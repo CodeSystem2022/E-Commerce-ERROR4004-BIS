@@ -4,6 +4,7 @@ import NextLink from 'next/link'
 import { AppBar, Badge, Box, Button, IconButton, Link, Toolbar, Typography } from '@mui/material'
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
+import Image from 'next/image'
 
 const Navbar = () => {
   return (
@@ -19,7 +20,7 @@ const Navbar = () => {
             color: 'black'
           } }
         >
-          <Typography variant='h6'>Oh-la-la-Shoes|</Typography>
+          <Image src='/logo/logo-name.jpg' alt='Oh-la-la-Shoes' width='50' height='50'/>
           <Typography sx={ { ml: 0.5 } }>Shop</Typography>
         </NextLink>
         <Box flex={ 1 } />

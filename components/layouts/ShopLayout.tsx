@@ -1,6 +1,7 @@
 import React, { FC, ReactElement } from 'react'
 import Head from 'next/head'
 import Navbar from '../ui/Navbar'
+import SideMenu from '../ui/SideMenu'
 
 interface ShopLayoutPops {
   title: string
@@ -27,11 +28,12 @@ const ShopLayout: FC<ShopLayoutPops> = ({
             <meta name='og:image' content={ imageFullUrl } />
           )
         }
+        <link rel="shortcut icon" href="/logo/logo-name.jpg" type="image/jpg" />
       </Head>
       <nav>
         <Navbar />
       </nav>
-      { /* TODO: sidebar */ }
+      <SideMenu />
       <main
         style={ {
           margin: '80px auto',
