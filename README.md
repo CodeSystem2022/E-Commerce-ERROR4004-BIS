@@ -83,6 +83,10 @@ yarn dev
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Creación del proyecto con NEXTjs
 
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Creación dle Navbar
+
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Creación de la HomePage con las tarjetas de los productos
+
 ## Sprint 2 - Semana 2 (27Oct - 2Nov):
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>
@@ -117,6 +121,7 @@ Si es una tarea solo de estilos en vez de `feat` utilizamos `style`, si es solo 
   > products
   > ui
 > database
+> interfaces
 > node_modules
 > pages
   > admin

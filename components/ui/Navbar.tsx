@@ -20,7 +20,7 @@ const Navbar = () => {
             color: 'black'
           } }
         >
-          <Image src='/logo/logo-name.jpg' alt='Oh-la-la-Shoes' width='50' height='50'/>
+          <Image src='/logo/logo-name.png' alt='Oh-la-la-Shoes' width='50' height='50'/>
           <Typography sx={ { ml: 0.5 } }>Shop</Typography>
         </NextLink>
         <Box flex={ 1 } />
