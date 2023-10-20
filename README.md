@@ -52,19 +52,65 @@ Este proyecto está creado con [**Next.js**](https://nextjs.org/) con el comando
 
 ## Primeros pasos
 
-Correr el servidor:
+1. Bajarte el cósigo del repositorio, creando una carpeta en tu local, y luego: 
+```BASH
+git clone https://github.com/CodeSystem2022/E-Commerce-ERROR4004-BIS.git .
+```
 
+2. Instalar las dependencias (node_modules) con:
+```BASH
+yarn install
+```
+
+3. Correr el servidor:
 ```bash
 yarn dev
 ```
 
-Abrir [http://localhost:3000](http://localhost:3000) en tu navegador localmente, para ver la aplicación.
+4. Abrir [http://localhost:3000](http://localhost:3000) en tu navegador localmente, para ver la aplicación.
 
 ---
 
+## <img width="30" height="30" src="https://img.icons8.com/external-flaticons-flat-flat-icons/30/external-scrum-agile-flaticons-flat-flat-icons-7.png" alt="agile"/> ¿Cómo nos organizamos?
+
+- Utilizamos las metodologías **ágile** y el marco de trabajo **Scrum**
+
+- Dividimos todo el proyecto en **3 Sprints** de **una semana** cada uno.
+
+## Sprint 1 - Semana 1 (20Oct - 26Oct):
+
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Creación del repositorio en GitHub
+
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Creación del proyecto con NEXTjs
+
+## Sprint 2 - Semana 2 (27Oct - 2Nov):
+
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>
+
+## Sprint 3 - Semana 3 (3Nov - 10Nov):
+
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>
+
+---
+
+## <img width="30" height="30" src="https://img.icons8.com/color/48/merge-git.png" alt="merge-git"/> Workflow de Git y GitHub
+
+- La rama principal es: **main**
+
+- En base a la rama main se crean las nuevas ramas para ir trabajando en las tareas. Una vez completada la tarea, dicha rama es unida a main y eliminada.
+
+-> ¿Cómo nombramos las ramas?
+
+``feat/#<nro-issue>-<tarea>``, donde el **nro de issue** corresponde al issue creado y a la historia d eusuario en la que se trabaja y **tarea** es un nombre descriptivo de la tarea a realizar.
+
+Si es una tarea solo de estilos en vez de `feat` utilizamos `style`, si es solo de documentación utilizamos `doc` y si es para arreglar un gub `bugfix`
+
+---
+
+
 ## <img width="30" height="30" src="https://img.icons8.com/3d-fluency/30/book.png" alt="book"/> Aprender más
 
-Para aprender más de **Next.js**, te compartimos los sigueintes recursos:
+Para aprender más de **Next.js**, te compartimos los siguientes recursos:
 
 - [Next.js Documentation](https://nextjs.org/docs) - aprende sobre Next.js y API.
 
