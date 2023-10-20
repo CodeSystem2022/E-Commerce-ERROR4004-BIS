@@ -24,8 +24,8 @@ export const initialData: SeedData = {
         {
             description: "Sleek, comfortable shoes for little ones. Your little adventurer will be ready to play in these comfy Swift Run 1.0 shoes. Featuring a knit upper and flexible EVA midsole, these shoes keep tiny feet supported and cushioned. Recycled materials and a non-marking outsole ensure each step is gentle on the planet. These lightweight, lace-up shoes inspire dreams of zooming across the playground or racing down the sidewalk — someday.",
             images: [
-                '1740176-00-A_0_2000.jpg',
                 '1740176-00-A_1.jpg',
+                '1740176-00-A_0_2000.jpg',
             ],
             inStock: 7,
             price: 75,
@@ -39,8 +39,8 @@ export const initialData: SeedData = {
         {
             description: "Slip-On sneakers made in part with recycled materials. Light as air and ready for adventure, these kids' shoes slip on quick and stay comfy all day thanks to an EVA midsole. The textile upper is made from recycled materials, doing right by the planet while doing right by little feet. An elastic strap with bold wording lets kids proudly sport the adidas logo. Perfect for playdates and playgrounds, these shoes keep up with kids on the move.This product features at least 20% recycled materials. By reusing materials that have already been created, we help to reduce waste and our reliance on finite resources and reduce the footprint of the products we make.",
             images: [
-                '1740507-00-A_0_2000.jpg',
                 '1740507-00-A_1.jpg',
+                '1740507-00-A_0_2000.jpg',
             ],
             inStock: 5,
             price: 200,

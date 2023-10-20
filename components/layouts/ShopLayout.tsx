@@ -28,7 +28,7 @@ const ShopLayout: FC<ShopLayoutPops> = ({
             <meta name='og:image' content={ imageFullUrl } />
           )
         }
-        <link rel="shortcut icon" href="/logo/logo-name.jpg" type="image/jpg" />
+        <link rel="shortcut icon" href="/logo/logo-name.png" type="image/jpg" />
       </Head>
       <nav>
         <Navbar />
