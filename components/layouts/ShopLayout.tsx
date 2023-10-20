@@ -1,5 +1,6 @@
 import React, { FC, ReactElement } from 'react'
 import Head from 'next/head'
+import Navbar from '../ui/Navbar'
 
 interface ShopLayoutPops {
   title: string
@@ -28,7 +29,7 @@ const ShopLayout: FC<ShopLayoutPops> = ({
         }
       </Head>
       <nav>
-        { /* TODO: navbar */ }
+        <Navbar />
       </nav>
       { /* TODO: sidebar */ }
       <main
