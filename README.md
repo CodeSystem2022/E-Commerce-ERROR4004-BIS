@@ -40,7 +40,7 @@
 
 - [<img width="30" height="30" src="https://img.icons8.com/fluency-systems-regular/30/nextjs.png" alt="nextjs"/> **NEXTjs**](https://nextjs.org/)   
 
-- Yarn
+-  <img src="https://github.com/devicons/devicon/blob/master/icons/yarn/yarn-original.svg" alt="yarn" width="30" height="30"  /> Yarn
 
 - <img width="30" height="30" src="https://img.icons8.com/color/30/git.png" alt="git"/> Git y <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/github.png" alt="github"/> GitHub
 
