@@ -1,40 +1,81 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Trabajo Final para Tecnicatura Uiversitaria en Programación
 
-## Getting Started
+---
 
-First, run the development server:
+## <img width="40" height="40" src="https://img.icons8.com/stickers/40/user-group-man-woman.png" alt="group man woman"/> Integrantes y Roles
+
+| Integrante | Rol |
+| ---------- | --- |
+| Calle, Sonia | Analista Funcional (realiza la documentación Funcional del proyecto) / Scrum Master / Tester QA (documentar casos de prueba durante el desarrollo) / FrontEnd - BackEnd Developer / Base de Datos |
+| Costa, María Eugenia | Team Lead / Diseñadora UX/UI (realiza la documentación de Diseño y presentación) / Documenta el desarrollo en el README del proyecto en GitHub y en la Wiki / FrontEnd - BackEnd Developer / Base de Datos |
+| Alsina, Maximiliano | Product Owner / Realizara el video final de presentación / FrontEnd - BackEnd Developer / Base de Datos |
+
+---
+
+## <img width="40" height="40" src="https://img.icons8.com/color/40/dynamic-links.png" alt="links"/> Links
+
+- [Brief](https://docs.google.com/document/d/1LPc0LTbNF5unnrfiF8R59yl9BBKEm1BsEWLsPGhDPJI/edit?usp=sharing)
+
+- [Documentación funcional](https://docs.google.com/document/d/1YNPMAWqXpl7aj9xLWDiIT1L7vwaxbv-jqRyhpXVV4Hc/edit?usp=sharing)
+
+- [Mapa del sitio](https://docs.google.com/document/d/1Ec3KNFZzIzSQiBec-16NTbqHis8xm4VU2E9OXlZHgHQ/edit?usp=sharing)
+
+- [Presentación](https://www.canva.com/design/DAFuEnIx6ZQ/WqMlVRlpdpPYe6gUj71rOw/edit?utm_content=DAFuEnIx6ZQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
+- Video (en construcción)
+
+---
+
+## <img width="40" height="40" src="https://img.icons8.com/emoji/40/laptop-emoji.png" alt="laptop-emoji"/> Tecnologías
+
+- <img width="30" height="30" src="https://img.icons8.com/color/30/html-5--v1.png" alt="html-5--v1"/> HTML5
+
+- <img width="30" height="30" src="https://img.icons8.com/color/30/css3.png" alt="css3"/> CSS 3
+
+- [<img width="30" height="30" src="https://img.icons8.com/color/30/typescript.png" alt="typescript"/> **TypeScript**](https://www.typescriptlang.org/)
+
+- [<img width="30" height="30" src="https://img.icons8.com/color/30/material-ui.png" alt="material-ui"/> **Material UI**](https://mui.com/material-ui/)
+
+- [<img width="30" height="30" src="https://img.icons8.com/ultraviolet/30/react--v1.png" alt="react--v1"/> **React**](https://react.dev/)
+
+- [<img width="30" height="30" src="https://img.icons8.com/fluency-systems-regular/30/nextjs.png" alt="nextjs"/> **NEXTjs**](https://nextjs.org/)   
+
+- Yarn
+
+- <img width="30" height="30" src="https://img.icons8.com/color/30/git.png" alt="git"/> Git y <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/github.png" alt="github"/> GitHub
+
+---
+
+## <img width="30" height="30" src="https://img.icons8.com/color/30/console.png" alt="console"/> ¿Cómo ver el proyecto en local?
+
+Este proyecto está creado con [**Next.js**](https://nextjs.org/) con el comando: [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## Primeros pasos
+
+Correr el servidor:
 
 ```bash
-npm run dev
-# or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abrir [http://localhost:3000](http://localhost:3000) en tu navegador localmente, para ver la aplicación.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+---
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## <img width="30" height="30" src="https://img.icons8.com/3d-fluency/30/book.png" alt="book"/> Aprender más
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Para aprender más de **Next.js**, te compartimos los sigueintes recursos:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- [Next.js Documentation](https://nextjs.org/docs) - aprende sobre Next.js y API.
 
-## Learn More
+- [Learn Next.js](https://nextjs.org/learn) - un tutotial interactivo de Next.js.
 
-To learn more about Next.js, take a look at the following resources:
+Poder ver el repositorio: [the Next.js GitHub repository](https://github.com/vercel/next.js/) - el feedback y la contribución son bienvenidos.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## <img width="30" height="30" src="https://img.icons8.com/office/30/monitor.png" alt="monitor"/> Para deployar en Vercel
 
-## Deploy on Vercel
+La forma más sencilla de deployar tu proyecto de Next.js es usando [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme), los creadores de Nextjs.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Mirá: [Next.js deployment documentation](https://nextjs.org/docs/deployment) para más detalles.
