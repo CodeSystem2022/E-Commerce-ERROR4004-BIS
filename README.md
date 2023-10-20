@@ -6,9 +6,9 @@
 
 | Integrante | Rol |
 | ---------- | --- |
-| Calle, Sonia | Analista Funcional (realiza la documentación Funcional del proyecto) / Scrum Master / Tester QA (documentar casos de prueba durante el desarrollo) / FrontEnd - BackEnd Developer / Base de Datos |
-| Costa, María Eugenia | Team Lead / Diseñadora UX/UI (realiza la documentación de Diseño y presentación) / Documenta el desarrollo en el README del proyecto en GitHub y en la Wiki / FrontEnd - BackEnd Developer / Base de Datos |
-| Alsina, Maximiliano | Product Owner / Realizara el video final de presentación / FrontEnd - BackEnd Developer / Base de Datos |
+| [**Calle, Sonia**](https://github.com/SoCalle) | Analista Funcional (realiza la documentación Funcional del proyecto) / Scrum Master / Tester QA (documentar casos de prueba durante el desarrollo) / FrontEnd - BackEnd Developer / Base de Datos |
+| [**Costa, María Eugenia**](https://github.com/eugenia1984) | Team Lead / Diseñadora UX/UI (realiza la documentación de Diseño y presentación) / Documenta el desarrollo en el README del proyecto en GitHub y en la Wiki / FrontEnd - BackEnd Developer / Base de Datos |
+| [**Alsina, Maximiliano**](https://github.com/MalsinaG) | Product Owner / Realizara el video final de presentación / FrontEnd - BackEnd Developer / Base de Datos |
 
 ---
 
