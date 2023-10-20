@@ -90,7 +90,7 @@ yarn dev
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Creación de la HomePage con las tarjetas de los productos, que contienen la imagen del producto, el nombre y el precio
 
-<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Página con el detalle del producto        
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Página con el detalle del producto, que tiene: slider con las imagenes del producto, totilo, precio, boton de - y + para modificar la cantidad de productos, botones con los talles disponibles, botón para agregar al carro de compra y la descripción        
 
 ## Sprint 2 - Semana 2 (27Oct - 2Nov):
 
