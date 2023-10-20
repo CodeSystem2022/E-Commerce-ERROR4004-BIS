@@ -24,7 +24,8 @@ const Home: NextPage = () => {
                 <CardActionArea>
                   <CardMedia
                     component='img'
-                    image={ `products/${product.images[0]}`}
+                    image={ `products/${ product.images[0] }` }
+                    alt={ product.title}
                   />               
                     
                 </CardActionArea>
