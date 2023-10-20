@@ -107,6 +107,39 @@ Si es una tarea solo de estilos en vez de `feat` utilizamos `style`, si es solo 
 
 ---
 
+## Estructura del proyecto
+
+```
+>.next
+> components
+  > cart
+  > laytouts
+  > products
+  > ui
+> database
+> node_modules
+> pages
+  > admin
+  > api
+  > auth
+  > cart
+  > checkout
+  > orders
+  > products
+> public
+> styles
+> theme
+.eslintrc.json
+.gitignore
+next-env.d.ts
+next.config.js
+package.json
+README.md
+tsconfig.json
+yarn.lock
+```
+
+---
 
 ## <img width="30" height="30" src="https://img.icons8.com/3d-fluency/30/book.png" alt="book"/> Aprender más
 
