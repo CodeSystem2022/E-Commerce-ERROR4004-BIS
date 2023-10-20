@@ -34,9 +34,9 @@
 
 - [<img width="30" height="30" src="https://img.icons8.com/color/30/typescript.png" alt="typescript"/> **TypeScript**](https://www.typescriptlang.org/)
 
-- [<img width="30" height="30" src="https://img.icons8.com/color/30/material-ui.png" alt="material-ui"/> **Material UI**](https://mui.com/material-ui/)
+- [<img width="30" height="30" src="https://img.icons8.com/color/30/material-ui.png" alt="material-ui"/> **Material UI**](https://mui.com/material-ui/): @emotion/react - @emotion/styled - @mui/material - @mui/icons-material
 
-- [<img width="30" height="30" src="https://img.icons8.com/ultraviolet/30/react--v1.png" alt="react--v1"/> **React**](https://react.dev/)
+- [<img width="30" height="30" src="https://img.icons8.com/ultraviolet/30/react--v1.png" alt="react--v1"/> **React**](https://react.dev/) y **react-dom**
 
 - [<img width="30" height="30" src="https://img.icons8.com/fluency-systems-regular/30/nextjs.png" alt="nextjs"/> **NEXTjs**](https://nextjs.org/)   
 
