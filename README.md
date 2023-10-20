@@ -40,6 +40,9 @@
 
 - [<img width="30" height="30" src="https://img.icons8.com/fluency-systems-regular/30/nextjs.png" alt="nextjs"/> **NEXTjs**](https://nextjs.org/)   
 
+
+- [**react-slideshow-image**](https://www.npmjs.com/package/react-slideshow-image)
+
 -  <img src="https://github.com/devicons/devicon/blob/master/icons/yarn/yarn-original.svg" alt="yarn" width="30" height="30"  /> Yarn
 
 - <img width="30" height="30" src="https://img.icons8.com/color/30/git.png" alt="git"/> Git y <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/github.png" alt="github"/> GitHub
@@ -85,7 +88,9 @@ yarn dev
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Creación del Navbar
 
-<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Creación de la HomePage con las tarjetas de los productos
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Creación de la HomePage con las tarjetas de los productos, que contienen la imagen del producto, el nombre y el precio
+
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Página con el detalle del producto        
 
 ## Sprint 2 - Semana 2 (27Oct - 2Nov):
 
@@ -130,7 +135,7 @@ Si es una tarea solo de estilos en vez de `feat` utilizamos `style`, si es solo 
   > cart
   > checkout
   > orders
-  > products
+  > product
 > public
   > logo
   > products

@@ -1,4 +1,6 @@
 import React, { FC, useState, useMemo } from 'react'
+import NextLink from 'next/link'
+
 import {
   Box,
   Card,
@@ -17,7 +19,7 @@ interface ProductCardPorps {
 const ProductCard: FC<ProductCardPorps> = ({ product }) => {
   const [isHovered, setIsHovered] = useState(false)
 
-  const productImage = useMemo(() => { 
+  const productImage = useMemo(() => {
     return isHovered
       ? `products/${ product.images[0] }`
       : `products/${ product.images[1] }`
@@ -30,23 +32,25 @@ const ProductCard: FC<ProductCardPorps> = ({ product }) => {
       sm={ 4 }
       md={ 3 }
       onMouseEnter={ () => setIsHovered(true) }
-      onMouseLeave={ () => setIsHovered(false)}
+      onMouseLeave={ () => setIsHovered(false) }
     >
       <Card>
-        <CardActionArea>
-          <CardMedia
-            className='fadeIn'
-            component='img'
-            image={ productImage }
-            alt={ product.title }
-          />
-        </CardActionArea>
+        <NextLink href='/product/slug' passHref prefetch={ false}>
+          <CardActionArea>
+            <CardMedia
+              className='fadeIn'
+              component='img'
+              image={ productImage }
+              alt={ product.title }
+            />
+          </CardActionArea>
+        </NextLink>
       </Card>
       <Box sx={ { mt: 1 } } className='fadeIn'>
-        <Typography fontWeight={700}>
+        <Typography fontWeight={ 700 }>
           { product.title }
         </Typography>
-        <Typography fontWeight={500}>
+        <Typography fontWeight={ 500 }>
           { `$ ${ product.price }` }
         </Typography>
       </Box>
