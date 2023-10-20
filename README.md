@@ -132,7 +132,10 @@ Si es una tarea solo de estilos en vez de `feat` utilizamos `style`, si es solo 
   > orders
   > products
 > public
+  > logo
+  > products
 > styles
+  globals.css
 > theme
 .eslintrc.json
 .gitignore
