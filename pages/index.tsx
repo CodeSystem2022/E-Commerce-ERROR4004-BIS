@@ -1,7 +1,8 @@
 import { NextPage } from 'next'
-import { Typography } from '@mui/material'
+import { Card,CardActionArea, CardMedia, Grid, Typography } from '@mui/material'
 
 import ShopLayout from '../components/layouts/ShopLayout'
+import { initialData } from '../database/products'
 
 const Home: NextPage = () => {
   return (
@@ -16,6 +17,17 @@ const Home: NextPage = () => {
         <Typography variant='h2' sx={ { mb: 1 } }>
           All products
         </Typography>
+        <Grid container spacing={ 4 }>
+          { initialData.products.map(product => (
+            <Grid item xs={ 6 } sm={ 4 } key={ product.slug }>
+              <Card>
+                <CardActionArea>
+                  <CardMedia></CardMedia>
+                </CardActionArea>
+              </Card>
+            </Grid>
+          )) }
+        </Grid>
       </>
     </ShopLayout>
   )
