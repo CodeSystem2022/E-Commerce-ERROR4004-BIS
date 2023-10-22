@@ -103,7 +103,7 @@ yarn dev
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> **Página del la dirección de envío de la compra**(`/checkout/address`), con el título, varios campos apra completar la dirección de envío y el botón de confirmación.
 
-<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>**Página del resumen de la compra**(`/checkout/summary`).
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>**Página del resumen de la compra**(`/checkout/summary`), donde se ve en tarjetas el detalle con imagen, titulo, precio, talla y total de ítems de cada producto. Y se ve el resumend e la compra con la dirección de envío (que permite editar)  y el total a pagar(también editable para modificar la cantidad de items desde el carro de compra) con el botón para confirmar la compra.
 
 ## Sprint 2 - Semana 2 (27Oct - 2Nov):
 
