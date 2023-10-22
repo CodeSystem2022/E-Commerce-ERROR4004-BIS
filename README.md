@@ -103,6 +103,8 @@ yarn dev
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> **Página del la dirección de envío de la compra**(`/checkout/address`), con el título, varios campos apra completar la dirección de envío y el botón de confirmación.
 
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>**Página del resumen de la compra**(`/checkout/summary`).
+
 ## Sprint 2 - Semana 2 (27Oct - 2Nov):
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>
