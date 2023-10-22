@@ -20,19 +20,25 @@ const Navbar = () => {
             color: 'black'
           } }
         >
-          <Image src='/logo/logo-name.png' alt='Oh-la-la-Shoes' width='50' height='50'/>
+          <Image
+            src='/logo/logo-name.png'
+            alt='Oh-la-la-Shoes'
+            width='50'
+            height='50'
+            style={ { borderRadius: '50%' } }
+          />
           <Typography sx={ { ml: 0.5 } }>Shop</Typography>
         </NextLink>
         <Box flex={ 1 } />
         <Box sx={ { display: { xs: 'none', sm: 'block' } } }>
           <NextLink href='/category/men' passHref>
-              <Button>Men</Button>
+            <Button>Men</Button>
           </NextLink>
           <NextLink href='/category/women' passHref>
-              <Button>Women</Button>
+            <Button>Women</Button>
           </NextLink>
           <NextLink href='/category/kid' passHref>
-              <Button>Kid</Button>
+            <Button>Kid</Button>
           </NextLink>
         </Box>
         <Box flex={ 1 } />

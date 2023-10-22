@@ -7,9 +7,10 @@ import {
   Grid,
   Typography,
 } from '@mui/material'
-import { CartList } from '../../components/cart';
-import ShopLayout from '../../components/layouts/ShopLayout'
 
+import ShopLayout from '../../components/layouts/ShopLayout'
+import CartList from '../../components/cart/CartList'
+import OrderSummary from '../../components/cart/OrderSummary'
 
 const CartPage = () => {
   return (
@@ -18,20 +19,21 @@ const CartPage = () => {
       pageDescription='Store shopping cart'
     >
       <>
-        <Typography variant='h1' component='h1'>
+        <Typography variant='h1' component='h1' my={ 4 }>
           Shopping cart
         </Typography>
-        <Grid container>
+        <Grid container spacing={ 2 }>
           <Grid item xs={ 12 } sm={ 7 }>
-            <CartList />
+            <CartList editable />
           </Grid>
           <Grid item xs={ 12 } sm={ 5 }>
             <Card className='summary-card'>
               <CardContent>
-                <Typography variant='h2'>
+                <Typography variant='h2' mb={ 2 }>
                   Order
                 </Typography>
                 <Divider sx={ { my: 1 } } />
+                <OrderSummary />
                 <Box sx={ { mt: 3 } }>
                   <Button
                     color='secondary'

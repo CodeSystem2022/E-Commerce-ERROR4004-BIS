@@ -40,8 +40,9 @@
 
 - [<img width="30" height="30" src="https://img.icons8.com/fluency-systems-regular/30/nextjs.png" alt="nextjs"/> **NEXTjs**](https://nextjs.org/)   
 
+- [**react-slideshow-image**](https://www.npmjs.com/package/react-slideshow-image), para los sliders de productos en la página de detalle del producto
 
-- [**react-slideshow-image**](https://www.npmjs.com/package/react-slideshow-image)
+- [**react-hook-form**](https://react-hook-form.com/), para el manejo de los formularios
 
 -  <img src="https://github.com/devicons/devicon/blob/master/icons/yarn/yarn-original.svg" alt="yarn" width="30" height="30"  /> Yarn
 
@@ -55,22 +56,28 @@ Este proyecto está creado con [**Next.js**](https://nextjs.org/) con el comando
 
 ## Primeros pasos
 
-1. Bajarte el cósigo del repositorio, creando una carpeta en tu local, y luego: 
+1. Antes que nada debes tener insatalado:
+
+- **Node** de versión 16 en adelante
+
+- **Yarn**
+
+2. Bajarte el cósigo del repositorio, creando una carpeta en tu local, y luego: 
 ```BASH
 git clone https://github.com/CodeSystem2022/E-Commerce-ERROR4004-BIS.git .
 ```
 
-2. Instalar las dependencias (node_modules) con:
+3. Instalar las dependencias (node_modules) con:
 ```BASH
 yarn install
 ```
 
-3. Correr el servidor:
+4. Correr el servidor:
 ```bash
 yarn dev
 ```
 
-4. Abrir [http://localhost:3000](http://localhost:3000) en tu navegador localmente, para ver la aplicación.
+5. Abrir [http://localhost:3000](http://localhost:3000) en tu navegador localmente, para ver la aplicación.
 
 ---
 
@@ -82,15 +89,17 @@ yarn dev
 
 ## Sprint 1 - Semana 1 (20Oct - 26Oct):
 
-<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Creación del repositorio en GitHub
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Creación del **repositorio** en GitHub
 
-<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Creación del proyecto con NEXTjs
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Creación del **proyecto** con NEXTjs
 
-<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Creación del Navbar
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Creación del **Navbar**, con: logo, linsk (Men, Women, Kid), la lupa pra buscar, el carro de compras y el Menú.
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Creación de la HomePage con las tarjetas de los productos, que contienen la imagen del producto, el nombre y el precio
 
-<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Página con el detalle del producto, que tiene: slider con las imagenes del producto, totilo, precio, boton de - y + para modificar la cantidad de productos, botones con los talles disponibles, botón para agregar al carro de compra y la descripción        
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> **Página con el detalle del producto**, que tiene: slider con las imagenes del producto, titulo, precio, boton de - y + para modificar la cantidad de productos, botones con los talles disponibles, botón para agregar al carro de compra y la descripción        
+
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> **Página del carro de compras**, donde muestra la imagen del producto, el título, la talla, el precio, se pueden agregar o quitar productos. Y también se ve el resumen del pedido, con la suma total a abonar.
 
 ## Sprint 2 - Semana 2 (27Oct - 2Nov):
 
