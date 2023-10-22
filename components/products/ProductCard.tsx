@@ -35,13 +35,27 @@ const ProductCard: FC<ProductCardPorps> = ({ product }) => {
       onMouseLeave={ () => setIsHovered(false) }
     >
       <Card>
-        <NextLink href='/product/slug' passHref prefetch={ false}>
-          <CardActionArea>
+        <NextLink href='/product/slug' passHref prefetch={ false }>
+          <CardActionArea
+             sx={ {
+              height: {
+                xs: '130px',
+                sm: '200px'
+              }
+            } }
+          >
             <CardMedia
               className='fadeIn'
               component='img'
               image={ productImage }
               alt={ product.title }
+              sx={ {
+                height: {
+                  xs: '110px',
+                  sm: '180px'
+                },
+                objectFit: 'contain'
+              } }
             />
           </CardActionArea>
         </NextLink>
