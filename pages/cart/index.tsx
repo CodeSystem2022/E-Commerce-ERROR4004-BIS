@@ -10,7 +10,7 @@ import {
 
 import ShopLayout from '../../components/layouts/ShopLayout'
 import CartList from '../../components/cart/CartList'
-
+import OrderSummary from '../../components/cart/OrderSummary'
 
 const CartPage = () => {
   return (
@@ -33,6 +33,7 @@ const CartPage = () => {
                   Order
                 </Typography>
                 <Divider sx={ { my: 1 } } />
+                <OrderSummary  />
                 <Box sx={ { mt: 3 } }>
                   <Button
                     color='secondary'
