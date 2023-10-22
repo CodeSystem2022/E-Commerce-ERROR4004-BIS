@@ -26,9 +26,9 @@ const CartList: FC<CartListPorps> = ({ editable = false }) => {
               { /* TODO: llevar a la pagina del producto*/ }
               <CardActionArea>
                 <CardMedia
-                  image={ `products/${ product.images[0] }` }
+                  image={ `/products/${ product.images[0] }` }
                   component='img'
-                  sx={ { borderRadius: '12px' } }
+                  sx={ { borderRadius: '12px', objectFit: 'contain' } }
                   height='140px'
                   width='100%'
                 />
