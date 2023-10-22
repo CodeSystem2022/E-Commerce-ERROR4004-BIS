@@ -28,7 +28,7 @@ const CartPage = () => {
           <Grid item xs={ 12 } sm={ 5 }>
             <Card className='summary-card'>
               <CardContent>
-                <Typography variant='h2'>
+                <Typography variant='h2' mb={ 2}>
                   Order
                 </Typography>
                 <Divider sx={ { my: 1 } } />

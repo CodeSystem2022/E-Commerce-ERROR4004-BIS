@@ -17,15 +17,19 @@ const EmptyPage = () => {
         height='calc(100vh - 200px)'
         sx={ { flexDirection: { xs: 'column', sm: 'row' } } }
       >
-        <RemoveShoppingCartOutlined sx={ { fontSize: 100 } } />
+        <RemoveShoppingCartOutlined sx={ { fontSize: 100 } } color='secondary'/>
         <Box
           display='flex'
           flexDirection='column'
           alignItems='center'
+          gap='12px'
         >
           <Typography>No items in the shopping cart</Typography>
-          <NextLink href='/' passHref>
-            <Typography typography="h4" color="secondary">
+          <NextLink href='/' passHref  className='btn-link-primary-link'>
+            <Typography
+              color='secondary'
+              className='btn-link-primary'
+            >
               Back to store
             </Typography>
           </NextLink>
