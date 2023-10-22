@@ -107,6 +107,8 @@ yarn dev
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> **Página de pago**(`/orders/{id}`) con un badge con informe si el pago esta ok o no. Debe tener tarjetas con los articulos a comprar y el resumen de la dirección de envío y el total a  pagar.
 
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>**Página de historial de ordenes**(`/orders/history`)
+
 ## Sprint 2 - Semana 2 (27Oct - 2Nov):
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>
