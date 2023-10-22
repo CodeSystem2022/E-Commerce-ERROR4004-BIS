@@ -89,17 +89,17 @@ yarn dev
 
 ## Sprint 1 - Semana 1 (20Oct - 26Oct):
 
-<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Creación del repositorio en GitHub
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Creación del **repositorio** en GitHub
 
-<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Creación del proyecto con NEXTjs
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Creación del **proyecto** con NEXTjs
 
-<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Creación del Navbar
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Creación del **Navbar**, con: logo, linsk (Men, Women, Kid), la lupa pra buscar, el carro de compras y el Menú.
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Creación de la HomePage con las tarjetas de los productos, que contienen la imagen del producto, el nombre y el precio
 
-<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Página con el detalle del producto, que tiene: slider con las imagenes del producto, titulo, precio, boton de - y + para modificar la cantidad de productos, botones con los talles disponibles, botón para agregar al carro de compra y la descripción        
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> **Página con el detalle del producto**, que tiene: slider con las imagenes del producto, titulo, precio, boton de - y + para modificar la cantidad de productos, botones con los talles disponibles, botón para agregar al carro de compra y la descripción        
 
-<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Carro de compras, donde muestra la imagen del producto, el título, la talla, el precio, se pueden agregar o quitar productos. Y también se ve el resumen del pedido, con la suma total a abonar.
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> **Página del carro de compras**, donde muestra la imagen del producto, el título, la talla, el precio, se pueden agregar o quitar productos. Y también se ve el resumen del pedido, con la suma total a abonar.
 
 ## Sprint 2 - Semana 2 (27Oct - 2Nov):
 
