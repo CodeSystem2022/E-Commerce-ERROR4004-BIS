@@ -14,7 +14,7 @@ import ShopLayout from '../../components/layouts/ShopLayout'
 const CartPage = () => {
   return (
     <ShopLayout
-      title='Shopping cart - 3'
+      title='Shopping Cart - 3'
       pageDescription='Store shopping cart'
     >
       <>
