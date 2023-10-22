@@ -99,7 +99,9 @@ yarn dev
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> **Página con el detalle del producto**, que tiene: slider con las imagenes del producto, titulo, precio, boton de - y + para modificar la cantidad de productos, botones con los talles disponibles, botón para agregar al carro de compra y la descripción        
 
-<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> **Página del carro de compras**, donde muestra la imagen del producto, el título, la talla, el precio, se pueden agregar o quitar productos. Y también se ve el resumen del pedido, con la suma total a abonar.
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> **Página del carro de compras** (`/cart`), donde muestra la imagen del producto, el título, la talla, el precio, se pueden agregar o quitar productos. Y también se ve el resumen del pedido, con la suma total a abonar. Y también la **Página de carro de compras vacío** (`` /cart/empty), la cual tiene un ícono del carro de compras, el mensaje y un boton para volver.
+
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> **Página del la dirección de envío de la compra**(`/checkout/address`), con el título, varios campos apra completar la dirección de envío y el botón de confirmación.
 
 ## Sprint 2 - Semana 2 (27Oct - 2Nov):
 
