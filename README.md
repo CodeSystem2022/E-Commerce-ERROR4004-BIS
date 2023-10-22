@@ -42,7 +42,7 @@
 
 - [**react-slideshow-image**](https://www.npmjs.com/package/react-slideshow-image), para los sliders de productos en la página de detalle del producto
 
-- [**react-hook-form**](https://react-hook-form.com/), par ael manejo de los formularios
+- [**react-hook-form**](https://react-hook-form.com/), para el manejo de los formularios
 
 -  <img src="https://github.com/devicons/devicon/blob/master/icons/yarn/yarn-original.svg" alt="yarn" width="30" height="30"  /> Yarn
 
