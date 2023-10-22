@@ -34,7 +34,7 @@
 
 - [<img width="30" height="30" src="https://img.icons8.com/color/30/typescript.png" alt="typescript"/> **TypeScript**](https://www.typescriptlang.org/)
 
-- [<img width="30" height="30" src="https://img.icons8.com/color/30/material-ui.png" alt="material-ui"/> **Material UI**](https://mui.com/material-ui/): @emotion/react - @emotion/styled - @mui/material - @mui/icons-material
+- [<img width="30" height="30" src="https://img.icons8.com/color/30/material-ui.png" alt="material-ui"/> **Material UI**](https://mui.com/material-ui/): @emotion/react - @emotion/styled - @mui/material - @mui/icons-material - @mui/x-data-grid
 
 - [<img width="30" height="30" src="https://img.icons8.com/ultraviolet/30/react--v1.png" alt="react--v1"/> **React**](https://react.dev/) y **react-dom**
 
@@ -106,6 +106,8 @@ yarn dev
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>**Página del resumen de la compra**(`/checkout/summary`), donde se ve en tarjetas el detalle con imagen, titulo, precio, talla y total de ítems de cada producto. Y se ve el resumend e la compra con la dirección de envío (que permite editar)  y el total a pagar(también editable para modificar la cantidad de items desde el carro de compra) con el botón para confirmar la compra.
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> **Página de pago**(`/orders/{id}`) con un badge con informe si el pago esta ok o no. Debe tener tarjetas con los articulos a comprar y el resumen de la dirección de envío y el total a  pagar.
+
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>**Página de historial de ordenes**(`/orders/history`), donde se ve en una tabla el historial de las ordenes, con los id, el nombre completo, si está pago o no y un link para ir al detalle de la orden.
 
 ## Sprint 2 - Semana 2 (27Oct - 2Nov):
 
