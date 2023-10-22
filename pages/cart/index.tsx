@@ -29,7 +29,7 @@ const CartPage = () => {
           <Grid item xs={ 12 } sm={ 5 }>
             <Card className='summary-card'>
               <CardContent>
-                <Typography variant='h2' mb={ 2 }>
+                <Typography variant='h2' mb={ 4 }>
                   Order
                 </Typography>
                 <Divider sx={ { my: 1 } } />
