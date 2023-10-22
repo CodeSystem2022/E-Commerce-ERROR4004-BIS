@@ -13,7 +13,7 @@ interface SeedProduct {
 
 // type ValidSizes = 'XS' | 'S' | 'M' | 'L' | 'XL' | 'XXL' | 'XXXL'
 type ValidSizes = '30' | '31' | '32' | '33' | '34' | '35' | '36' | '37' | '38' | '39' | '40' | '41' | '42' | '43' | '44'
-type ValidTypes = 'running' | 'sneakers'| 'soccer' | 'shirts' | 'pants' | 'hoodies' | 'hats'
+type ValidTypes = 'running' | 'sneakers' | 'soccer' | 'shirts' | 'pants' | 'hoodies' | 'hats'
 
 interface SeedData {
     products: SeedProduct[],
@@ -29,11 +29,11 @@ export const initialData: SeedData = {
             ],
             inStock: 7,
             price: 75,
-            sizes: ['30', '31', '32', '33', '34','35', '36'],
+            sizes: ['30', '31', '32', '33', '34', '35', '36'],
             slug: "swift_run",
             type: 'running',
-            tags: ['shoes', 'boys', 'kids'],
-            title: "Swift Run 1.0 Shoes Kids",
+            tags: ['Adidas', 'Shoes', 'Boys', 'Kids', 'Girls', 'Run'],
+            title: "Swift Run 1.0 - Adidas (Kids)",
             gender: 'kid'
         },
         {
@@ -44,44 +44,44 @@ export const initialData: SeedData = {
             ],
             inStock: 5,
             price: 200,
-            sizes: ['30','31', '32','33', '34','35', '36'],
+            sizes: ['30', '31', '32', '33', '34', '35', '36'],
             slug: "lite_racer_adapt",
             type: 'sneakers',
-            tags: ['kids'],
-            title: "Lite Racer Adapt 6.0 Shoes Kids",
+            tags: ['Adidas','kids', 'Boys', 'Girls'],
+            title: "Lite Racer Adapt 6.0 - Adidas (Kids)",
             gender: 'kid'
         },
 
         {
-            description: "Introducing the Tesla Raven Collection. The Men's Raven Lightweight Zip Up Bomber has a premium, modern silhouette made from a sustainable bamboo cotton blend for versatility in any season. The hoodie features subtle thermoplastic polyurethane Tesla logos on the left chest and below the back collar, a concealed chest pocket with custom matte zipper pulls and a french terry interior. Made from 70% bamboo and 30% cotton.",
+            description: "This low-cut AJ1 is simplified to the max for a black and white shoe, but it's anything but simple. The subtle tones create a perfect backdrop for the pop of color from Jordan's own big and bright image on the side. As always, you get quality materials, like the durable leather upper, supportive foam in the outsole, and the comfortable Air you know and love.",
             images: [
                 '1740250-00-A_0_2000.jpg',
                 '1740250-00-A_1.jpg'
             ],
             inStock: 10,
-            price: 130,
-            sizes: ['35', '36', '37', '38', '39', '40', '41', '42', '43', '44'],
-            slug: "men_raven_lightweight_zip_up_bomber_jacket",
-            type: 'shirts',
-            tags: ['shirt'],
-            title: "Men's Raven Lightweight Zip Up Bomber Jacket",
-            gender: 'men'
+            price: 78,
+            sizes: ['35', '36', '37', '38'],
+            slug: "air_jordan_1_low",
+            type: 'sneakers',
+            tags: ['Nike', 'Jordan', 'kids', 'Boys', 'Girls'],
+            title: "Air Jordan 1 Low - Nike (Kids)",
+            gender: 'kid'
         },
 
         {
-            description: "Introducing the Tesla Turbine Collection. Designed for style, comfort and everyday lifestyle, the Men's Turbine Long Sleeve Tee features a subtle, water-based T logo on the left chest and our Tesla wordmark below the back collar. The lightweight material is double-dyed, creating a soft, casual style for ideal wear in any season. Made from 50% cotton and 50% polyester.",
+            description: "It's still our most proven shoe. Its design continues to help keep you moving. The Nike React Infinity Run 3 offers a soft, stable feel with a ride that will accompany you on all your long and short runs. The breathable upper is designed to be supportive yet flexible. We even added more cushioning to the collar to give you a soft, protective feel. Keep running; we've got what you need.",
             images: [
-                '1740280-00-A_0_2000.jpg',
                 '1740280-00-A_1.jpg',
+                '1740280-00-A_0_2000.jpg',
             ],
             inStock: 50,
-            price: 45,
-            sizes: ['35', '36', '37', '38', '39', '40', '41', '42', '43', '44'],
-            slug: "men_turbine_long_sleeve_tee",
-            type: 'shirts',
-            tags: ['shirt'],
-            title: "Men's Turbine Long Sleeve Tee",
-            gender: 'men'
+            price: 120,
+            sizes: ['36', '37', '38', '39', '40', '41'],
+            slug: "nike_react_infinity_run_flyknit",
+            type: 'running',
+            tags: ['Women', 'Nike', 'Running'],
+            title: "React Infinity Run Flyknit 3 - Nike (Women-running)",
+            gender: 'women'
         },
         {
             description: "Introducing the Tesla Turbine Collection. Designed for style, comfort and everyday lifestyle, the Men's Turbine Short Sleeve Tee features a subtle, water-based Tesla wordmark across the chest and our T logo below the back collar. The lightweight material is double-dyed, creating a soft, casual style for ideal wear in any season. Made from 50% cotton and 50% polyester.",
