@@ -1,4 +1,4 @@
-# Trabajo Final para Tecnicatura Uiversitaria en Programación
+# Trabajo Final para Tecnicatura Universitaria en Programación
 
 ---
 
@@ -44,11 +44,14 @@
 
 - [**react-hook-form**](https://react-hook-form.com/), para el manejo de los formularios
 
--  <img src="https://github.com/devicons/devicon/blob/master/icons/yarn/yarn-original.svg" alt="yarn" width="30" height="30"  /> Yarn
+-  [<img src="https://github.com/devicons/devicon/blob/master/icons/yarn/yarn-original.svg" alt="yarn" width="30" height="30"  /> **Yarn**](https://yarnpkg.com/)
 
 - <img width="30" height="30" src="https://img.icons8.com/color/30/git.png" alt="git"/> Git y <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/github.png" alt="github"/> GitHub
 
+- [<img width="30" height="30" src="https://img.icons8.com/color/30/mongodb.png" alt="mongodb"/> **MongoDB**](https://www.mongodb.com/)
+
 - [<img width="30" height="30" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/30/external-docker-a-set-of-coupled-software-as-a-service-logo-color-tal-revivo.png" alt="docker"/> **Docker**](https://www.docker.com/)
+
   
 ---
 
