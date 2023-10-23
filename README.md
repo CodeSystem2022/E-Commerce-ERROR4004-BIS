@@ -84,7 +84,13 @@ yarn dev
 
 5. Abrir [http://localhost:3000](http://localhost:3000) en tu navegador localmente, para ver la aplicación.
 
-6. Para correr localmente, se necesita la base de datos.
+6. Para correr localmente, se necesita la base de datos, con:
+
+- El **service** es ``ohlalalshoesdb``, en el archivo `.env`: `MONGO_URL=mongodb://localhost:27017/ohlalalshoesdb`.
+
+- El nombre del **contenedor** es ``holalashoes-database``, este nombre irá en el archivo **docker-compose.yaml** y es el nombre que veréen Docker 
+
+- El nombre del **volumen** es `mongo`.
 
 ```bash
 docker-compose up -d
