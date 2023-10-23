@@ -130,8 +130,8 @@ export const initialData: SeedData = {
         {
             description: "Created for the hardwood but taken to the streets, the '80s b-ball icon returns with perfectly shined overlays and classic team colors. With its iconic hoops design, the Nike Dunk Low channels '80s vintage back onto the streets while its padded, low-cut collar lets you take your game anywhere—in comfort.",
             images: [
-                'a447e0eb-b47c.png',
                 'a447e0eb-b47c-2.png',
+                'a447e0eb-b47c.png',
             ],
             inStock: 20,
             price: 115,
@@ -145,8 +145,8 @@ export const initialData: SeedData = {
         {
             description: "With maximum cushioning to support every mile, the Invincible 3 gives you Nike Running's highest level of comfort underfoot to help you stay on your feet today, tomorrow and beyond. Designed to help keep you on the run, it’s super supportive and bouncy, so that you can propel down your preferred path and come back for your next run feeling ready and reinvigorated.",
             images: [
-                '87a2f87d-9bd5.png',
                 '87a2f87d-9bd5-2.png',
+                '87a2f87d-9bd5.png',
             ],
             inStock: 6,
             price: 180,
@@ -175,8 +175,8 @@ export const initialData: SeedData = {
         {
             description: "A rugged and winterised take on the Capri tennis shoe line, this bold piece can stand up to more than the courts. With its.",
             images: [
-                '7654393-00-A_2_2000.png',
                 '7654393-00-A_3.png',
+                '7654393-00-A_2_2000.png',
             ],
             inStock: 2,
             price: 90,
@@ -187,22 +187,22 @@ export const initialData: SeedData = {
             title: "Capri Para Sneakers - Puma (Men)",
             gender: 'men'
         },
-        /*
         {
-            description: "Inspired by our fully integrated home solar and storage system, the Tesla Solar Roof Tee advocates for clean, sustainable energy wherever you go. Designed for fit, comfort and style, the tee features an aerial view of our seamless Solar Roof design on the front with our signature T logo above 'Solar Roof' on the back. Made from 100% Peruvian cotton.",
+            description: "Rider FV is all about a combination of past and future, with a nostalgic, heritage.",
             images: [
-                '1703767-00-A_0_2000.jpg',
-                '1703767-00-A_1.jpg',
+                '1703767-00-A_1.png',
+                '1703767-00-A_0_2000.png',
             ],
             inStock: 15,
             price: 35,
-            sizes: ['35', '36', '37', '38', '39', '40', '41', '42', '43', '44'],
-            slug: "men_solar_roof_tee",
-            type: 'shirts',
-            tags: ['shirt'],
-            title: "Men's Solar Roof Tee",
-            gender: 'men'
+            sizes: ['35', '36', '37', '38'],
+            slug: "rider_fv_mix_match_toddlers_sneakers",
+            type: 'sneakers',
+            tags: ['Sneakers', 'Boys', 'Kids', 'Puma'],
+            title: "Rider FV Mix Match Toddlers' Sneakers - Puma (Kids)",
+            gender: 'kid'
         },
+        /*
         {
             description: "Inspired by the world’s most unlimited resource, the Let the Sun Shine Tee highlights our fully integrated home solar and storage system. Designed for fit, comfort and style, the tee features a sunset graphic along with our Tesla wordmark on the front and our signature T logo printed above 'Solar Roof' on the back. Made from 100% Peruvian cotton.",
             images: [
