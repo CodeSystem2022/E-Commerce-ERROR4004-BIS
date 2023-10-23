@@ -171,8 +171,8 @@ export const initialData: SeedData = {
         {
             description: "Inspired by our original PUMA California, the classic lines and dreamy details of the Cali Dream.",
             images: [
-                '1741416-00-A_0_2000.jpg',
-                '1741416-00-A_1.jpg',
+                '1741416-00-A_0_2000.png',
+                '1741416-00-A_1.png',
             ],
             inStock: 50,
             price: 68,
@@ -186,8 +186,8 @@ export const initialData: SeedData = {
         {
             description: "A rugged and winterised take on the Capri tennis shoe line, this bold piece can stand up to more than the courts. With its.",
             images: [
-                '7654393-00-A_2_2000.jpg',
-                '7654393-00-A_3.jpg',
+                '7654393-00-A_2_2000.png',
+                '7654393-00-A_3.png',
             ],
             inStock: 2,
             price: 90,
