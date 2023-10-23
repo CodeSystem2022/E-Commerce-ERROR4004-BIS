@@ -168,36 +168,37 @@ export const initialData: SeedData = {
             title: "Invincible 3 - Nike (Women)",
             gender: 'women'
         },
-        /*{
-            description: "Introducing the Tesla Turbine Collection. Designed for style, comfort and everyday lifestyle, the Men's Turbine Short Sleeve Tee features a subtle, water-based Tesla wordmark across the chest and our T logo below the back collar. The lightweight material is double-dyed, creating a soft, casual style for ideal wear in any season. Made from 50% cotton and 50% polyester.",
+        {
+            description: "Inspired by our original PUMA California, the classic lines and dreamy details of the Cali Dream.",
             images: [
                 '1741416-00-A_0_2000.jpg',
                 '1741416-00-A_1.jpg',
             ],
             inStock: 50,
-            price: 40,
-            sizes: ['35', '36', '37', '38', '39', '40', '41', '42', '43', '44'],
-            slug: "men_turbine_short_sleeve_tee",
-            type: 'shirts',
-            tags: ['shirt'],
-            title: "Men's Turbine Short Sleeve Tee",
-            gender: 'men'
+            price: 68,
+            sizes: ['35', '36', '37', '38', '39', '40', ],
+            slug: "cali_dream_wooly",
+            type: 'sneakers',
+            tags: ['Sneakers', 'Puma', 'Women'],
+            title: "Cali Dream Wooly - Puma (Women)",
+            gender: 'women'
         },
         {
-            description: "Designed for comfort, the Cybertruck Owl Tee is made from 100% cotton and features our signature Cybertruck icon on the back.",
+            description: "A rugged and winterised take on the Capri tennis shoe line, this bold piece can stand up to more than the courts. With its.",
             images: [
                 '7654393-00-A_2_2000.jpg',
                 '7654393-00-A_3.jpg',
             ],
-            inStock: 0,
-            price: 35,
+            inStock: 2,
+            price: 90,
             sizes: ['35', '36', '37', '38', '39', '40', '41', '42', '43', '44'],
-            slug: "men_cybertruck_owl_tee",
-            type: 'shirts',
-            tags: ['shirt'],
-            title: "Men's Cybertruck Owl Tee",
+            slug: "capri_para_sneakers",
+            type: 'sneakers',
+            tags: ['Shirt', 'Man', 'Puma'],
+            title: "Capri Para Sneakers - Puma (Men)",
             gender: 'men'
         },
+        /*
         {
             description: "Inspired by our fully integrated home solar and storage system, the Tesla Solar Roof Tee advocates for clean, sustainable energy wherever you go. Designed for fit, comfort and style, the tee features an aerial view of our seamless Solar Roof design on the front with our signature T logo above 'Solar Roof' on the back. Made from 100% Peruvian cotton.",
             images: [
