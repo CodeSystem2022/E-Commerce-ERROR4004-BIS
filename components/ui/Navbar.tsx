@@ -37,8 +37,11 @@ const Navbar = () => {
           <NextLink href='/category/women' passHref>
             <Button>Women</Button>
           </NextLink>
+          <NextLink href='/category/unisex' passHref>
+            <Button>Unisex</Button>
+          </NextLink>
           <NextLink href='/category/kid' passHref>
-            <Button>Kid</Button>
+            <Button>Kids</Button>
           </NextLink>
         </Box>
         <Box flex={ 1 } />
