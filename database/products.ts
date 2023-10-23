@@ -398,7 +398,7 @@ export const initialData: SeedData = {
             gender: 'women'
         },
         {
-            description: "ICustomizable Platform Chucks are the ultimate canvas for creativity. Let your little one express their style with a selection of new and trending colors and prints, then top it off with fully personalized details for a look that's one-of-a-kind—just like them..",
+            description: "ICustomizable Platform Chucks are the ultimate canvas for creativity. Let your little one express their style with a selection of new and trending colors and prints, then top it off with fully personalized details for a look that's one-of-a-kind—just like them.",
             images: [
                 '1740051-00-A_1.jpg',
                 '1740051-00-A_0_2000.jpg',
@@ -406,73 +406,73 @@ export const initialData: SeedData = {
             inStock: 10,
             price: 60,
             sizes: ['35', '36', '37', '38', '39', '40', '41'],
-            slug: "custom_chuck_taylor",
+            slug: "custom_chuck_taylor_kids",
             type: 'sneakers',
             tags: ['Sneakers', 'Kid', 'Converse'],
             title: "Custom Chuck Taylor All Star By You - Converse (Kids)",
             gender: 'kid'
         },
-        /*
         {
-            description: "Introducing the Tesla Chill Collection. The Men's Chill Full Zip Hoodie has a premium, heavyweight exterior and soft fleece interior for comfort in any season. The hoodie features subtle thermoplastic polyurethane Tesla logos on the left chest and sleeve, a double layer single seam hood and pockets with custom matte zipper pulls. Made from 60% cotton and 40% recycled polyester.",
+            description: "Express yourself in signature Chuck Taylor style. Mix and match the tri-panel design with your choice of new colors and prints, then top it off with fully personalized laces, linings, text, and more for a truly one-of-a-kind style.",
             images: [
-                '1741111-00-A_0_2000.jpg',
                 '1741111-00-A_1.jpg',
+                '1741111-00-A_0_2000.jpg',
             ],
             inStock: 100,
-            price: 85,
-            sizes: ['35', '36', '37', '38', '39', '40', '41', '42', '43', '44'],
-            slug: "men_chill_full_zip_hoodie",
-            type: 'shirts',
-            tags: ['shirt'],
-            title: "Men's Chill Full Zip Hoodie",
-            gender: 'men'
+            price: 90,
+            sizes: ['35', '36', '37', '38', '39', '40', '41', ],
+            slug: "custom_chuck_taylor_lift_platform",
+            type: 'sneakers',
+            tags: ['Sneakers', 'Converse', 'Women'],
+            title: "Custom Chuck Taylor All Star Lift Platform By You - Converse (Women)",
+            gender: 'women'
         },
         {
-            description: "Introducing the Tesla Chill Collection. The Men’s Chill Quarter Zip Pullover has a premium, heavyweight exterior and soft fleece interior for comfort in any season. The pullover features subtle thermoplastic polyurethane Tesla logos on the left chest and below the back collar, as well as a custom matte zipper pull. Made from 60% cotton and 40% recycled polyester.",
+            description: "Converse CONS team rider Sean Greene’s leaves a groove on every San Francisco street, wall, and sidewalk in his path. For his debut One Star Pro colorway, Sean added details and materials that speak to his grit, all-in commitment, and perpetual need for speed. Using a canvas upper with suede paneling, the Sean Greene One Star Pro is stealthily designed to be seen, adding reflective materials in the Star and heel stripe, custom sock liner artwork, and an embossed homage to the homies. With rubber-backed durability in high abrasion areas, elastic tongue straps, CX Foam sock liner, and grippy traction rubber outsole, the Sean Greene One Star Pro mixes Converse heritage with ground-up enhancements for skateboarding.",
             images: [
-                '1740140-00-A_0_2000.jpg',
-                '1740140-00-A_1.jpg',
+                '1740140-00-A_1.png',
+                '1740140-00-A_0_2000.png',
             ],
             inStock: 7,
-            price: 85,
-            sizes: ['35', '36', '37', '38', '39', '40', '41', '42', '43', '44'],
-            slug: "men_chill_quarter_zip_pullover_-_gray",
-            type: 'shirts',
-            tags: ['shirt'],
-            title: "Men's Chill Quarter Zip Pullover - Gray",
+            price: 80,
+            sizes: [ '38', '39', '40', '41', '42', '43', '44'],
+            slug: "sean_greene_one_star_pro",
+            type: 'sneakers',
+            tags: ['Sneakers', 'Converse', 'Men'],
+            title: "Sean Greene One Star Pro - Converse (Men)",
             gender: 'men'
         },
         {
-            description: "Introducing the Tesla Chill Collection. The Men’s Chill Quarter Zip Pullover has a premium, heavyweight exterior and soft fleece interior for comfort in any season. The pullover features subtle thermoplastic polyurethane Tesla logos on the left chest and below the back collar, as well as a custom matte zipper pull. Made from 60% cotton and 40% recycled polyester.",
+            description: "aking cues from hiking faves, this edition of the Run Star Hike pairs hyper-bright hits and trail-inspired laces. Go on, get out there.High-top platform shoe with durable cotton twill upper. OrthoLite cushioning helps provide optimal comfort. Leather eyerow overlays and webbed heel loops. Color-popped outsole and round trail fleck laces for a utility-inspired look. Iconic Chuck Taylor ankle patch",
             images: [
-                '1740145-00-A_2_2000.jpg',
-                '1740145-00-A_1.jpg',
+                '1740145-00-A_1.png',
+                '1740145-00-A_2_2000.png',
             ],
             inStock: 15,
-            price: 85,
-            sizes: ['35', '36', '37', '38', '39', '40', '41', '42', '43', '44'],
-            slug: "men_chill_quarter_zip_pullover_-_white",
-            type: 'shirts',
-            tags: ['shirt'],
-            title: "Men's Chill Quarter Zip Pullover - White",
-            gender: 'men'
+            price: 110,
+            sizes: ['35', '36', '37', '38', '39'],
+            slug: "run_star_hike_pleatform_utility_twist",
+            type: 'sneakers',
+            tags: ['Sneakers', 'Converse', 'Women'],
+            title: "Run Star Hike Platform Utility Twist - Converse (Women)",
+            gender: 'women'
         },
         {
-            description: "The Unisex 3D Large Wordmark Pullover Hoodie features soft fleece and an adjustable, jersey-lined hood for comfort and coverage. Designed in a unisex style, the pullover hoodie includes a tone-on-tone 3D silicone-printed wordmark across the chest.",
+            description: "Rack up the style points in the Jack Purcell. Named after the world badminton champ, this refined, sporty low top lands any look with ease. Plus, layers of cushioning serve up unmatched comfort—making it a win for any rotation.",
             images: [
-                '8529107-00-A_0_2000.jpg',
-                '8529107-00-A_1.jpg',
+                '8529107-00-A_1.png',
+                '8529107-00-A_0_2000.png',
             ],
             inStock: 15,
             price: 70,
             sizes: ['35', '36', '37', '38', '39', '40', '41', '42', '43', '44'],
-            slug: "3d_large_wordmark_pullover_hoodie",
-            type: 'hoodies',
-            tags: ['hoodie'],
-            title: "3D Large Wordmark Pullover Hoodie",
+            slug: "jack_purcell",
+            type: 'sneakers',
+            tags: ['Sneakers', 'Conerse', 'Unisex'],
+            title: "Jack Purcell - Converse (Unisex)",
             gender: 'unisex'
         },
+        /*
         {
             description: "As with the iconic Tesla logo, the Cybertruck Graffiti Hoodie is a classic in the making. Unisex style featuring soft fleece and an adjustable, jersey-lined hood for comfortable coverage.",
             images: [
