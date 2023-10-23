@@ -202,37 +202,37 @@ export const initialData: SeedData = {
             title: "Rider FV Mix Match Toddlers' Sneakers - Puma (Kids)",
             gender: 'kid'
         },
-        /*
         {
-            description: "Inspired by the world’s most unlimited resource, the Let the Sun Shine Tee highlights our fully integrated home solar and storage system. Designed for fit, comfort and style, the tee features a sunset graphic along with our Tesla wordmark on the front and our signature T logo printed above 'Solar Roof' on the back. Made from 100% Peruvian cotton.",
+            description: "Inspired by our original PUMA California, the classic lines and groovy details of the Cali Dream make it ready for all city looks.",
             images: [
-                '1700280-00-A_0_2000.jpg',
-                '1700280-00-A_1.jpg',
+                '1700280-00-A_1.png',
+                '1700280-00-A_0_2000.png',
             ],
             inStock: 17,
             price: 35,
-            sizes: ['35', '36', '37', '38', '39', '40', '41', '42', '43', '44'],
-            slug: "men_let_the_sun_shine_tee",
-            type: 'shirts',
-            tags: ['shirt'],
-            title: "Men's Let the Sun Shine Tee",
-            gender: 'men'
+            sizes: ['35', '36', '37', '38'],
+            slug: "cali_dream_star_flower_child_big_kids",
+            type: 'sneakers',
+            tags: ['Sneakers', 'Kids', 'Boys', 'Girls', 'Puma'],
+            title: "Cali Dream Star Flower Child Big Kids - Puma' Sneakers ",
+            gender: 'kid'
         },
         {
-            description: "Designed for fit, comfort and style, the Men's 3D Large Wordmark Tee is made from 100% Peruvian cotton with a 3D silicone-printed Tesla wordmark printed across the chest.",
+            description: "Round out your favorite fit in cool style with these kicks.Low boot. Lace closure. With Puma branding details.",
             images: [
-                '8764734-00-A_0_2000.jpg',
-                '8764734-00-A_1.jpg',
+                '8764734-00-A_1.png',
+                '8764734-00-A_0_2000.png',
             ],
             inStock: 12,
             price: 35,
-            sizes: ['35', '36', '37', '38', '39', '40', '41', '42', '43', '44'],
-            slug: "men_3d_large_wordmark_tee",
-            type: 'shirts',
-            tags: ['shirt'],
-            title: "Men's 3D Large Wordmark Tee",
-            gender: 'men'
+            sizes: ['35', '36', '37', '38', '39', '40'],
+            slug: "suede_nyc",
+            type: 'sneakers',
+            tags: ['Sneakers', 'Puma', 'Women'],
+            title: "Suede NYC - Puma (Women)",
+            gender: 'women'
         },
+        /*
         {
             description: "Designed for fit, comfort and style, the Tesla T Logo Tee is made from 100% Peruvian cotton and features a silicone-printed T Logo on the left chest.",
             images: [
