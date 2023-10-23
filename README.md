@@ -135,13 +135,13 @@ GET: `localhost:3000/api/products` para ver los productos
 
 ### Para ver los productos por genero
 
-GET: `localhost:3000/api/products?genter=men` para ver los productos por genero masculino
+GET: `localhost:3000/api/products?gender=men` para ver los productos por genero masculino
 
-GET: `localhost:3000/api/products?genter=women` para ver los productos por genero femenino
+GET: `localhost:3000/api/products?gender=women` para ver los productos por genero femenino
 
-GET: `localhost:3000/api/products?genter=kid` para ver los productos por genero niños
+GET: `localhost:3000/api/products?gender=kid` para ver los productos por genero niños
 
-GET: `localhost:3000/api/products?genter=unisex` para ver los productos por genero unisex
+GET: `localhost:3000/api/products?gender=unisex` para ver los productos por genero unisex
 
 ---
 
