@@ -13,7 +13,7 @@ interface SeedProduct {
 
 // type ValidSizes = 'XS' | 'S' | 'M' | 'L' | 'XL' | 'XXL' | 'XXXL'
 type ValidSizes = '30' | '31' | '32' | '33' | '34' | '35' | '36' | '37' | '38' | '39' | '40' | '41' | '42' | '43' | '44' | '45' | '46' | '47' | '48' | '49' | '50' 
-type ValidTypes = 'running' | 'sneakers' | 'soccer' | 'basketball' | 'driving'
+type ValidTypes = 'running' | 'sneakers' | 'soccer' | 'basketball' | 'driving' |'training'
 
 interface SeedData {
     products: SeedProduct[],
@@ -54,8 +54,8 @@ export const initialData: SeedData = {
         {
             description: "This low-cut AJ1 is simplified to the max for a black and white shoe, but it's anything but simple. The subtle tones create a perfect backdrop for the pop of color from Jordan's own big and bright image on the side. As always, you get quality materials, like the durable leather upper, supportive foam in the outsole, and the comfortable Air you know and love.",
             images: [
-                '1740250-00-A_0_2000.jpg',
-                '1740250-00-A_1.jpg'
+                '1740250-00-A_0_2000.png',
+                '1740250-00-A_1.png'
             ],
             inStock: 10,
             price: 78,
@@ -295,49 +295,49 @@ export const initialData: SeedData = {
         {
             description: "Tackle any terrain in the sturdy confines of the Voyage NITRO™ 3. In this updated version of the model, we’ve tooled the trail shoe with a full NITROFOAM™ midsole for a lighter weight and more responsive ride when you’re conquering distances. The PUMAGRIP ATR rubber outsole has been revamped with our PWRADAPT tech, allowing the lugs to move independently with the ground for supreme traction on multi-terrain. Our new, wider upper has been reinforced with PWRTAPE for support and protection, and the forefoot drain ports shed water like a champ. Dominate your run, no matter the season, with the Voyage NITRO™ 3.",
             images: [
-                '1633802-00-A_0_2000.jpg',
-                '1633802-00-A_2.jpg',
+                '1633802-00-A_2.png',
+                '1633802-00-A_0_2000.png',
             ],
             inStock: 5,
             price: 140,
             sizes: ['35', '36', '37', '38', '39', '40', '41', '42', '43', '44'],
-            slug: "men_battery_day_tee",
+            slug: "seasons_voyage_nitro_3",
             type: 'running',
             tags: ['Running', 'Puma', 'Women'],
-            title: "SEASONS Voyage NITRO™ 3 Women's Running Shoes - Puma (Women)",
+            title: "SEASONS Voyage NITRO™ 3 - Puma (Women)",
             gender: 'women'
         },
-        /*
         {
-            description: "Designed for exceptional comfort and inspired by the Cybertruck unveil event, the Cybertruck Bulletproof Tee is made from 100% cotton and features our signature Cybertruck icon on the back.",
+            description: "Introducing the latest high-performance training shoe from the TRAIN PUMA squad, the PWR NITRO™ Squared. This universal training shoe features our brand-new NITRO™ Squared technology, which is executed with a dual density nitrogen-injected outer to provide enhanced midsole banking during lateral movements. The internal compound is single density NITROFOAM™ to allow for rebounding and cushioning. With PWR NITRO™ Squared, you'll receive not only world-class comfort and stability during your next high intensity gym session, but it's also an eye-catching addition to your workout wardrobe.",
             images: [
-                '7654399-00-A_0_2000.jpg',
-                '7654399-00-A_1.jpg',
+                '7654399-00-A_1.png',
+                '7654399-00-A_0_2000.png',
             ],
             inStock: 150,
-            price: 30,
-            sizes: ['35', '36', '37', '38', '39', '40', '41', '42', '43', '44'],
-            slug: "men_cybertruck_bulletproof_tee",
-            type: 'shirts',
-            tags: ['shirt'],
-            title: "Men’s Cybertruck Bulletproof Tee",
-            gender: 'men'
+            price: 120,
+            sizes: ['35', '36', '37', '38', '39', '40', '41'],
+            slug: "pwr_nitro_squad",
+            type: 'training',
+            tags: ['Training', 'Puma', 'Women'],
+            title: "PWR NITRO™ Squared - Puma (Women)",
+            gender: 'women'
         },
         {
-            description: "Inspired by the Model Y order confirmation graphic, the limited edition Haha Yes Tee is designed for comfort and style. Made from 100% Peruvian cotton and featuring the Tesla wordmark across the chest, the exclusive tee will commemorate your order for years to come.",
+            description: "Forget about your inheritance? Never. In a tribute to heritage and innovation, we combined two icons to go beyond the expected. Lightweight, breathable Flyknit fabric blends seamlessly with super-comfortable Air Max cushioning. Lace up your laces and let your feet do the talking. Retro Superpower: inspired by the 2012 Flyknit Racer, the anatomical, feather-light, nearly seamless upper is as revolutionary as it is attractive. Modern comfort: the snug heel and expressive Max Air window design are inspired directly from Pre-Day, bringing a balanced combination of tradition and innovation.",
             images: [
-                '7652410-00-A_0.jpg',
-                '7652410-00-A_1_2000.jpg',
+                '7652410-00-A_0.png',
+                '7652410-00-A_1_2000.png',
             ],
             inStock: 10,
-            price: 35,
-            sizes: ['35', '36', '37', '38', '39', '40', '41', '42', '43', '44'],
-            slug: "men_haha_yes_tee",
-            type: 'shirts',
-            tags: ['shirt'],
-            title: "Men's Haha Yes Tee",
-            gender: 'men'
+            price: 118,
+            sizes: ['35', '36', '37', '38', '39', '40', '41'],
+            slug: "nike_air_max_flyknit_racer",
+            type: 'running',
+            tags: ['Running', 'Nike', 'Women'],
+            title: "Nike Air Max Flyknit Racer",
+            gender: 'women'
         },
+                /*
         {
             description: "Designed for fit, comfort and style, the limited edition S3XY Tee is made from 100% cotton with a 3D silicone-printed “S3XY” logo across the chest. Made in Peru. Available in black.",
             images: [
