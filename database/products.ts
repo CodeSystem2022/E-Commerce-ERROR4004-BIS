@@ -13,7 +13,7 @@ interface SeedProduct {
 
 // type ValidSizes = 'XS' | 'S' | 'M' | 'L' | 'XL' | 'XXL' | 'XXXL'
 type ValidSizes = '30' | '31' | '32' | '33' | '34' | '35' | '36' | '37' | '38' | '39' | '40' | '41' | '42' | '43' | '44' | '45' | '46' | '47' | '48' | '49' | '50' 
-type ValidTypes = 'running' | 'sneakers' | 'soccer' | 'shirts' | 'pants' | 'hoodies' | 'hats' | 'basketball'
+type ValidTypes = 'running' | 'sneakers' | 'soccer' | 'basketball' | 'driving'
 
 interface SeedData {
     products: SeedProduct[],
@@ -277,22 +277,22 @@ export const initialData: SeedData = {
             title: "Suede Mid XXI Sneakers - Puma (Men)",
             gender: 'men'
         },
-        /*
         {
-            description: "Inspired by our popular home battery, the Tesla Powerwall Tee is made from 100% cotton and features the phrase 'Pure Energy' under our signature logo in the back. Designed for fit, comfort and style, the exclusive tee promotes sustainable energy in any environment.",
+            description: "Pick up the pace with the Speedcat Shield Driving Shoes. These classic shoes are infused with true motorsport DNA – they're the perfect shoes for all the motorsport fans out there.",
             images: [
-                '9877034-00-A_0_2000.jpg',
-                '9877034-00-A_2.jpg',
+                '9877034-00-A_2.png',
+                '9877034-00-A_0_2000.png',
             ],
             inStock: 24,
-            price: 35,
-            sizes: ['35', '36', '37', '38', '39', '40', '41', '42', '43', '44'],
-            slug: "men_powerwall_tee",
-            type: 'shirts',
-            tags: ['shirt'],
-            title: "Men's Powerwall Tee",
+            price: 90,
+            sizes: [ '38', '39', '40', '41', '42', '43', '44'],
+            slug: "speedcat_shield_sd_driving_shoes",
+            type: 'driving',
+            tags: ['Puma', 'Men'],
+            title: "Speedcat Shield SD Driving Shoes - Puma (Men)",
             gender: 'men'
         },
+        /*
         {
             description: "Inspired by Tesla Battery Day and featuring the unveiled tabless battery cell, Battery Day Tee celebrates the future of energy storage and cell manufacturing. Designed for fit, comfort and style, Battery Day Tee is made from 100% cotton with a stylized cell printed across the chest. Made in Peru.",
             images: [
