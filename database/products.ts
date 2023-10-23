@@ -292,22 +292,22 @@ export const initialData: SeedData = {
             title: "Speedcat Shield SD Driving Shoes - Puma (Men)",
             gender: 'men'
         },
-        /*
         {
-            description: "Inspired by Tesla Battery Day and featuring the unveiled tabless battery cell, Battery Day Tee celebrates the future of energy storage and cell manufacturing. Designed for fit, comfort and style, Battery Day Tee is made from 100% cotton with a stylized cell printed across the chest. Made in Peru.",
+            description: "Tackle any terrain in the sturdy confines of the Voyage NITRO™ 3. In this updated version of the model, we’ve tooled the trail shoe with a full NITROFOAM™ midsole for a lighter weight and more responsive ride when you’re conquering distances. The PUMAGRIP ATR rubber outsole has been revamped with our PWRADAPT tech, allowing the lugs to move independently with the ground for supreme traction on multi-terrain. Our new, wider upper has been reinforced with PWRTAPE for support and protection, and the forefoot drain ports shed water like a champ. Dominate your run, no matter the season, with the Voyage NITRO™ 3.",
             images: [
                 '1633802-00-A_0_2000.jpg',
                 '1633802-00-A_2.jpg',
             ],
             inStock: 5,
-            price: 30,
+            price: 140,
             sizes: ['35', '36', '37', '38', '39', '40', '41', '42', '43', '44'],
             slug: "men_battery_day_tee",
-            type: 'shirts',
-            tags: ['shirt'],
-            title: "Men's Battery Day Tee",
-            gender: 'men'
+            type: 'running',
+            tags: ['Running', 'Puma', 'Women'],
+            title: "SEASONS Voyage NITRO™ 3 Women's Running Shoes - Puma (Women)",
+            gender: 'women'
         },
+        /*
         {
             description: "Designed for exceptional comfort and inspired by the Cybertruck unveil event, the Cybertruck Bulletproof Tee is made from 100% cotton and features our signature Cybertruck icon on the back.",
             images: [
