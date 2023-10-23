@@ -75,7 +75,7 @@ Este proyecto está creado con [**Next.js**](https://nextjs.org/) con el comando
 git clone https://github.com/CodeSystem2022/E-Commerce-ERROR4004-BIS.git .
 ```
 
-Una vez creado entra dentro de la carpeta dle proyecto.
+Una vez creado entra dentro de la carpeta del proyecto.
 
 3. Instalar las **dependencias** (**node_modules**) con:
 ```BASH
