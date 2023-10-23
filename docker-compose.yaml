@@ -1,5 +1,5 @@
 services:
-  teslodb:
+  holalashoesdb:
     image: mongo:5.0.0
     container_name: holalashoes-database
     ports:

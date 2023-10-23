@@ -86,17 +86,21 @@ yarn dev
 
 6. Para correr localmente, se necesita la base de datos, con:
 
-- El **service** es ``ohlalalshoesdb``, en el archivo `.env`: `MONGO_URL=mongodb://localhost:27017/ohlalalshoesdb`.
-
-- El nombre del **contenedor** es ``holalashoes-database``, este nombre irá en el archivo **docker-compose.yaml** y es el nombre que veréen Docker 
-
-- El nombre del **volumen** es `mongo`.
-
 ```bash
 docker-compose up -d
 ```
 
 El ```-d```, significa detached
+
+Para que esto funcione bien, anteriomente voy a tener qeu configurar:
+
+-El **service** es ``ohlalalshoesdb``, en el archivo `.env`: `MONGO_URL=mongodb://localhost:27017/ohlalalshoesdb`.
+
+-El nombre del **contenedor** es ``holalashoes-database``, este nombre irá en el archivo **docker-compose.yaml** y es el nombre que veréen Docker 
+
+-El nombre del **volumen** es `mongo`.
+
+
 
 7. Configurar las variables de entorno
 
