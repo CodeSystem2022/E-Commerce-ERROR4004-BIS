@@ -382,37 +382,37 @@ export const initialData: SeedData = {
             title: "Metcon 8 AMP - Nike (Men)",
             gender: 'men'
         },
-        /*
         {
-            description: "Introducing the Tesla Raven Collection. The Men's Raven Lightweight Hoodie has a premium, relaxed silhouette made from a sustainable bamboo cotton blend. The hoodie features subtle thermoplastic polyurethane Tesla logos across the chest and on the sleeve with a french terry interior for versatility in any season. Made from 70% bamboo and 30% cotton.",
+            description: "We worked with professional athletes to amplify three key training attributes—stability, fit, and traction. The FUSE 2.0 features increased rubber for enhanced stability, including higher sidewall coverage to ensure traction and grip. The streamlined upper construction provides durability for rope climbs, while a lightweight TPU heel clip is designed for handstand push-ups. And all this innovation comes in one sleek package to help you reach your ultimate training potential. .",
             images: [
-                '1740245-00-A_0_2000.jpg',
-                '1740245-00-A_1.jpg',
+                '1740245-00-A_0_2000.png',
+                '1740245-00-A_1.png',
             ],
             inStock: 10,
-            price: 115,
-            sizes: ['35', '36', '37', '38', '39', '40', '41', '42', '43', '44'],
-            slug: "men_raven_lightweight_hoodie",
-            type: 'hoodies',
-            tags: ['hoodie'],
-            title: "Men's Raven Lightweight Hoodie",
-            gender: 'men'
+            price: 90,
+            sizes: [ '37', '38', '39', '40', '41', '42', '43', '44'],
+            slug: "fuse_2_0",
+            type: 'training',
+            tags: ['Training', 'Women', 'Puma'],
+            title: "Fuse 2.0 - Puma (Women)",
+            gender: 'women'
         },
         {
-            description: "Introducing the Tesla Chill Collection. The Chill Pullover Hoodie has a premium, heavyweight exterior and soft fleece interior for comfort in any season. The unisex hoodie features subtle thermoplastic polyurethane Tesla logos across the chest and on the sleeve, a double layer single seam hood and pockets with custom matte zipper pulls. Made from 60% cotton and 40% recycled polyester.",
+            description: "ICustomizable Platform Chucks are the ultimate canvas for creativity. Let your little one express their style with a selection of new and trending colors and prints, then top it off with fully personalized details for a look that's one-of-a-kind—just like them..",
             images: [
-                '1740051-00-A_0_2000.jpg',
                 '1740051-00-A_1.jpg',
+                '1740051-00-A_0_2000.jpg',
             ],
             inStock: 10,
-            price: 130,
-            sizes: ['35', '36', '37', '38', '39', '40', '41', '42', '43', '44'],
-            slug: "chill_pullover_hoodie",
-            type: 'hoodies',
-            tags: ['hoodie'],
-            title: "Chill Pullover Hoodie",
-            gender: 'unisex'
+            price: 60,
+            sizes: ['35', '36', '37', '38', '39', '40', '41'],
+            slug: "custom_chuck_taylor",
+            type: 'sneakers',
+            tags: ['Sneakers', 'Kid', 'Converse'],
+            title: "Custom Chuck Taylor All Star By You - Converse (Kids)",
+            gender: 'kid'
         },
+        /*
         {
             description: "Introducing the Tesla Chill Collection. The Men's Chill Full Zip Hoodie has a premium, heavyweight exterior and soft fleece interior for comfort in any season. The hoodie features subtle thermoplastic polyurethane Tesla logos on the left chest and sleeve, a double layer single seam hood and pockets with custom matte zipper pulls. Made from 60% cotton and 40% recycled polyester.",
             images: [
