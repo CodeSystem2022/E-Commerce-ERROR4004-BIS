@@ -50,6 +50,8 @@
 
 - [<img width="30" height="30" src="https://img.icons8.com/color/30/mongodb.png" alt="mongodb"/> **MongoDB**](https://www.mongodb.com/) y [<img width="30" height="30" src="https://img.icons8.com/color/30/mongoose.png" alt="mongoose"/> **Mongoose**](https://mongoosejs.com/) , para la base de datos
 
+- [<img width="30" height="30" src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/30/external-postman-is-the-only-complete-api-development-environment-logo-shadow-tal-revivo.png" alt="postman"/> **Postman**](https://www.postman.com/), para ver las pediciones REST FULL API
+
 - [<img width="30" height="30" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/30/external-docker-a-set-of-coupled-software-as-a-service-logo-color-tal-revivo.png" alt="docker"/> **Docker**](https://www.docker.com/)
 
   
@@ -67,17 +69,21 @@ Este proyecto está creado con [**Next.js**](https://nextjs.org/) con el comando
 
 - **Yarn**
 
-2. Bajarte el cósigo del repositorio, creando una carpeta en tu local, y luego: 
+2. Bajarte el código del repositorio, creando una carpeta en tu local, y luego: 
+
 ```BASH
 git clone https://github.com/CodeSystem2022/E-Commerce-ERROR4004-BIS.git .
 ```
 
-3. Instalar las dependencias (node_modules) con:
+Una vez creado entra dentro de la carpeta dle proyecto.
+
+3. Instalar las **dependencias** (**node_modules**) con:
 ```BASH
 yarn install
 ```
 
-4. Correr el servidor:
+4. Correr el **servidor** en local, con:
+
 ```bash
 yarn dev
 ```
@@ -92,7 +98,7 @@ docker-compose up -d
 
 El ```-d```, significa detached
 
-Para que esto funcione bien, anteriomente voy a tener qeu configurar:
+A tener en cuenta para las configuraciones de Docker y Base de datos:
 
 -El **service** es ``ohlalalshoesdb``, en el archivo `.env`: `MONGO_URL=mongodb://localhost:27017/ohlalalshoesdb`.
 
@@ -100,7 +106,7 @@ Para que esto funcione bien, anteriomente voy a tener qeu configurar:
 
 -El nombre del **volumen** es `mongo`.
 
-7. Configurar las variables de entorno
+7. Configurar las **variables de entorno**
 
 Renombrar el archivo ```.env.template``` a ```.env```
 
@@ -118,6 +124,24 @@ yarn dev
 10. Llenar la base de datos con información de pruebas
 
 Llamar a: ```http://localhost:3000/api/seed```
+
+10. Con **Postman** podemos hacer las peticiones REST FUL API, creandonos:
+
+GET: `localhost:3000/api/seed` para confirmar que tenemos bien la base de datos
+
+### Para ver todos los productos:
+
+GET: `localhost:3000/api/products` para ver los productos
+
+### Para ver los productos por genero
+
+GET: `localhost:3000/api/products?genter=men` para ver los productos por genero masculino
+
+GET: `localhost:3000/api/products?genter=women` para ver los productos por genero femenino
+
+GET: `localhost:3000/api/products?genter=kid` para ver los productos por genero niños
+
+GET: `localhost:3000/api/products?genter=unisex` para ver los productos por genero unisex
 
 ---
 
