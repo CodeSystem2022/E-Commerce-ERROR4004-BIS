@@ -39,8 +39,8 @@ export const initialData: SeedData = {
         {
             description: "Slip-On sneakers made in part with recycled materials. Light as air and ready for adventure, these kids' shoes slip on quick and stay comfy all day thanks to an EVA midsole. The textile upper is made from recycled materials, doing right by the planet while doing right by little feet. An elastic strap with bold wording lets kids proudly sport the adidas logo. Perfect for playdates and playgrounds, these shoes keep up with kids on the move.This product features at least 20% recycled materials. By reusing materials that have already been created, we help to reduce waste and our reliance on finite resources and reduce the footprint of the products we make.",
             images: [
-                '1740507-00-A_1.jpg',
-                '1740507-00-A_0_2000.jpg',
+                '1740507-00-A_0_2000.png',
+                '1740507-00-A_1.png',
             ],
             inStock: 5,
             price: 200,
@@ -194,7 +194,7 @@ export const initialData: SeedData = {
                 '1703767-00-A_0_2000.png',
             ],
             inStock: 15,
-            price: 35,
+            price: 55,
             sizes: ['35', '36', '37', '38'],
             slug: "rider_fv_mix_match_toddlers_sneakers",
             type: 'sneakers',
@@ -203,18 +203,18 @@ export const initialData: SeedData = {
             gender: 'kid'
         },
         {
-            description: "Inspired by our original PUMA California, the classic lines and groovy details of the Cali Dream make it ready for all city looks.",
+            description: "Inspired by our original Puma  California, the classic lines and groovy details of the Cali Dream make it ready for all city looks.",
             images: [
                 '1700280-00-A_1.png',
                 '1700280-00-A_0_2000.png',
             ],
             inStock: 17,
-            price: 35,
+            price: 70,
             sizes: ['35', '36', '37', '38'],
             slug: "cali_dream_star_flower_child_big_kids",
             type: 'sneakers',
             tags: ['Sneakers', 'Kids', 'Boys', 'Girls', 'Puma'],
-            title: "Cali Dream Star Flower Child Big Kids - Puma' Sneakers ",
+            title: "Cali Dream Star Flower Child Big Kids - Puma (Kids)",
             gender: 'kid'
         },
         {
@@ -224,7 +224,7 @@ export const initialData: SeedData = {
                 '8764734-00-A_0_2000.png',
             ],
             inStock: 12,
-            price: 35,
+            price: 85,
             sizes: ['35', '36', '37', '38', '39', '40'],
             slug: "suede_nyc",
             type: 'sneakers',
@@ -232,52 +232,52 @@ export const initialData: SeedData = {
             title: "Suede NYC - Puma (Women)",
             gender: 'women'
         },
-        /*
         {
-            description: "Designed for fit, comfort and style, the Tesla T Logo Tee is made from 100% Peruvian cotton and features a silicone-printed T Logo on the left chest.",
+            description: "The Fast Rider was first launched in 1980. And now, over four decades later, this iconic shoe has been redesigned and renamed. With a new slim Federbein outsole and ultra-comfy Rider Foam, these are, quite simply, the epitome of casual-cool street style,and are the perfect addition to your little one’s wardrobe.",
             images: [
-                '7652426-00-A_0_2000.jpg',
-                '7652426-00-A_1.jpg',
+                '7652426-00-A_1.png',
+                '7652426-00-A_0_2000.png',
             ],
             inStock: 5,
-            price: 35,
+            price: 55,
             sizes: ['35', '36', '37', '38', '39', '40', '41', '42', '43', '44'],
-            slug: "men_3d_t_logo_tee",
-            type: 'shirts',
-            tags: ['shirt'],
-            title: "Men's 3D T Logo Tee",
-            gender: 'men'
+            slug: "future_rider_play_on_toddlers",
+            type: 'sneakers',
+            tags: ['Sneakers', 'Puma', 'Kids', 'Boy', 'Girls'],
+            title: "Future Rider Play On Toddlers' Shoes - Puma (Kids)",
+            gender: 'kid'
         },
         {
-            description: "Designed for comfort and style in any size, the Tesla Small Wordmark Tee is made from 100% Peruvian cotton and features a 3D silicone-printed wordmark on the left chest.",
+            description: "The Suede hit the scene in 1968 and has been changing the game ever since. It’s been worn by icons of every generation, and it’s stayed classic through it all. Instantly recognizable and constantly reinvented, Suede’s legacy continues to grow and be legitimized by the authentic and expressive individuals that embrace the iconic shoe. Be apart of the history of Suede.",
             images: [
-                '8528839-00-A_0_2000.jpg',
-                '8528839-00-A_2.jpg',
+                '8528839-00-A_0_2000.png',
+                '8528839-00-A_2.png',
             ],
             inStock: 2,
-            price: 35,
-            sizes: ['35', '36', '37', '38', '39', '40', '41', '42', '43', '44'],
-            slug: "men_3d_small_wordmark_tee",
-            type: 'shirts',
-            tags: ['shirt'],
-            title: "Men’s 3D Small Wordmark Tee",
+            price: 75,
+            sizes: [ '37', '38', '39', '40', '41', '42', '43', '44'],
+            slug: "suede_classic_xxi",
+            type: 'sneakers',
+            tags: ['Sneakers', 'Puma', 'Men'],
+            title: "Suede Classic XXI Sneakers - Puma (Men)",
             gender: 'men'
         },
         {
-            description: "Designed to celebrate Tesla's incredible performance mode, the Plaid Mode Tee features great fit, comfort and style. Made from 100% cotton, it's the next best thing to riding shotgun at the Nürburgring.",
+            description: "This season, we launch the iconic PUMA Suede into the 21st century in this new mid-top silhouette. The classic style from the '60s hits new heights with a mid-top padded collar and signature suede upper. The leather sourced in this product comes from environmentally responsible leather manufacturing, and is audited and certified via the Leather Working Group protocol.",
             images: [
-                '1549268-00-A_0_2000.jpg',
-                '1549268-00-A_2.jpg',
+                '1549268-00-A_0_2000.png',
+                '1549268-00-A_2.png',
             ],
             inStock: 82,
-            price: 35,
-            sizes: ['35', '36', '37', '38', '39', '40', '41', '42', '43', '44'],
-            slug: "men_plaid_mode_tee",
-            type: 'shirts',
-            tags: ['shirt'],
-            title: "Men's Plaid Mode Tee",
+            price: 85,
+            sizes: [ '38', '39', '40', '41', '42', '43', '44'],
+            slug: "suede_mid_xxl_skeakers",
+            type: 'sneakers',
+            tags: ['Sneakers', 'Med', 'Puma'],
+            title: "Suede Mid XXI Sneakers - Puma (Men)",
             gender: 'men'
         },
+        /*
         {
             description: "Inspired by our popular home battery, the Tesla Powerwall Tee is made from 100% cotton and features the phrase 'Pure Energy' under our signature logo in the back. Designed for fit, comfort and style, the exclusive tee promotes sustainable energy in any environment.",
             images: [
