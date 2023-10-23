@@ -84,6 +84,33 @@ yarn dev
 
 5. Abrir [http://localhost:3000](http://localhost:3000) en tu navegador localmente, para ver la aplicación.
 
+6. Para correr localmente, se necesita la base de datos.
+
+```bash
+docker-compose up -d
+```
+
+El ```-d```, significa detached
+
+7. Configurar las variables de entorno
+
+Renombrar el archivo ```.env.template``` a ```.env```
+
+8. MongoDB URL Local:
+
+```MONGO_URL=mongodb://localhost:27017/holalashoes```
+
+9. Reconstruir los módulos de node y levantar Next
+
+```bash
+yarn install
+yarn dev
+```
+
+10. Llenar la base de datos con información de pruebas
+
+Llamar a: ```http://localhost:3000/api/seed```
+
 ---
 
 ## <img width="30" height="30" src="https://img.icons8.com/external-flaticons-flat-flat-icons/30/external-scrum-agile-flaticons-flat-flat-icons-7.png" alt="agile"/> ¿Cómo nos organizamos?
