@@ -51,7 +51,6 @@ export const initialData: SeedData = {
             title: "Lite Racer Adapt 6.0 - Adidas (Kids)",
             gender: 'kid'
         },
-
         {
             description: "This low-cut AJ1 is simplified to the max for a black and white shoe, but it's anything but simple. The subtle tones create a perfect backdrop for the pop of color from Jordan's own big and bright image on the side. As always, you get quality materials, like the durable leather upper, supportive foam in the outsole, and the comfortable Air you know and love.",
             images: [
@@ -67,7 +66,6 @@ export const initialData: SeedData = {
             title: "Air Jordan 1 Low - Nike (Kids)",
             gender: 'kid'
         },
-
         {
             description: "It's still our most proven shoe. Its design continues to help keep you moving. The Nike React Infinity Run 3 offers a soft, stable feel with a ride that will accompany you on all your long and short runs. The breathable upper is designed to be supportive yet flexible. We even added more cushioning to the collar to give you a soft, protective feel. Keep running; we've got what you need.",
             images: [
@@ -86,9 +84,8 @@ export const initialData: SeedData = {
         {
             description: "Meet the leader of the pack. First released in 1987, the Nike Air Max 1 was the first shoe in the family to bring Air to the world. With a fast-paced look, tried-and-true cushioning and classic wavy mudguard, it’s no wonder it’s reigned supreme ever since.",
             images: [
-                'f9ac3cd9-caf8-479f-a5a8-4fe4e4887204.webp',
-                'b51fa75a-1e19-41ed-b27e-2048908bab03.webp',
-                '793ef95a-87aa-4356-998e-db8868ae196d.webp',
+                '793ef95a-87aa.png',
+                '793ef95a-87aa-2.png',
                
             ],
             inStock: 12,
@@ -103,10 +100,8 @@ export const initialData: SeedData = {
         {
             description: "Looks Max, feels Max. The Georgia Air Max SYSTM brings back everything you love about your favorite '80s vibes and adds a bit of school pride. Tried-and-true visible Max Air cushioning pairs with a sleek, sport-inspired upper. It's Air Max delivering again for Bulldogs fans everywhere.",
             images: [
-                '758583ad-bbd8-49c5-800b-3b18a774b244.webp',
-                'c82c1c81-b25a-4c03-a721-0a5b1002b3eb.webp',
-                '5b63f512-eea8-4a4d-99df-6e9abcea871c.webp',
-               
+                '758583ad-bbd8.png',
+                '758583ad-bbd8-2.png',
             ],
             inStock: 9,
             price: 110,
@@ -120,10 +115,8 @@ export const initialData: SeedData = {
         {
             description: "Out-of-this-world talent. Down-to-earth heart. Zion stays away from the noise that comes with being a pro athlete and prioritizes his game. He puts in the mud, sweat, and tears necessary to elevate his game, and this special edition Zion 3 honors his sky-high level of play. Court-ready tech helps you go up fast, come down hard, and react quickly when you're getting low.",
             images: [
-                'f6a0a8b3-4155-44df-ae6a-a2d2b2ba7174.webp',
-                'd9fecdc8-e9d8-4771-ab87-37b5a23c2145.webp',
-                '236b5c69-aa26-4214-ae4c-cef2b4c4dc1a.webp',
-               
+                'f6a0a8b3-4155.png',
+                'f6a0a8b3-4155-2.png',               
             ],
             inStock: 5,
             price: 140,
@@ -137,10 +130,8 @@ export const initialData: SeedData = {
         {
             description: "Created for the hardwood but taken to the streets, the '80s b-ball icon returns with perfectly shined overlays and classic team colors. With its iconic hoops design, the Nike Dunk Low channels '80s vintage back onto the streets while its padded, low-cut collar lets you take your game anywhere—in comfort.",
             images: [
-                '299a35b4-9eac-4297-bd72-021b9df2722d.webp',
-                'a447e0eb-b47c-464b-91df-5387f958582d.webp',
-                'f3c16707-4582-4a8a-a638-0396fa21c196.webp',
-               
+                'a447e0eb-b47c.png',
+                'a447e0eb-b47c-2.png',
             ],
             inStock: 20,
             price: 115,
@@ -154,10 +145,8 @@ export const initialData: SeedData = {
         {
             description: "With maximum cushioning to support every mile, the Invincible 3 gives you Nike Running's highest level of comfort underfoot to help you stay on your feet today, tomorrow and beyond. Designed to help keep you on the run, it’s super supportive and bouncy, so that you can propel down your preferred path and come back for your next run feeling ready and reinvigorated.",
             images: [
-                '87a2f87d-9bd5-430e-85d2-08d4f9d48951.webp',
-                '4ac94327-456e-4a93-ad3a-8423558eeb67.webp',
-                '1f79b0db-5d29-46c5-9d69-5f5048bf33a7.webp',
-               
+                '87a2f87d-9bd5.png',
+                '87a2f87d-9bd5-2.png',
             ],
             inStock: 6,
             price: 180,
