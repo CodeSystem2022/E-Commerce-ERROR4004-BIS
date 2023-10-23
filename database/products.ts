@@ -12,7 +12,7 @@ interface SeedProduct {
 }
 
 // type ValidSizes = 'XS' | 'S' | 'M' | 'L' | 'XL' | 'XXL' | 'XXXL'
-type ValidSizes = '30' | '31' | '32' | '33' | '34' | '35' | '36' | '37' | '38' | '39' | '40' | '41' | '42' | '43' | '44'
+type ValidSizes = '30' | '31' | '32' | '33' | '34' | '35' | '36' | '37' | '38' | '39' | '40' | '41' | '42' | '43' | '44' | '45' | '46' | '47' | '48' | '49' | '50' 
 type ValidTypes = 'running' | 'sneakers' | 'soccer' | 'shirts' | 'pants' | 'hoodies' | 'hats'
 
 interface SeedData {
@@ -84,6 +84,91 @@ export const initialData: SeedData = {
             gender: 'women'
         },
         {
+            description: "Meet the leader of the pack. First released in 1987, the Nike Air Max 1 was the first shoe in the family to bring Air to the world. With a fast-paced look, tried-and-true cushioning and classic wavy mudguard, it’s no wonder it’s reigned supreme ever since.",
+            images: [
+                'f9ac3cd9-caf8-479f-a5a8-4fe4e4887204.webp',
+                'b51fa75a-1e19-41ed-b27e-2048908bab03.webp',
+                '793ef95a-87aa-4356-998e-db8868ae196d.webp',
+               
+            ],
+            inStock: 12,
+            price: 160,
+            sizes: ['36', '37', '38', '39', '40', '41', '42', '43' ,'44'],
+            slug: "nike_air_max_1_premium",
+            type: 'sneakers',
+            tags: ['Men', 'Nike', 'Sneakers'],
+            title: "Air Max 1 Premium - Nike (Men)",
+            gender: 'men'
+        },
+        {
+            description: "Looks Max, feels Max. The Georgia Air Max SYSTM brings back everything you love about your favorite '80s vibes and adds a bit of school pride. Tried-and-true visible Max Air cushioning pairs with a sleek, sport-inspired upper. It's Air Max delivering again for Bulldogs fans everywhere.",
+            images: [
+                '758583ad-bbd8-49c5-800b-3b18a774b244.webp',
+                'c82c1c81-b25a-4c03-a721-0a5b1002b3eb.webp',
+                '5b63f512-eea8-4a4d-99df-6e9abcea871c.webp',
+               
+            ],
+            inStock: 9,
+            price: 110,
+            sizes: ['36', '37', '38', '39', '40', '41', '42', '43' ,'44'],
+            slug: "nike_college_air_max_SYSTM_georgia",
+            type: 'sneakers',
+            tags: ['Men', 'Nike', 'Sneakers'],
+            title: "College Air Max SYSTM (Georgia) - Nike (Men)",
+            gender: 'men'
+        },
+        {
+            description: "Out-of-this-world talent. Down-to-earth heart. Zion stays away from the noise that comes with being a pro athlete and prioritizes his game. He puts in the mud, sweat, and tears necessary to elevate his game, and this special edition Zion 3 honors his sky-high level of play. Court-ready tech helps you go up fast, come down hard, and react quickly when you're getting low.",
+            images: [
+                'f6a0a8b3-4155-44df-ae6a-a2d2b2ba7174.webp',
+                'd9fecdc8-e9d8-4771-ab87-37b5a23c2145.webp',
+                '236b5c69-aa26-4214-ae4c-cef2b4c4dc1a.webp',
+               
+            ],
+            inStock: 5,
+            price: 140,
+            sizes: ['40', '41', '42', '43', '44', '45', '46', '47' ,'48', '49', '50'],
+            slug: "zion_3_Mud_Sweat_and_Tears",
+            type: 'basketball',
+            tags: ['Men', 'Jordan', 'Basketball'],
+            title: "Zion 3 Mud, Sweat and Tears - Jordan (Men)",
+            gender: 'men'
+        },
+        {
+            description: "Created for the hardwood but taken to the streets, the '80s b-ball icon returns with perfectly shined overlays and classic team colors. With its iconic hoops design, the Nike Dunk Low channels '80s vintage back onto the streets while its padded, low-cut collar lets you take your game anywhere—in comfort.",
+            images: [
+                '299a35b4-9eac-4297-bd72-021b9df2722d.webp',
+                'a447e0eb-b47c-464b-91df-5387f958582d.webp',
+                'f3c16707-4582-4a8a-a638-0396fa21c196.webp',
+               
+            ],
+            inStock: 20,
+            price: 115,
+            sizes: ['34', '36', '37', '38', '39', '40', '41', '42'],
+            slug: "nike_dunk_low",
+            type: 'basketball',
+            tags: ['Women', 'Nike', 'Sneakers'],
+            title: "Dunk Low - Nike (Women)",
+            gender: 'women'
+        },
+        {
+            description: "With maximum cushioning to support every mile, the Invincible 3 gives you Nike Running's highest level of comfort underfoot to help you stay on your feet today, tomorrow and beyond. Designed to help keep you on the run, it’s super supportive and bouncy, so that you can propel down your preferred path and come back for your next run feeling ready and reinvigorated.",
+            images: [
+                '87a2f87d-9bd5-430e-85d2-08d4f9d48951.webp',
+                '4ac94327-456e-4a93-ad3a-8423558eeb67.webp',
+                '1f79b0db-5d29-46c5-9d69-5f5048bf33a7.webp',
+               
+            ],
+            inStock: 6,
+            price: 180,
+            sizes: ['34', '36', '37', '38', '39', '40', '41', '42'],
+            slug: "nike_invincible_3",
+            type: 'running',
+            tags: ['Women', 'Nike', 'Running'],
+            title: "Invincible 3 - Nike (Women)",
+            gender: 'women'
+        },
+        /*{
             description: "Introducing the Tesla Turbine Collection. Designed for style, comfort and everyday lifestyle, the Men's Turbine Short Sleeve Tee features a subtle, water-based Tesla wordmark across the chest and our T logo below the back collar. The lightweight material is double-dyed, creating a soft, casual style for ideal wear in any season. Made from 50% cotton and 50% polyester.",
             images: [
                 '1741416-00-A_0_2000.jpg',
@@ -803,5 +888,6 @@ export const initialData: SeedData = {
             title: "Kids Corp Jacket",
             gender: 'kid'
         },
+        */
     ]
 }
