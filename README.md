@@ -109,6 +109,10 @@ yarn dev
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>**Página de historial de ordenes**(`/orders/history`), donde se ve en una tabla el historial de las ordenes, con los id, el nombre completo, si está pago o no y un link para ir al detalle de la orden.
 
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>**Página de iniciar sesión** donde se ingresa con correo electrónico y contraseña. Y hay un link por si no es un usuario registrado se pueda registrar.
+
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>**Página de crear cuenta** con nombre completo, correo electrónico y contraseña. Si ya tiene cuenta puede ir a la página de iniciar sesión.
+
 ## Sprint 2 - Semana 2 (27Oct - 2Nov):
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>
