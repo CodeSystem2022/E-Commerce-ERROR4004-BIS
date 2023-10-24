@@ -18,6 +18,7 @@ interface ProductCardPorps {
 
 const ProductCard: FC<ProductCardPorps> = ({ product }) => {
   const [isHovered, setIsHovered] = useState(false)
+  const [isImageLoaded, setIsImageLoaded] = useState(false)
 
   const productImage = useMemo(() => {
     return isHovered
@@ -37,7 +38,7 @@ const ProductCard: FC<ProductCardPorps> = ({ product }) => {
       <Card>
         <NextLink href='/product/slug' passHref prefetch={ false }>
           <CardActionArea
-             sx={ {
+            sx={ {
               height: {
                 xs: '130px',
                 sm: '200px'
@@ -56,11 +57,18 @@ const ProductCard: FC<ProductCardPorps> = ({ product }) => {
                 },
                 objectFit: 'contain'
               } }
+              onLoad={ () => setIsImageLoaded(true) }
             />
           </CardActionArea>
         </NextLink>
       </Card>
-      <Box sx={ { mt: 1 } } className='fadeIn'>
+      <Box
+        sx={ {
+          mt: 1,
+          display: isImageLoaded ? 'block' : 'none'
+        } }
+        className='fadeIn'
+      >
         <Typography fontWeight={ 700 }>
           { product.title }
         </Typography>
