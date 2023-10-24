@@ -188,6 +188,7 @@ GET: `localhost:3000/api/search/{string}`
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>Crear la **pantalla de carga** par que el usuario sepa que se están buscando los productos  
 
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>Crear lás páginas por genero: hombre, mujer, niños y unosex, para que al hacer click en las opciones del navbar tengamos los productos por género
 
 ## Sprint 2 - Semana 2 (27Oct - 2Nov):
 
