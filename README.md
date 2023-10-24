@@ -114,7 +114,7 @@ Renombrar el archivo ```.env.template``` a ```.env```
 
 8. MongoDB URL Local:
 
-```MONGO_URL=mongodb://localhost:27017/holalashoes```
+```MONGO_URL=mongodb://localhost:27017/ohlalalshoesdb```
 
 9. Reconstruir los módulos de node y levantar Next
 

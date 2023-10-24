@@ -20,7 +20,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-slideshow-image": "^4.3.0",
-    "swr": "^2.2.4"
+    "swr": "^1.2.1"
   },
   "devDependencies": {
     "@types/node": "^20",
