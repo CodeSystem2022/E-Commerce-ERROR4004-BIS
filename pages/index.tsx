@@ -5,7 +5,19 @@ import ShopLayout from '../components/layouts/ShopLayout'
 import { initialData } from '../database/products'
 import ProductList from '../components/products/ProductList'
 
-const Home: NextPage = () => {
+import useSWR from 'swr'
+
+const fetcher = (...args: [key: string]) => fetcher(...args).then(res => res.json())
+
+const HomePage: NextPage = () => {
+
+  const { data, error } = useSWR('/api/products', fetcher)
+
+  if (error) return <div>Fail to load</div>
+  if (!data) return <div>Loading...</div>
+
+  console.log({ data })
+
   return (
     <ShopLayout
       title={ 'Oh-la-la-Shoes | Home' }
@@ -26,4 +38,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default HomePage

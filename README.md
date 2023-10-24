@@ -127,7 +127,7 @@ yarn dev
 
 Llamar a: ```http://localhost:3000/api/seed```
 
-10. Con <img width="20" height="20" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/20/external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo.png" alt="postman"/> **Postman** podemos hacer las peticiones REST FUL API, creandonos:
+11. Con <img width="20" height="20" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/20/external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo.png" alt="postman"/> **Postman** podemos hacer las peticiones REST FUL API, creandonos:
 
 GET: `localhost:3000/api/seed` para confirmar que tenemos bien la base de datos
 
