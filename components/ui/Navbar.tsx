@@ -1,12 +1,17 @@
 import React from 'react'
+
 import NextLink from 'next/link'
+import Image from 'next/image'
+import { useRouter } from 'next/router'
 
 import { AppBar, Badge, Box, Button, IconButton, Link, Toolbar, Typography } from '@mui/material'
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
-import Image from 'next/image'
 
 const Navbar = () => {
+
+  const { asPath } = useRouter()
+
   return (
     <AppBar>
       <Toolbar>
@@ -32,16 +37,56 @@ const Navbar = () => {
         <Box flex={ 1 } />
         <Box sx={ { display: { xs: 'none', sm: 'block' } } }>
           <NextLink href='/category/men' passHref>
-            <Button>Men</Button>
+            <Button
+              color={ asPath === '/category/men' ? 'primary' : 'info' }
+              sx={ {
+                margin: '0px 4px',
+                '&:hover': {
+                  color: 'black', 
+                }
+              } }
+            >
+              Men
+            </Button>
           </NextLink>
           <NextLink href='/category/women' passHref>
-            <Button>Women</Button>
+            <Button
+              color={ asPath === '/category/women' ? 'primary' : 'info' }
+              sx={ {
+                margin: '0px 4px',
+                '&:hover': {
+                  color: 'black', 
+                }
+              } }
+            >
+              Women
+            </Button>
           </NextLink>
           <NextLink href='/category/unisex' passHref>
-            <Button>Unisex</Button>
+            <Button
+              color={ asPath === '/category/unisex' ? 'primary' : 'info' }
+              sx={ {
+                margin: '0px 4px',
+                '&:hover': {
+                  color: 'black', 
+                }
+              } }
+            >
+              Unisex
+            </Button>
           </NextLink>
           <NextLink href='/category/kid' passHref>
-            <Button>Kids</Button>
+            <Button
+              color={ asPath === '/category/kid' ? 'primary' : 'info' }
+              sx={ {
+                margin: '0px 4px',
+                '&:hover': {
+                  color: 'black',
+                }
+              } }
+            >
+              Kids
+            </Button>
           </NextLink>
         </Box>
         <Box flex={ 1 } />
