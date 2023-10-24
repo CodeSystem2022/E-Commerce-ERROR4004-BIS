@@ -143,6 +143,14 @@ GET: `localhost:3000/api/products?gender=kid` para ver los productos por genero 
 
 GET: `localhost:3000/api/products?gender=unisex` para ver los productos por genero unisex
 
+### Para ver un producto por su slug
+
+GET: `localhost:3000/api/products/{slug}` slug es la parte que llega dinamica acorde al producto a mostrar un producto por el slug
+
+### Buscar un producto por tag o por el titulo
+
+GET: `localhost:3000/api/search/{string}`
+
 ---
 
 ## <img width="30" height="30" src="https://img.icons8.com/external-flaticons-flat-flat-icons/30/external-scrum-agile-flaticons-flat-flat-icons-7.png" alt="agile"/> ¿Cómo nos organizamos?
