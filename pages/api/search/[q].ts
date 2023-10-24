@@ -10,6 +10,7 @@ type Data =
 export default function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
 
   switch (req.method) {
+
     case 'GET':
       return searchProducts(req, res)
 
@@ -21,6 +22,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Data>)
 }
 
 const searchProducts = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
+  
   let { q = '' } = req.query
 
   if (q.length === 0) {
