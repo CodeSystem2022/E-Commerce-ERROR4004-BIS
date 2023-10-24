@@ -44,7 +44,7 @@
 
 - [**react-hook-form**](https://react-hook-form.com/), para el manejo de los formularios
 
-- [**SWR**](https://swr.vercel.app/) (**stale-while-revalidate**), bibilioteca React Hooks para la obtención de datos
+- [**SWR**](https://swr.vercel.app/) (**stale-while-revalidate**), bibilioteca React Hooks para la obtención de datos, el componente obtendrá sonstante y automáticamente el último flujo de datos. Y la interfaz de usuario será siempre rápida y reactiva.
 
 -  [<img src="https://github.com/devicons/devicon/blob/master/icons/yarn/yarn-original.svg" alt="yarn" width="30" height="30"  /> **Yarn**](https://yarnpkg.com/)
 
