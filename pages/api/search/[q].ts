@@ -22,7 +22,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Data>)
 }
 
 const searchProducts = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
-  
+
   let { q = '' } = req.query
 
   if (q.length === 0) {
@@ -36,7 +36,9 @@ const searchProducts = async (req: NextApiRequest, res: NextApiResponse<Data>) =
   await db.connect()
   const products = await Product.find({
     $text: { $search: q }
-  }).lean()
+  })
+    .select('title images price inStock slug -_id')
+    .lean()
 
   await db.disconnect()
 
