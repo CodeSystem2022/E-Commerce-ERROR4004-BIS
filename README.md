@@ -184,7 +184,10 @@ GET: `localhost:3000/api/search/{string}`
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>**Página de crear cuenta** con nombre completo, correo electrónico y contraseña. Si ya tiene cuenta puede ir a la página de iniciar sesión.
 
-<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Crear los REST FULL API para tener los endpoints de busqueda de productos: GET:`/api/products`, GET:`api/products?gender=men` para buscar por genero (men, women, kid, unisex), GET:`/api/products/{slug}` para buscar el producto por el slug y `/api/search/{string}` donde string es una palabra ya sea del titulo o de las tags
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Crear los **REST FULL API** para tener los endpoints de busqueda de **productos**: GET:`/api/products`, GET:`api/products?gender=men` para buscar por genero (men, women, kid, unisex), GET:`/api/products/{slug}` para buscar el producto por el slug y `/api/search/{string}` donde string es una palabra ya sea del titulo o de las tags
+
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>Crear la **pantalla de carga** par que el usuario sepa que se están buscando los productos  
+
 
 ## Sprint 2 - Semana 2 (27Oct - 2Nov):
 
