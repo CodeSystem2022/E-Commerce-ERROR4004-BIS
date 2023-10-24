@@ -31,6 +31,6 @@ const HomePage: NextPage = () => {
       </>
     </ShopLayout>
   )
-}
+} 
 
 export default HomePage
