@@ -18,7 +18,7 @@ export default async function handler(
 
   await db.connect()
   await Product.deleteMany()
-  await Product.insertMany( seedDatabase.initialData.products)
+  await Product.insertMany(seedDatabase.initialData.products)
 
   await db.disconnect()
 

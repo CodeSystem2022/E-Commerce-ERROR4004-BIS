@@ -2,26 +2,17 @@ import { NextPage } from 'next'
 import { Typography } from '@mui/material'
 
 import ShopLayout from '../components/layouts/ShopLayout'
-import { initialData } from '../database/products'
 import ProductList from '../components/products/ProductList'
-
-import useSWR from 'swr'
-
-const fetcher = (...args: [key: string]) => fetcher(...args).then(res => res.json())
+import { useProducts } from '../hooks'
 
 const HomePage: NextPage = () => {
 
-  const { data, error } = useSWR('/api/products', fetcher)
-
-  if (error) return <div>Fail to load</div>
-  if (!data) return <div>Loading...</div>
-
-  console.log({ data })
+  const { products, isLoading } = useProducts('/products')
 
   return (
     <ShopLayout
       title={ 'Oh-la-la-Shoes | Home' }
-      pageDescription='Find the beast shoes at the beast price'
+      pageDescription='Find the best shoes at the best price'
     >
       <>
         <Typography variant='h1' component='h1'>
@@ -30,9 +21,12 @@ const HomePage: NextPage = () => {
         <Typography variant='h2' sx={ { mb: 1 } }>
           All products
         </Typography>
-        <ProductList
-          products={ initialData.products as any }
-        />
+        {
+          isLoading ?
+            <h1>Loading...</h1>
+            :
+            <ProductList products={ products } />
+        }
       </>
     </ShopLayout>
   )
