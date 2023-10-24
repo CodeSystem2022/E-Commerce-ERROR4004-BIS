@@ -44,6 +44,8 @@
 
 - [**react-hook-form**](https://react-hook-form.com/), para el manejo de los formularios
 
+- [**SWR**](https://swr.vercel.app/) (**stale-while-revalidate**), bibilioteca React Hooks para la obtención de datos
+
 -  [<img src="https://github.com/devicons/devicon/blob/master/icons/yarn/yarn-original.svg" alt="yarn" width="30" height="30"  /> **Yarn**](https://yarnpkg.com/)
 
 - <img width="30" height="30" src="https://img.icons8.com/color/30/git.png" alt="git"/> Git y <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/github.png" alt="github"/> GitHub
@@ -129,25 +131,22 @@ Llamar a: ```http://localhost:3000/api/seed```
 
 GET: `localhost:3000/api/seed` para confirmar que tenemos bien la base de datos
 
-### Para ver todos los productos:
+### <img width="24" height="24" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo.png" alt="postman"/> Endpoints ara ver todos los productos:
 
-GET: `localhost:3000/api/products` para ver los productos
+- **Todos los productos**:
 
-### Para ver los productos por genero
+GET: `localhost:3000/api/products` para ver todos los productos
 
-GET: `localhost:3000/api/products?gender=men` para ver los productos por genero masculino
+- **Productos por genero**:
 
-GET: `localhost:3000/api/products?gender=women` para ver los productos por genero femenino
+GET: `localhost:3000/api/products?gender=men` para ver los productos por genero masculino, los demás géneros posibles son: `women`, `kid` y `unisex`
 
-GET: `localhost:3000/api/products?gender=kid` para ver los productos por genero niños
 
-GET: `localhost:3000/api/products?gender=unisex` para ver los productos por genero unisex
-
-### Para ver un producto por su slug
+- **Un producto por su slug**:
 
 GET: `localhost:3000/api/products/{slug}` slug es la parte que llega dinamica acorde al producto a mostrar un producto por el slug
 
-### Buscar un producto por tag o por el titulo
+- **Un producto por tag o por el titulo**:
 
 GET: `localhost:3000/api/search/{string}`
 
