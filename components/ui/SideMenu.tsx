@@ -111,7 +111,7 @@ const SideMenu = () => {
               <ListItemIcon>
                 <EscalatorWarningOutlined />
               </ListItemIcon>
-              <ListItemText primary={ 'Kid' } />
+              <ListItemText primary={ 'Kids' } />
             </ListItem>
           </Button>
           <Button

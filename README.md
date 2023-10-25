@@ -165,7 +165,7 @@ GET: `localhost:3000/api/search/{string}`
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Creación del **proyecto** con NEXTjs
 
-<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Creación del **Navbar**, con: logo, linsk (Men, Women, Kid), la lupa pra buscar, el carro de compras y el Menú.
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Creación del **Navbar**, con: logo, links (Men, Women, Unisex, Kids), la lupa para buscar, el carro de compras y el Menú lateral, que tendrá: lupa de búsqueda, Profile, My orders, Men, Women, Kids, Unisex, Login, Exit y si es administrador el panel de adminsitrador con: Products, Orders, Users.
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Creación de la HomePage con las tarjetas de los productos, que contienen la imagen del producto, el nombre y el precio
 
