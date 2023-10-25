@@ -138,6 +138,8 @@ const Navbar = () => {
             (
               <IconButton
                 onClick={ () => setIsSearchVisible(true) }
+                className='fadeIn'
+                sx={ { display: { xs: 'none', sm: 'flex' } } }
               >
                 <SearchOutlinedIcon />
               </IconButton>
