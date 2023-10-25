@@ -1,16 +1,20 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import NextLink from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 
+import { UiContext } from '../../context'
+
 import { AppBar, Badge, Box, Button, IconButton, Link, Toolbar, Typography } from '@mui/material'
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
 
+
 const Navbar = () => {
 
   const { asPath } = useRouter()
+  const { toggleSideMenu } = useContext(UiContext)
 
   return (
     <AppBar>
@@ -42,7 +46,7 @@ const Navbar = () => {
               sx={ {
                 margin: '0px 4px',
                 '&:hover': {
-                  color: 'black', 
+                  color: 'black',
                 }
               } }
             >
@@ -55,7 +59,7 @@ const Navbar = () => {
               sx={ {
                 margin: '0px 4px',
                 '&:hover': {
-                  color: 'black', 
+                  color: 'black',
                 }
               } }
             >
@@ -68,7 +72,7 @@ const Navbar = () => {
               sx={ {
                 margin: '0px 4px',
                 '&:hover': {
-                  color: 'black', 
+                  color: 'black',
                 }
               } }
             >
@@ -102,7 +106,7 @@ const Navbar = () => {
             </IconButton>
           </Link>
         </NextLink>
-        <Button>
+        <Button onClick={ toggleSideMenu }>
           Menu
         </Button>
       </Toolbar>

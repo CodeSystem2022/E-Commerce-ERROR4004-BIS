@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { useRouter } from 'next/router'
+import { UiContext } from '../../context'
 import {
   Box,
+  Button,
   Divider,
   Drawer,
   IconButton,
@@ -12,6 +15,7 @@ import {
   ListItemText,
   ListSubheader
 } from '@mui/material'
+
 import {
   AccountCircleOutlined,
   AdminPanelSettings,
@@ -24,16 +28,26 @@ import {
   SearchOutlined,
   VpnKeyOutlined
 } from '@mui/icons-material'
+import WcOutlinedIcon from '@mui/icons-material/WcOutlined'
 
 const SideMenu = () => {
+  const router = useRouter()
+  const { isMenuOpen, toggleSideMenu } = useContext(UiContext)
+
+  const navigateTo = (url: string) => {
+    toggleSideMenu()
+    router.push(url)
+  }
+
   return (
     <Drawer
-      open={ false}
+      open={ isMenuOpen }
       anchor='right'
       sx={ {
         backdropFilter: 'blur(4px)',
         transition: 'all 0.5s ease-out'
       } }
+      onClose={ toggleSideMenu}
     >
       <Box sx={ { width: 250, paddingTop: 5 } } >
         <List>
@@ -64,24 +78,54 @@ const SideMenu = () => {
             </ListItemIcon>
             <ListItemText primary={ 'My orders' } />
           </ListItem>
-          <ListItem sx={ { display: { xs: '', sm: 'none' } } }>
-            <ListItemIcon>
-              <MaleOutlined />
-            </ListItemIcon>
-            <ListItemText primary={ 'Men' } />
-          </ListItem>
-          <ListItem sx={ { display: { xs: '', sm: 'none' } } }>
-            <ListItemIcon>
-              <FemaleOutlined />
-            </ListItemIcon>
-            <ListItemText primary={ 'Women' } />
-          </ListItem>
-          <ListItem sx={ { display: { xs: '', sm: 'none' } } }>
-            <ListItemIcon>
-              <EscalatorWarningOutlined />
-            </ListItemIcon>
-            <ListItemText primary={ 'Kid' } />
-          </ListItem>
+          <Button
+            onClick={ () => navigateTo('/category/men') }
+            fullWidth
+            sx={ { display: { xs: '', sm: 'none' } } }
+          >
+            <ListItem >
+              <ListItemIcon>
+                <MaleOutlined />
+              </ListItemIcon>
+              <ListItemText primary={ 'Men' } />
+            </ListItem>
+          </Button>
+          <Button
+            onClick={ () => navigateTo('/category/women') }
+            fullWidth
+            sx={ { display: { xs: '', sm: 'none' } } }
+          >
+            <ListItem >
+              <ListItemIcon>
+                <FemaleOutlined />
+              </ListItemIcon>
+              <ListItemText primary={ 'Women' } />
+            </ListItem>
+          </Button>
+          <Button
+            onClick={ () => navigateTo('/category/kid') }
+            fullWidth
+            sx={ { display: { xs: '', sm: 'none' } } }
+          >
+            <ListItem >
+              <ListItemIcon>
+                <EscalatorWarningOutlined />
+              </ListItemIcon>
+              <ListItemText primary={ 'Kid' } />
+            </ListItem>
+          </Button>
+          <Button
+            onClick={ () => navigateTo('/category/unisex') }
+            fullWidth
+            sx={ { display: { xs: '', sm: 'none' } } }
+          >
+            <ListItem >
+              <ListItemIcon>
+                <WcOutlinedIcon />
+              </ListItemIcon>
+              <ListItemText primary={ 'Unisex' } />
+            </ListItem>
+          </Button>
           <ListItem >
             <ListItemIcon>
               <VpnKeyOutlined />
@@ -117,7 +161,7 @@ const SideMenu = () => {
           </ListItem>
         </List>
       </Box>
-    </Drawer>
+    </Drawer >
   )
 }
 
