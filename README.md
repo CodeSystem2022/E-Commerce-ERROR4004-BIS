@@ -224,14 +224,18 @@ Si es una tarea solo de estilos en vez de `feat` utilizamos `style`, si es solo 
   > laytouts
   > products
   > ui
+> context
 > database
+> hooks
 > interfaces
+> models
 > node_modules
 > pages
   > admin
   > api
   > auth
   > cart
+  > category
   > checkout
   > orders
   > product
@@ -241,8 +245,10 @@ Si es una tarea solo de estilos en vez de `feat` utilizamos `style`, si es solo 
 > styles
   globals.css
 > theme
+.env.template
 .eslintrc.json
 .gitignore
+docker-compose.yaml
 next-env.d.ts
 next.config.js
 package.json
