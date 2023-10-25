@@ -20,15 +20,10 @@ const Navbar = () => {
   const [searchTerm, setSearchTerm] = useState('')
   const [isSearchVisible, setIsSearchVisible] = useState<boolean>(false)
 
-  const navigateTo = (url: string) => {
-    toggleSideMenu()
-    push(url)
-  }
-
   const onSearchTerm = () => {
     if (searchTerm.trim().length === 0) return
 
-    navigateTo(`/search/${ searchTerm }`)
+    push(`/search/${ searchTerm }`)
   }
 
   return (
@@ -54,7 +49,11 @@ const Navbar = () => {
           <Typography sx={ { ml: 0.5 } }>Shop</Typography>
         </NextLink>
         <Box flex={ 1 } />
-        <Box sx={ { display: { xs: 'none', sm: 'block' } } }>
+        <Box
+          sx={ {
+            display: isSearchVisible ? 'none' : { xs: 'none', sm: 'block' }
+          } }
+        >
           <NextLink href='/category/men' passHref>
             <Button
               color={ asPath === '/category/men' ? 'primary' : 'info' }
@@ -114,6 +113,9 @@ const Navbar = () => {
           isSearchVisible ?
             (
               <Input
+                sx={ {
+                  display: { xs: 'none', sm: 'block' }
+                } }
                 className='fadeIn'
                 autoFocus
                 value={ searchTerm }
@@ -123,7 +125,9 @@ const Navbar = () => {
                 placeholder='Search...'
                 endAdornment={
                   <InputAdornment position='end'>
-                    <IconButton onClick={ () => { } }>
+                    <IconButton
+                      onClick={ () => setIsSearchVisible(false) }
+                    >
                       <ClearOutlined />
                     </IconButton>
                   </InputAdornment>
@@ -132,7 +136,9 @@ const Navbar = () => {
             )
             :
             (
-              <IconButton>
+              <IconButton
+                onClick={ () => setIsSearchVisible(true) }
+              >
                 <SearchOutlinedIcon />
               </IconButton>
             )
