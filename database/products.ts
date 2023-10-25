@@ -188,10 +188,12 @@ export const initialData: SeedData = {
             gender: 'men'
         },
         {
-            description: "Rider FV is all about a combination of past and future, with a nostalgic, heritage.",
+            description: "Rider FV sneakers are all about a combination of past and future, with a nostalgic, heritage-inspired base and fresh tooling. Mix and match your style with this fun new concept for kids. Designs are all about self-expression and celebrating differences, with playful graphics and hand-drawn elements.",
             images: [
                 '1703767-00-A_1.png',
                 '1703767-00-A_0_2000.png',
+                '1703767-00-A_2.png',
+                '1703767-00-A_3.png',
             ],
             inStock: 15,
             price: 55,

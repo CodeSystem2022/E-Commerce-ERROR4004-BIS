@@ -36,7 +36,7 @@ const ProductCard: FC<ProductCardPorps> = ({ product }) => {
       onMouseLeave={ () => setIsHovered(false) }
     >
       <Card>
-        <NextLink href='/product/slug' passHref prefetch={ false }>
+        <NextLink href={ `/product/${product.slug}`} passHref prefetch={ false }>
           <CardActionArea
             sx={ {
               height: {

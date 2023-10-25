@@ -24,6 +24,7 @@ const SizeSelector: FC<SizeSelectorProps> = ({
               color: `${ selectedSize === size ? ' #3A64D8' : 'black' }`,
               border: `${ selectedSize === size ? '2px solid #3A64D8' : '2px solid black' }`,
               margin: '4px',
+              padding: '2px 4px',
               fontWeight: '800'
             } }
           >
