@@ -1,23 +1,30 @@
 import React from 'react'
+import { NextPage, GetStaticPaths, GetStaticProps } from 'next'
 
-import { Box, Button, Chip, Grid, Typography } from '@mui/material'
+import { Box, Button, Grid, Typography } from '@mui/material'
+
+import { IProduct } from '../../interfaces'
+
 import ShopLayout from '../../components/layouts/ShopLayout'
-import { initialData } from '../../database/products'
 import ProductSlideshow from '../../components/products/ProductSlideshow'
 import ItemCounter from '../../components/ui/ItemCounter'
 import SizeSelector from '../../components/products/SizeSelector'
+import { dbProducts } from '../../database'
 
-const product = initialData.products[0]
+interface ProductPageProps {
+  product: IProduct
+}
 
-const ProductPage = () => {
+const ProductPage: NextPage<ProductPageProps> = ({ product }) => {
+
   return (
     <ShopLayout
       title={ product.title }
       pageDescription={ product.title }
     >
-      <Grid container spacing={ 3 }>
+      <Grid container spacing={ 3 } my={ 3 }>
         <Grid item xs={ 12 } sm={ 7 }>
-          <ProductSlideshow images={product.images} />
+          <ProductSlideshow images={ product.images } />
         </Grid>
         <Grid item xs={ 12 } sm={ 5 }>
           <Box display='flex' flexDirection='column'>
@@ -34,7 +41,7 @@ const ProductPage = () => {
               <ItemCounter />
               <SizeSelector
                 // selectedSize={product.sizes[3]}
-                sizes={product.sizes }
+                sizes={ product.sizes }
               />
             </Box>
             <Button color='secondary' className='circular-btn'>
@@ -46,7 +53,7 @@ const ProductPage = () => {
                 Description
               </Typography>
               <Typography variant='body2'>
-                { product.description}
+                { product.description }
               </Typography>
             </Box>
           </Box>
@@ -56,4 +63,40 @@ const ProductPage = () => {
   )
 }
 
+
+export const getStaticPaths: GetStaticPaths = async (ctx) => {
+
+  const productSlugs = await dbProducts.getAllProdcutsSlugs()
+
+  return {
+    paths: productSlugs.map(({ slug }) => ({
+      params: {
+        slug
+      }
+    })),
+    fallback: "blocking"
+  }
+}
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+
+  const { slug = '' } = params as { slug: string }
+  const product = await dbProducts.getProductBySlug(slug)
+
+  if (!product) {
+    return {
+      redirect: {
+        destination: '/',
+        permanent: false
+      }
+    }
+  }
+
+  return {
+    props: {
+      product
+    },
+    revalidate: 86400
+  }
+}
 export default ProductPage
