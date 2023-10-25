@@ -19,7 +19,7 @@ const WomenPage: NextPage = () => {
         <Typography variant='h1' component='h1'>
           Women
         </Typography>
-        <Typography variant='h2' sx={ { mb: 1 } }>
+        <Typography variant='h2' component='h2' sx={ { mb: 1 } }>
           Products for women
         </Typography>
         {

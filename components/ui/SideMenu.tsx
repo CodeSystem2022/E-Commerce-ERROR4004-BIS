@@ -29,24 +29,24 @@ import {
   VpnKeyOutlined
 } from '@mui/icons-material'
 import WcOutlinedIcon from '@mui/icons-material/WcOutlined'
-import { useFormState } from 'react-dom'
 
 const SideMenu = () => {
   const router = useRouter()
   const { isMenuOpen, toggleSideMenu } = useContext(UiContext)
 
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState('')
 
-  const onSearchTerm = () => {
-    if(searchTerm.trim().length === 0)return;
-    navigateTo(`/search/${ searchTerm }`);
-  }
-  
   const navigateTo = (url: string) => {
     toggleSideMenu()
     router.push(url)
   }
-
+  
+  const onSearchTerm = () => {
+    if (searchTerm.trim().length === 0) return
+    
+    navigateTo(`/search/${ searchTerm }`)
+  }
+  
   return (
     <Drawer
       open={ isMenuOpen }
@@ -61,16 +61,15 @@ const SideMenu = () => {
         <List>
           <ListItem>
             <Input
+              autoFocus
               value={ searchTerm }
               onChange={(e) => setSearchTerm( e.target.value ) }
               onKeyPress={(e) => e.key === 'Enter' ? onSearchTerm() : null }
               type='text'
-              placeholder="Search..."
+              placeholder='Search...'
               endAdornment={
-                <InputAdornment position="end">
-                  <IconButton
-                    onClick={ onSearchTerm }
-                  >
+                <InputAdornment position='end'>
+                  <IconButton onClick={ onSearchTerm }>
                     <SearchOutlined />
                   </IconButton>
                 </InputAdornment>

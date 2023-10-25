@@ -1,18 +1,24 @@
 import { GetServerSideProps, NextPage } from 'next'
-import { Typography } from '@mui/material'
 
-import ShopLayout from '../../components/layouts/ShopLayout'
-import ProductList from '../../components/products/ProductList'
-import Product from '../../models/Product';
+import { Box, Typography } from '@mui/material'
+
 import { dbProducts } from '@/database'
 import { IProduct } from '@/interfaces'
 
-interface Props {
-    products : IProduct[];
+import ShopLayout from '../../components/layouts/ShopLayout'
+import ProductList from '../../components/products/ProductList'
+
+interface SearchPageProps {
+  products: IProduct[]
+  foundProducts: boolean
+  query: string
 }
 
-const SearchPage: NextPage<Props> = ({ products }) => {
-
+const SearchPage: NextPage<SearchPageProps> = ({
+  products,
+  foundProducts,
+  query
+}) => {
 
   return (
     <ShopLayout
@@ -21,41 +27,66 @@ const SearchPage: NextPage<Props> = ({ products }) => {
     >
       <>
         <Typography variant='h1' component='h1'>
-          Shop
+          Search products
         </Typography>
-        <Typography variant='h2' sx={ { mb: 1 } }>
-          All products
-        </Typography>
-        
+        {
+          foundProducts ?
+            <Typography
+              variant='h2'
+              component='h2'
+              textTransform='capitalize'
+              sx={ { mb: 1 } }
+            >
+              { query }
+            </Typography>
+            :
+            <>
+              <Typography variant='h2' component='h2' sx={ { mb: 1 } }>
+                No products found:
+                <Box
+                  component='span'
+                  color='#3A64D8'
+                  mx={ 1 }
+                  textTransform='capitalize'
+                >
+                  { query }
+                </Box>
+              </Typography>
+            </>
+        }
         <ProductList products={ products } />
-        
       </>
     </ShopLayout>
   )
-} 
+}
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
-    
-    const {query = '' } = params as { query:string };
 
-    if( query.length === 0){
-        return{
-            redirect: {
-                destination: '/',
-                permanent: true
-            }
-        }
-    }
+  const { query = '' } = params as { query: string }
 
-    let products = await dbProducts.getProductsByTerm( query );
-
-    // TODO: retornar otros productos
-
+  if (query.length === 0) {
     return {
-        props: {
-            products
-        }
+      redirect: {
+        destination: '/',
+        permanent: true
+      }
     }
+  }
+
+  let products = await dbProducts.getProductsByTerm(query)
+  const foundProducts = products.length > 0
+
+  if (!foundProducts) {
+    products = await dbProducts.getAllProducts()
+  }
+
+  return {
+    props: {
+      products,
+      foundProducts,
+      query
+    }
+  }
 }
 
 export default SearchPage

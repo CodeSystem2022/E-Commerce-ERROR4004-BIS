@@ -19,7 +19,7 @@ const UnisexPage: NextPage = () => {
         <Typography variant='h1' component='h1'>
           Unisex
         </Typography>
-        <Typography variant='h2' sx={ { mb: 1 } }>
+        <Typography variant='h2' component='h2' sx={ { mb: 1 } }>
           Products for unisex
         </Typography>
         {

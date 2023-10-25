@@ -30,7 +30,7 @@ const SummaryPage = () => {
           <Grid item xs={ 12 } sm={ 5 }>
             <Card className='summary-card'>
               <CardContent>
-                <Typography variant='h2' mb={ 4 }>
+                <Typography variant='h2' component='h2' mb={ 4 }>
                   Summary (3 products)
                 </Typography>
                 <Divider sx={ { my: 1 } } />
