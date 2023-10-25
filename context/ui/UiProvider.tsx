@@ -18,9 +18,9 @@ export const UiProvider: FC = ({ children }) => {
 
   return (
     <UiContext.Provider value={ {
-      ...state.
+      ...state,
       // Methods
-      toggleSideMenu,
+      toggleSideMenu
     } }>
       { children }
     </UiContext.Provider>
