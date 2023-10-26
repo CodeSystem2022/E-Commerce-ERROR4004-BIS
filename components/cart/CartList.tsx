@@ -31,7 +31,7 @@ const CartList: FC<CartListPorps> = ({ editable = false }) => {
                   sx={ { borderRadius: '12px', objectFit: 'contain', } }
                   height='140px'
                   width='100%'
-      
+
                 />
               </CardActionArea>
             </NextLink>
@@ -46,7 +46,8 @@ const CartList: FC<CartListPorps> = ({ editable = false }) => {
               </Typography>
               {
                 editable ?
-                  <ItemCounter />
+                  <ItemCounter
+                  />
                   :
                   <Typography variant='body1'><strong>3 items</strong></Typography>
               }
@@ -56,19 +57,20 @@ const CartList: FC<CartListPorps> = ({ editable = false }) => {
             item
             xs={ 2 }
             display='flex'
+            alignContent='center'
+            justifyContent='flex-start'
             alignItems='center'
             flexDirection='column'
           >
             <Typography variant='subtitle1' mb={ 3 } textAlign='center'>
               <strong>{ `$${ product.price }` }</strong>
-              { /* Editable*/ }
-              {
-                editable &&
-                <Button color='secondary' variant='outlined'>
-                  Remove
-                </Button>
-              }
             </Typography>
+            {
+              editable &&
+              <Button color='secondary' variant='outlined'>
+                Remove
+              </Button>
+            }
           </Grid>
         </Grid>
       )) }

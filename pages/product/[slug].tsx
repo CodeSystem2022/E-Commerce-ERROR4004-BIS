@@ -1,23 +1,28 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 
+import { useRouter } from 'next/router'
 import { NextPage, GetStaticPaths, GetStaticProps } from 'next'
+
+import { CartContext } from '../../context'
 
 import { Box, Button, Chip, Grid, Typography } from '@mui/material'
 
 import { IProduct, ISize } from '../../interfaces'
-
+import { ICartProduct } from '@/interfaces/cart'
 import ShopLayout from '../../components/layouts/ShopLayout'
 import ProductSlideshow from '../../components/products/ProductSlideshow'
 import ItemCounter from '../../components/ui/ItemCounter'
 import SizeSelector from '../../components/products/SizeSelector'
 import { dbProducts } from '../../database'
-import { ICartProduct } from '@/interfaces/cart'
 
 interface ProductPageProps {
   product: IProduct
 }
 
 const ProductPage: NextPage<ProductPageProps> = ({ product }) => {
+
+  const router = useRouter()
+  const { addProductToCart } = useContext(CartContext)
 
   const [tempCartProduct, setTempCartProduct] = useState<ICartProduct>(
     {
@@ -37,6 +42,22 @@ const ProductPage: NextPage<ProductPageProps> = ({ product }) => {
       ...currentProduct,
       size
     }))
+  }
+
+  const onUpdateQuantity = (quantity: number) => {
+    setTempCartProduct(currentProduct => ({
+      ...currentProduct,
+      quantity
+    }))
+  }
+
+  const onAddProduct = () => {
+    if (!tempCartProduct.size) {
+      return
+    }
+
+    addProductToCart(tempCartProduct)
+    router.push('/cart')
   }
 
   return (
@@ -60,7 +81,11 @@ const ProductPage: NextPage<ProductPageProps> = ({ product }) => {
               <Typography variant='subtitle2'>
                 Amount
               </Typography>
-              <ItemCounter />
+              <ItemCounter
+                currentValue={ tempCartProduct.quantity }
+                updatedQuantity={ onUpdateQuantity }
+                maxValue={ product.inStock > 5 ? 5 : product.inStock }
+              />
               <SizeSelector
                 sizes={ product.sizes }
                 selectedSize={ tempCartProduct.size }
@@ -70,7 +95,11 @@ const ProductPage: NextPage<ProductPageProps> = ({ product }) => {
             {
               (product.inStock > 0)
                 ? (
-                  <Button color='secondary' className='circular-btn'>
+                  <Button
+                    color='secondary'
+                    className='circular-btn'
+                    onClick={ onAddProduct }
+                  >
                     {
                       tempCartProduct.size
                         ? 'Add to shopping cart'
@@ -108,7 +137,7 @@ export const getStaticPaths: GetStaticPaths = async (ctx) => {
         slug
       }
     })),
-    fallback: "blocking"
+    fallback: 'blocking'
   }
 }
 
