@@ -1,16 +1,12 @@
 import React, { FC } from 'react'
-
 import { Box, Button } from '@mui/material'
-
 import { ISize } from '../../interfaces'
 
 interface SizeSelectorProps {
   selectedSize?: ISize
   sizes: ISize[]
-
   // Method
-  onSelectSize: (size:ISize) => void
-
+  onSelectedSize: (size: ISize) => void
 }
 
 export const SizeSelector: FC<SizeSelectorProps> = ({
@@ -27,12 +23,12 @@ export const SizeSelector: FC<SizeSelectorProps> = ({
             size='small'
             sx={ {
               color: `${ selectedSize === size ? ' #3A64D8' : 'black' }`,
-              border: `${ selectedSize === size ? '2px solid #3A64D8' : '2px solid black' }`,
+              border: `${ selectedSize === size ? '3px solid #3A64D8' : '3px solid black' }`,
               margin: '4px',
               padding: '2px 4px',
               fontWeight: '800'
             } }
-            onClick={() =>onSelectedSize( size )}
+            onClick={ () => onSelectedSize(size) }
           >
             { size }
           </Button>

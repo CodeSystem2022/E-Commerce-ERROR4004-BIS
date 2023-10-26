@@ -53,7 +53,7 @@ const ProductPage: NextPage<ProductPageProps> = ({ product }) => {
             <Typography variant='h1' component='h1'>
               { product.title }
             </Typography>
-            <Typography variant='subtitle1' component='h2'>
+            <Typography variant='subtitle1'>
               { `$${ product.price }` }
             </Typography>
             <Box sx={ { my: 2 } }>
@@ -62,7 +62,6 @@ const ProductPage: NextPage<ProductPageProps> = ({ product }) => {
               </Typography>
               <ItemCounter />
               <SizeSelector
-                // selectedSize={product.sizes[3]}
                 sizes={ product.sizes }
                 selectedSize={ tempCartProduct.size }
                 onSelectedSize={ selectedSize }
@@ -75,7 +74,7 @@ const ProductPage: NextPage<ProductPageProps> = ({ product }) => {
                     {
                       tempCartProduct.size
                         ? 'Add to shopping cart'
-                        : 'Select a size first!'
+                        : 'Select a size first'
                     }
                   </Button>
                 )
