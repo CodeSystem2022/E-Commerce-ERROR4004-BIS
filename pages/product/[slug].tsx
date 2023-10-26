@@ -10,14 +10,14 @@ import ProductSlideshow from '../../components/products/ProductSlideshow'
 import ItemCounter from '../../components/ui/ItemCounter'
 import SizeSelector from '../../components/products/SizeSelector'
 import { dbProducts } from '../../database'
-import { ICartProduct } from '@/interfaces/carts'
+import { ICartProduct } from '@/interfaces/cart'
 
 interface ProductPageProps {
   product: IProduct
 }
 
 const ProductPage: NextPage<ProductPageProps> = ({ product }) => {
-  
+
   const [tempCartProduct, setTempCartProduct] = useState<ICartProduct>(
     {
       _id: product._id,
@@ -30,8 +30,8 @@ const ProductPage: NextPage<ProductPageProps> = ({ product }) => {
       quantity: 1
     }
   )
-  const selectedSize = ( size:ISize) => {
-    setTempCartProduct( currentProduct => ({
+  const selectedSize = (size: ISize) => {
+    setTempCartProduct(currentProduct => ({
       ...currentProduct,
       size
     }))
@@ -62,27 +62,27 @@ const ProductPage: NextPage<ProductPageProps> = ({ product }) => {
               <SizeSelector
                 // selectedSize={product.sizes[3]}
                 sizes={ product.sizes }
-                selectedSize={ tempCartProduct.size}
+                selectedSize={ tempCartProduct.size }
                 onSelectedSize={ selectedSize }
               />
             </Box>
-            
+
             {
               (product.inStock > 0)
-               ?(
-                 <Button color='secondary' className='circular-btn'>
-                  {
-                    tempCartProduct.size
-                       ?'Add to shopping cart'
-                       :'Select a size first!'
-                  }
-                 </Button>
-               )
-               :(
-                <Chip label='No stock' color='error' variant='outlined' /> 
-               )
+                ? (
+                  <Button color='secondary' className='circular-btn'>
+                    {
+                      tempCartProduct.size
+                        ? 'Add to shopping cart'
+                        : 'Select a size first!'
+                    }
+                  </Button>
+                )
+                : (
+                  <Chip label='No stock' color='error' variant='outlined' />
+                )
             }
-            
+
             <Box sx={ { mt: 3 } }>
               <Typography variant='subtitle2'>
                 Description
