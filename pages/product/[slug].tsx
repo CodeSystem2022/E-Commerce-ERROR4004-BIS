@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
+
 import { NextPage, GetStaticPaths, GetStaticProps } from 'next'
 
-import { Box, Button, Grid, Typography } from '@mui/material'
+import { Box, Button, Chip, Grid, Typography } from '@mui/material'
 
 import { IProduct, ISize } from '../../interfaces'
 
@@ -30,6 +31,7 @@ const ProductPage: NextPage<ProductPageProps> = ({ product }) => {
       quantity: 1
     }
   )
+
   const selectedSize = (size: ISize) => {
     setTempCartProduct(currentProduct => ({
       ...currentProduct,
@@ -66,7 +68,6 @@ const ProductPage: NextPage<ProductPageProps> = ({ product }) => {
                 onSelectedSize={ selectedSize }
               />
             </Box>
-
             {
               (product.inStock > 0)
                 ? (
@@ -82,7 +83,6 @@ const ProductPage: NextPage<ProductPageProps> = ({ product }) => {
                   <Chip label='No stock' color='error' variant='outlined' />
                 )
             }
-
             <Box sx={ { mt: 3 } }>
               <Typography variant='subtitle2'>
                 Description

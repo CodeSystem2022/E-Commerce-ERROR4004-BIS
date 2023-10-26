@@ -6,6 +6,7 @@ import {
   Card,
   CardActionArea,
   CardMedia,
+  Chip,
   Grid,
   Typography
 } from '@mui/material'
@@ -36,7 +37,7 @@ const ProductCard: FC<ProductCardPorps> = ({ product }) => {
       onMouseLeave={ () => setIsHovered(false) }
     >
       <Card>
-        <NextLink href={ `/product/${product.slug}`} passHref prefetch={ false }>
+        <NextLink href={ `/product/${ product.slug }` } passHref prefetch={ false }>
           <CardActionArea
             sx={ {
               height: {
@@ -45,15 +46,20 @@ const ProductCard: FC<ProductCardPorps> = ({ product }) => {
               }
             } }
           >
-              {
-                (product.inStock === 0 ) && (
-                  <Chip 
-                      color="primary"
-                      label="No hay disponibles"
-                      sx={{ position: 'absolute', zIndex: 99, top: '10px', left: '10px' }}
-                  />
-                )
-              }
+            {
+              (product.inStock === 0) && (
+                <Chip
+                  color='primary'
+                  label='No stock'
+                  sx={ {
+                    position: 'absolute',
+                    zIndex: 99,
+                    top: '10px',
+                    right: '10px'
+                  } }
+                />
+              )
+            }
             <CardMedia
               className='fadeIn'
               component='img'
