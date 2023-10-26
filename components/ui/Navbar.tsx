@@ -124,7 +124,7 @@ const Navbar = () => {
                 type='text'
                 placeholder='Search...'
                 endAdornment={
-                  <InputAdornment position='end'>
+                  <InputAdornment>
                     <IconButton
                       onClick={ () => setIsSearchVisible(false) }
                     >
