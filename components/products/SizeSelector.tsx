@@ -7,11 +7,16 @@ import { ISize } from '../../interfaces'
 interface SizeSelectorProps {
   selectedSize?: ISize
   sizes: ISize[]
+
+  // Method
+  onSelectSize: (size:ISize) => void
+
 }
 
-const SizeSelector: FC<SizeSelectorProps> = ({
+export const SizeSelector: FC<SizeSelectorProps> = ({
   selectedSize,
-  sizes
+  sizes,
+  onSelectedSize
 }) => {
   return (
     <Box>
@@ -27,6 +32,7 @@ const SizeSelector: FC<SizeSelectorProps> = ({
               padding: '2px 4px',
               fontWeight: '800'
             } }
+            onClick={() =>onSelectedSize( size )}
           >
             { size }
           </Button>

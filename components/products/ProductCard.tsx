@@ -45,6 +45,15 @@ const ProductCard: FC<ProductCardPorps> = ({ product }) => {
               }
             } }
           >
+              {
+                (product.inStock === 0 ) && (
+                  <Chip 
+                      color="primary"
+                      label="No hay disponibles"
+                      sx={{ position: 'absolute', zIndex: 99, top: '10px', left: '10px' }}
+                  />
+                )
+              }
             <CardMedia
               className='fadeIn'
               component='img'
