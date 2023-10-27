@@ -35,20 +35,23 @@ export const CartProvider: FC<CartProviderProps> = ({
     }, [state.cart])
 
     const addProductToCart = (product: ICartProduct) => {
-
+        // Validate if the product already exist in the shopping cart
         const productInCart = state.cart.some(p => p._id === product._id)
+        // If the product by id dosn't exist in the shopping cart -> it's added
         if (!productInCart) return dispatch({ type: '[Cart] - Update products in cart', payload: [...state.cart, product] })
 
-        // validate size
+        // validate if the product already exist in the shopping cart and has the same size
         const productInCartButDifferentSize = state.cart.some(p => p._id === product._id && p.size === product.size)
+        // If exist and has different size -> it's added
         if (!productInCartButDifferentSize) return dispatch({ type: '[Cart] - Update products in cart', payload: [...state.cart, product] })
 
+        // The product exist and has the same size -> need to sum
         const updateProducts = state.cart.map(p => {
             if (p._id !== product._id) return p
             // Product exist and has different size
             if (p.size !== product.size) return p
 
-            // Update quantity
+            // Product exist and has same size -> Update quantity
             p.quantity += product.quantity
 
             return p
