@@ -3,10 +3,10 @@ import { Divider, Grid, Typography } from '@mui/material'
 const OrderSummary = () => {
   return (
     <Grid container>
-      { /* Amounto of products */ }
+      { /* Amount of products */ }
       <Grid item xs={ 6 }>
         <Typography>
-          Amount of items:
+          Products:
         </Typography>
       </Grid>
       <Grid item xs={ 6 } display='flex' justifyContent='end'>

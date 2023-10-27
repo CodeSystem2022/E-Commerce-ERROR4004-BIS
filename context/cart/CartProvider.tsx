@@ -35,6 +35,20 @@ export const CartProvider: FC<CartProviderProps> = ({
         Cookie.set('cart', JSON.stringify(state.cart))
     }, [state.cart])
 
+    useEffect(() => {
+        // To update summary
+        const numberOfItems = state.cart.reduce((prev, current) => current.quantity + prev, 0)
+        const subTotal = state.cart.reduce((prev, current) =>current.quantity * current.price + prev, 0)
+        const taxRate = Number(process.env.NEXT_PUBLIC_TAX_RATE || 0)
+
+        const orderSummary = {
+            numberOfItems,
+            subTotal,
+            tax: subTotal * taxRate
+        }
+        console.log(orderSummary)
+    }, [state.cart])
+
     const addProductToCart = (product: ICartProduct) => {
         // Validate if the product already exist in the shopping cart
         const productInCart = state.cart.some(p => p._id === product._id)
