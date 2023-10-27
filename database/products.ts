@@ -26,6 +26,8 @@ export const initialData: SeedData = {
             images: [
                 '1740176-00-A_1.jpg',
                 '1740176-00-A_0_2000.jpg',
+                '1740176-00-A_0_2001.png',
+                '1740176-00-A_0_2002.png',
             ],
             inStock: 7,
             price: 75,
@@ -41,6 +43,8 @@ export const initialData: SeedData = {
             images: [
                 '1740507-00-A_0_2000.png',
                 '1740507-00-A_1.png',
+                '1740507-00-A_0_2001.png',
+                '1740507-00-A_0_2002.png',
             ],
             inStock: 5,
             price: 200,
@@ -54,6 +58,8 @@ export const initialData: SeedData = {
         {
             description: "This low-cut AJ1 is simplified to the max for a black and white shoe, but it's anything but simple. The subtle tones create a perfect backdrop for the pop of color from Jordan's own big and bright image on the side. As always, you get quality materials, like the durable leather upper, supportive foam in the outsole, and the comfortable Air you know and love.",
             images: [
+                '1740250-00-A_0_2002.png',
+                '1740250-00-A_0_2001.png',
                 '1740250-00-A_0_2000.png',
                 '1740250-00-A_1.png'
             ],
@@ -75,11 +81,29 @@ export const initialData: SeedData = {
             inStock: 50,
             price: 120,
             sizes: ['36', '37', '38', '39', '40', '41'],
-            slug: "nike_react_infinity_run_flyknit",
+            slug: "nike_react_infinity_run_flyknit_women",
             type: 'running',
             tags: ['women', 'nike', 'running'],
             title: "React Infinity Run Flyknit 3 - Nike (Women)",
             gender: 'women'
+        },
+        {
+            description: "It's still our most proven shoe. Its design continues to help keep you moving. The Nike React Infinity Run 3 offers a soft, stable feel with a ride that will accompany you on all your long and short runs. The breathable upper is designed to be supportive yet flexible. We even added more cushioning to the collar to give you a soft, protective feel. Keep running; we've got what you need.",
+            images: [
+                '1740280-00-A_1222.png',
+                '1740280-00-A_1223.png',
+                '1740280-00-A_1224.png',
+                '1740280-00-A_1225.png',
+                '1740280-00-A_1226.png'
+            ],
+            inStock: 50,
+            price: 120,
+            sizes: ['36', '37', '38', '39', '40', '41'],
+            slug: "nike_react_infinity_run_flyknit_men",
+            type: 'running',
+            tags: ['men', 'nike', 'running'],
+            title: "React Infinity Run Flyknit 3 - Nike (Men)",
+            gender: 'men'
         },
         {
             description: "Meet the leader of the pack. First released in 1987, the Nike Air Max 1 was the first shoe in the family to bring Air to the world. With a fast-paced look, tried-and-true cushioning and classic wavy mudguard, it’s no wonder it’s reigned supreme ever since.",

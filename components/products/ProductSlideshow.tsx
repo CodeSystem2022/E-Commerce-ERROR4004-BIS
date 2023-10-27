@@ -22,7 +22,8 @@ const ProductSlideshow: FC<ProductSlideshowProps> = ({ images }) => {
               <div
                 style={ {
                   backgroundImage: `url(${ url })`,
-                  backgroundSize: 'cover'
+                  backgroundSize: 'contain',
+                  backgroundRepeat: 'no-repeat'
                 } }
               >
 
