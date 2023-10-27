@@ -41,7 +41,7 @@ const CartList: FC<CartListPorps> = ({ editable = false }) => {
                 { product.title }
               </Typography>
               <Typography variant='body1'>
-                Size: <strong>40</strong>
+                Size: <strong>{ product.size}</strong>
               </Typography>
               {
                 editable ?
