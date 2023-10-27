@@ -113,7 +113,7 @@ A tener en cuenta para las configuraciones de Docker y Base de datos:
 
 7. Configurar las **variables de entorno**
 
-Renombrar el archivo ```.env.template``` a ```.env```
+Copiar el archivo ```.env.template``` y renombrarlo a ```.env```
 
 8. MongoDB URL Local:
 
