@@ -93,12 +93,13 @@ const ProductPage: NextPage<ProductPageProps> = ({ product }) => {
               />
             </Box>
             {
-              (product.inStock > 0)
-                ? (
+              (product.inStock > 0) ?
+                (
                   <Button
                     color='secondary'
                     className='circular-btn'
                     onClick={ onAddProduct }
+                    aria-label='select a size and the add to cart'
                   >
                     {
                       tempCartProduct.size
@@ -108,7 +109,7 @@ const ProductPage: NextPage<ProductPageProps> = ({ product }) => {
                   </Button>
                 )
                 : (
-                  <Chip label='No stock' color='error' variant='outlined' />
+                  <Chip label='No stock' color='error' variant='filled' />
                 )
             }
             <Box sx={ { mt: 3 } }>

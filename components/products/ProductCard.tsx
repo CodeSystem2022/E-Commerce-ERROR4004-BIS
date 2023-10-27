@@ -18,8 +18,9 @@ interface ProductCardPorps {
 }
 
 const ProductCard: FC<ProductCardPorps> = ({ product }) => {
-  const [isHovered, setIsHovered] = useState(false)
-  const [isImageLoaded, setIsImageLoaded] = useState(false)
+  
+  const [isHovered, setIsHovered] = useState<boolean>(false)
+  const [isImageLoaded, setIsImageLoaded] = useState<boolean>(false)
 
   const productImage = useMemo(() => {
     return isHovered

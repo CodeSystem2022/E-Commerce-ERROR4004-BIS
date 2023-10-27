@@ -29,6 +29,7 @@ const loginPage = () => {
                             className='circular-btn'
                             size='large'
                             fullWidth
+                            aria-label='login'
                         >
                             Log in
                         </Button>

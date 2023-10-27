@@ -30,13 +30,19 @@ const ItemCounter: FC<ItemCounterPorps> = ({
 
   return (
     <Box display='flex' alignItems='center'>
-      <IconButton onClick={ () => addOrRemove(-1) }>
+      <IconButton
+        onClick={ () => addOrRemove(-1) }
+        aria-label='remove one product'
+      >
         <RemoveCircleOutline />
       </IconButton>
       <Typography sx={ { width: 40, textAlign: 'center' } }>
         { currentValue }
       </Typography>
-      <IconButton onClick={ () => addOrRemove(+1) }>
+      <IconButton
+        onClick={ () => addOrRemove(+1) }
+        aria-label='add one product'
+      >
         <AddCircleOutline />
       </IconButton>
     </Box>

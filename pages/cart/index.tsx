@@ -39,6 +39,7 @@ const CartPage = () => {
                     color='secondary'
                     className='circular-btn'
                     fullWidth
+                    aria-label='checkout'
                   >
                     Checkout
                   </Button>

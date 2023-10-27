@@ -62,7 +62,12 @@ const AddressPage = () => {
           </Grid>
         </Grid>
         <Box sx={ { mt: 5} } display='flex' justifyContent='center'>
-          <Button color='secondary' className='circular-btn' size='large'> 
+          <Button
+            color='secondary'
+            className='circular-btn'
+            size='large'
+            aria-label='Check out order'
+          > 
             Check out order
           </Button>
         </Box>

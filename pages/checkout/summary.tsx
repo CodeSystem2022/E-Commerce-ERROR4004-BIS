@@ -59,6 +59,7 @@ const SummaryPage = () => {
                     color='secondary'
                     className='circular-btn'
                     fullWidth
+                    aria-label='confirm order'
                   >
                     Confirm order
                   </Button>

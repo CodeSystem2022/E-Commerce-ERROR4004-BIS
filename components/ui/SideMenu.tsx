@@ -40,13 +40,13 @@ const SideMenu = () => {
     toggleSideMenu()
     router.push(url)
   }
-  
+
   const onSearchTerm = () => {
     if (searchTerm.trim().length === 0) return
-    
+
     navigateTo(`/search/${ searchTerm }`)
   }
-  
+
   return (
     <Drawer
       open={ isMenuOpen }
@@ -55,7 +55,7 @@ const SideMenu = () => {
         backdropFilter: 'blur(4px)',
         transition: 'all 0.5s ease-out'
       } }
-      onClose={ toggleSideMenu}
+      onClose={ toggleSideMenu }
     >
       <Box sx={ { width: 250, paddingTop: 5 } } >
         <List>
@@ -63,13 +63,16 @@ const SideMenu = () => {
             <Input
               autoFocus
               value={ searchTerm }
-              onChange={(e) => setSearchTerm( e.target.value ) }
-              onKeyPress={(e) => e.key === 'Enter' ? onSearchTerm() : null }
+              onChange={ (e) => setSearchTerm(e.target.value) }
+              onKeyPress={ (e) => e.key === 'Enter' ? onSearchTerm() : null }
               type='text'
               placeholder='Search...'
               endAdornment={
                 <InputAdornment position='end'>
-                  <IconButton onClick={ onSearchTerm }>
+                  <IconButton
+                    onClick={ onSearchTerm }
+                    aria-label='search product by word'
+                  >
                     <SearchOutlined />
                   </IconButton>
                 </InputAdornment>
@@ -77,13 +80,13 @@ const SideMenu = () => {
             />
           </ListItem>
           <ListItem>
-            <ListItemIcon>
+            <ListItemIcon aria-label='go to profile'>
               <AccountCircleOutlined />
             </ListItemIcon>
             <ListItemText primary={ 'Profile' } />
           </ListItem>
           <ListItem>
-            <ListItemIcon>
+            <ListItemIcon aria-label='go to my orders'>
               <ConfirmationNumberOutlined />
             </ListItemIcon>
             <ListItemText primary={ 'My orders' } />
@@ -92,9 +95,10 @@ const SideMenu = () => {
             onClick={ () => navigateTo('/category/men') }
             fullWidth
             sx={ { display: { xs: '', sm: 'none' } } }
+            aria-label='go to men category'
           >
             <ListItem >
-              <ListItemIcon>
+              <ListItemIcon aria-label='men'>
                 <MaleOutlined />
               </ListItemIcon>
               <ListItemText primary={ 'Men' } />
@@ -104,9 +108,10 @@ const SideMenu = () => {
             onClick={ () => navigateTo('/category/women') }
             fullWidth
             sx={ { display: { xs: '', sm: 'none' } } }
+            aria-label='go to women category'
           >
             <ListItem >
-              <ListItemIcon>
+              <ListItemIcon aria-label='women'>
                 <FemaleOutlined />
               </ListItemIcon>
               <ListItemText primary={ 'Women' } />
@@ -116,9 +121,10 @@ const SideMenu = () => {
             onClick={ () => navigateTo('/category/kid') }
             fullWidth
             sx={ { display: { xs: '', sm: 'none' } } }
+            aria-label='go to kids category'
           >
             <ListItem >
-              <ListItemIcon>
+              <ListItemIcon aria-label='go to kids category'>
                 <EscalatorWarningOutlined />
               </ListItemIcon>
               <ListItemText primary={ 'Kids' } />
@@ -128,22 +134,23 @@ const SideMenu = () => {
             onClick={ () => navigateTo('/category/unisex') }
             fullWidth
             sx={ { display: { xs: '', sm: 'none' } } }
+            aria-label='go to unisex category'
           >
             <ListItem >
-              <ListItemIcon>
+              <ListItemIcon aria-label='go to unisex category'>
                 <WcOutlinedIcon />
               </ListItemIcon>
               <ListItemText primary={ 'Unisex' } />
             </ListItem>
           </Button>
           <ListItem >
-            <ListItemIcon>
+            <ListItemIcon aria-label='login'>
               <VpnKeyOutlined />
             </ListItemIcon>
             <ListItemText primary={ 'Login' } />
           </ListItem>
-          <ListItem >
-            <ListItemIcon>
+          <ListItem>
+            <ListItemIcon aria-label='exit'>
               <LoginOutlined />
             </ListItemIcon>
             <ListItemText primary={ 'Exit' } />
@@ -152,19 +159,19 @@ const SideMenu = () => {
           <Divider />
           <ListSubheader>Admin Panel</ListSubheader>
           <ListItem >
-            <ListItemIcon>
+            <ListItemIcon aria-label='products'>
               <CategoryOutlined />
             </ListItemIcon>
             <ListItemText primary={ 'Products' } />
           </ListItem>
           <ListItem >
-            <ListItemIcon>
+            <ListItemIcon aria-label='orders'>
               <ConfirmationNumberOutlined />
             </ListItemIcon>
             <ListItemText primary={ 'Orders' } />
           </ListItem>
           <ListItem >
-            <ListItemIcon>
+            <ListItemIcon aria-label='users'>
               <AdminPanelSettings />
             </ListItemIcon>
             <ListItemText primary={ 'Users' } />

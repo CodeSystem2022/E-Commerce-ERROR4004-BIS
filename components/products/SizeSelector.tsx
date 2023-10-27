@@ -19,6 +19,7 @@ export const SizeSelector: FC<SizeSelectorProps> = ({
       {
         sizes.map(size => (
           <Button
+            aria-label='size product'
             key={ size }
             size='small'
             sx={ {

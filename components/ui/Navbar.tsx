@@ -17,7 +17,7 @@ const Navbar = () => {
   const { asPath, push } = useRouter()
   const { toggleSideMenu } = useContext(UiContext)
 
-  const [searchTerm, setSearchTerm] = useState('')
+  const [searchTerm, setSearchTerm] = useState<string>('')
   const [isSearchVisible, setIsSearchVisible] = useState<boolean>(false)
 
   const onSearchTerm = () => {
@@ -56,6 +56,7 @@ const Navbar = () => {
         >
           <NextLink href='/category/men' passHref>
             <Button
+              aria-label='go to men category'
               color={ asPath === '/category/men' ? 'primary' : 'info' }
               sx={ {
                 margin: '0px 4px',
@@ -69,6 +70,7 @@ const Navbar = () => {
           </NextLink>
           <NextLink href='/category/women' passHref>
             <Button
+              aria-label='go to women category'
               color={ asPath === '/category/women' ? 'primary' : 'info' }
               sx={ {
                 margin: '0px 4px',
@@ -82,6 +84,7 @@ const Navbar = () => {
           </NextLink>
           <NextLink href='/category/unisex' passHref>
             <Button
+              aria-label='go to unisex category'
               color={ asPath === '/category/unisex' ? 'primary' : 'info' }
               sx={ {
                 margin: '0px 4px',
@@ -95,6 +98,7 @@ const Navbar = () => {
           </NextLink>
           <NextLink href='/category/kid' passHref>
             <Button
+              aria-label='go to kid category'
               color={ asPath === '/category/kid' ? 'primary' : 'info' }
               sx={ {
                 margin: '0px 4px',
@@ -124,9 +128,10 @@ const Navbar = () => {
                 type='text'
                 placeholder='Search...'
                 endAdornment={
-                  <InputAdornment>
+                  <InputAdornment  position='end'>
                     <IconButton
                       onClick={ () => setIsSearchVisible(false) }
+                      aria-label='search product by word'
                     >
                       <ClearOutlined />
                     </IconButton>
@@ -140,6 +145,7 @@ const Navbar = () => {
                 onClick={ () => setIsSearchVisible(true) }
                 className='fadeIn'
                 sx={ { display: { xs: 'none', sm: 'flex' } } }
+                aria-label='search button by word'
               >
                 <SearchOutlinedIcon />
               </IconButton>
@@ -148,19 +154,20 @@ const Navbar = () => {
         <IconButton
           sx={ { display: { xs: 'flex', sm: 'none' } } }
           onClick={ toggleSideMenu }
+          aria-label='search product by word'
         >
           <SearchOutlinedIcon />
         </IconButton>
         <NextLink href='/cart' passHref>
-          <Link>
-            <IconButton>
+          <IconButton
+            aria-label='go to shopping cart'
+            >
               <Badge badgeContent={ 2 } color='secondary'>
                 < ShoppingCartOutlinedIcon />
               </Badge>
             </IconButton>
-          </Link>
         </NextLink>
-        <Button onClick={ toggleSideMenu }>
+        <Button onClick={ toggleSideMenu } aria-label='menu open and close'>
           Menu
         </Button>
       </Toolbar>

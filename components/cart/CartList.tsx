@@ -75,7 +75,7 @@ const CartList: FC<CartListPorps> = ({ editable = false }) => {
             </Typography>
             {
               editable &&
-              <Button color='secondary' variant='outlined'>
+              <Button color='secondary' variant='outlined' aria-label='remove'>
                 Remove
               </Button>
             }
