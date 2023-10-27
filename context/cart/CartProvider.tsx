@@ -61,11 +61,16 @@ export const CartProvider: FC<CartProviderProps> = ({
         dispatch({ type: '[Cart] - Update products in cart', payload: updateProducts })
     }
 
+    const updateCartQuantity = (product: ICartProduct) => {
+        dispatch({ type: '[Cart] - Change cart quantity', payload: product })
+    }
+
     return (
         <CartContext.Provider value={ {
             ...state,
             // Methods
             addProductToCart,
+            updateCartQuantity,
         } }>
             { children }
         </CartContext.Provider>

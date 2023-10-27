@@ -5,17 +5,24 @@ import { CartContext } from '../../context'
 
 import { Box, Button, CardActionArea, CardMedia, Grid, Typography } from '@mui/material'
 import ItemCounter from '../ui/ItemCounter'
+import { ICartProduct } from '../../interfaces'
 
 interface CartListPorps {
   editable?: boolean
 }
 
 const CartList: FC<CartListPorps> = ({ editable = false }) => {
-  const { cart } = useContext(CartContext);
+
+  const { cart, updateCartQuantity } = useContext(CartContext)
+
+  const onNewCartQuantityValue = (product: ICartProduct, newQuantityValue: number) => {
+    product.quantity = newQuantityValue
+    updateCartQuantity(product)
+  }
 
   return (
     <>
-      {  cart.map(product => (
+      { cart.map(product => (
         <Grid
           container
           spacing={ 2 }
@@ -31,17 +38,18 @@ const CartList: FC<CartListPorps> = ({ editable = false }) => {
                   sx={ { borderRadius: '12px', objectFit: 'contain', } }
                   height='140px'
                   width='100%'
+                  alt={ product.title }
                 />
               </CardActionArea>
             </NextLink>
           </Grid>
           <Grid item xs={ 7 }>
             <Box display='flex' flexDirection='column'>
-              <Typography variant='h2'>
+              <Typography variant='h2' component='h2'>
                 { product.title }
               </Typography>
               <Typography variant='body1'>
-                Size: <strong>{ product.size}</strong>
+                Size: <strong>{ product.size }</strong>
               </Typography>
               {
                 editable ?
@@ -49,7 +57,7 @@ const CartList: FC<CartListPorps> = ({ editable = false }) => {
                     <ItemCounter
                       currentValue={ product.quantity }
                       maxValue={ 10 }
-                      updatedQuantity={ () => { } }
+                      updatedQuantity={ (value) => onNewCartQuantityValue(product, value) }
                     />
                   )
                   :
