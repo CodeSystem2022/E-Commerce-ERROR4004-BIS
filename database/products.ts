@@ -110,7 +110,9 @@ export const initialData: SeedData = {
             images: [
                 '793ef95a-87aa.png',
                 '793ef95a-87aa-2.png',
-
+                '793ef95a-87aa-3.png',
+                '793ef95a-87aa-4.png',
+                '793ef95a-87aa-5.png',
             ],
             inStock: 12,
             price: 160,
@@ -126,6 +128,8 @@ export const initialData: SeedData = {
             images: [
                 '758583ad-bbd8.png',
                 '758583ad-bbd8-2.png',
+                '758583ad-bbd8-333.png',
+                '758583ad-bbd8-334.png'
             ],
             inStock: 9,
             price: 110,
@@ -141,6 +145,8 @@ export const initialData: SeedData = {
             images: [
                 'f6a0a8b3-4155.png',
                 'f6a0a8b3-4155-2.png',
+                '758583ad-bbd8-3.png',
+                '758583ad-bbd8-4.png'
             ],
             inStock: 5,
             price: 140,
@@ -156,6 +162,8 @@ export const initialData: SeedData = {
             images: [
                 'a447e0eb-b47c-2.png',
                 'a447e0eb-b47c.png',
+                'a447e0eb-b47c-3.png',
+                'a447e0eb-b47c-4.png',
             ],
             inStock: 20,
             price: 115,
