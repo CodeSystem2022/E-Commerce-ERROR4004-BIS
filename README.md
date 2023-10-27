@@ -195,7 +195,7 @@ GET: `localhost:3000/api/search/{string}`
 
 ## Sprint 2 - Semana 2 (27Oct - 2Nov):
 
-<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Completamos las paginas de registro y login, teniamos solo la maquetacòn, ahora agregamos las validaciones con **React-hook-form** y guardamos los usuarios en la base de datos.
 
 ## Sprint 3 - Semana 3 (3Nov - 10Nov):
 
