@@ -15,6 +15,7 @@ const CART_INITIAL_STATE: CartState = {
 interface CartProviderProps {
     children: ReactNode
 }
+
 export const CartProvider: FC<CartProviderProps> = ({
     children
 }) => {

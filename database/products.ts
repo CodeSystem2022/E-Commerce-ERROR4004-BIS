@@ -78,7 +78,7 @@ export const initialData: SeedData = {
             slug: "nike_react_infinity_run_flyknit",
             type: 'running',
             tags: ['women', 'nike', 'running'],
-            title: "React Infinity Run Flyknit 3 - Nike (Women-running)",
+            title: "React Infinity Run Flyknit 3 - Nike (Women)",
             gender: 'women'
         },
         {
@@ -252,8 +252,8 @@ export const initialData: SeedData = {
         {
             description: "The Suede hit the scene in 1968 and has been changing the game ever since. It’s been worn by icons of every generation, and it’s stayed classic through it all. Instantly recognizable and constantly reinvented, Suede’s legacy continues to grow and be legitimized by the authentic and expressive individuals that embrace the iconic shoe. Be apart of the history of Suede.",
             images: [
-                '8528839-00-A_0_2000.png',
                 '8528839-00-A_2.png',
+                '8528839-00-A_0_2000.png',
             ],
             inStock: 2,
             price: 75,
@@ -327,8 +327,8 @@ export const initialData: SeedData = {
         {
             description: "Forget about your inheritance? Never. In a tribute to heritage and innovation, we combined two icons to go beyond the expected. Lightweight, breathable Flyknit fabric blends seamlessly with super-comfortable Air Max cushioning. Lace up your laces and let your feet do the talking. Retro Superpower: inspired by the 2012 Flyknit Racer, the anatomical, feather-light, nearly seamless upper is as revolutionary as it is attractive. Modern comfort: the snug heel and expressive Max Air window design are inspired directly from Pre-Day, bringing a balanced combination of tradition and innovation.",
             images: [
-                '7652410-00-A_0.png',
                 '7652410-00-A_1_2000.png',
+                '7652410-00-A_0.png',
             ],
             inStock: 10,
             price: 118,
