@@ -1,4 +1,5 @@
-import { FC, useReducer, ReactNode } from 'react'
+import { FC, useReducer, ReactNode, useEffect } from 'react'
+import Cookie from 'js-cookie'
 
 import { ICartProduct } from '@/interfaces/cart'
 import { CartContext, cartReducer } from './'
@@ -14,8 +15,24 @@ const CART_INITIAL_STATE: CartState = {
 interface CartProviderProps {
     children: ReactNode
 }
-export const CartProvider: FC<CartProviderProps> = ({ children }) => {
+export const CartProvider: FC<CartProviderProps> = ({
+    children
+}) => {
     const [state, dispatch] = useReducer(cartReducer, CART_INITIAL_STATE)
+
+    useEffect(() => {
+        try {
+            const cookieProducts = Cookie.get('cart') ? JSON.parse(Cookie.get('cart')!) : []
+            dispatch({ type: '[Cart] - LoadCart from cookies | storage', payload: cookieProducts })
+        } catch (error) {
+            // If someone try to manipulate the cookie
+            dispatch({ type: '[Cart] - LoadCart from cookies | storage', payload: [] })
+        }
+    }, [])
+
+    useEffect(() => {
+        Cookie.set('cart', JSON.stringify(state.cart))
+    }, [state.cart])
 
     const addProductToCart = (product: ICartProduct) => {
 
@@ -26,7 +43,7 @@ export const CartProvider: FC<CartProviderProps> = ({ children }) => {
         const productInCartButDifferentSize = state.cart.some(p => p._id === product._id && p.size === product.size)
         if (!productInCartButDifferentSize) return dispatch({ type: '[Cart] - Update products in cart', payload: [...state.cart, product] })
 
-        const updateProducts = state.cart.map(p => { 
+        const updateProducts = state.cart.map(p => {
             if (p._id !== product._id) return p
             // Product exist and has different size
             if (p.size !== product.size) return p

@@ -1,37 +1,36 @@
-import React, { FC } from 'react'
+import React, { FC, useContext } from 'react'
 import NextLink from 'next/link'
 
+import { CartContext } from '../../context'
+
 import { Box, Button, CardActionArea, CardMedia, Grid, Typography } from '@mui/material'
-import { initialData } from '../../database/products'
 import ItemCounter from '../ui/ItemCounter'
-
-
-const productsInCart = [
-  initialData.products[0],
-  initialData.products[1],
-  initialData.products[2],
-]
 
 interface CartListPorps {
   editable?: boolean
 }
 
 const CartList: FC<CartListPorps> = ({ editable = false }) => {
+  const { cart } = useContext(CartContext);
+
   return (
     <>
-      { productsInCart.map((product) => (
-        <Grid container spacing={ 2 } key={ product.slug } sx={ { mb: 4 } }>
+      {  cart.map(product => (
+        <Grid
+          container
+          spacing={ 2 }
+          key={ product.slug + product.size }
+          sx={ { mb: 4 } }
+        >
           <Grid item xs={ 3 }>
-            <NextLink href='/product/slug' passHref>
-              { /* TODO: llevar a la pagina del producto*/ }
+            <NextLink href={ `/product/${ product.slug }` } passHref>
               <CardActionArea>
                 <CardMedia
-                  image={ `/products/${ product.images[0] }` }
+                  image={ `/products/${ product.image }` }
                   component='img'
                   sx={ { borderRadius: '12px', objectFit: 'contain', } }
                   height='140px'
                   width='100%'
-
                 />
               </CardActionArea>
             </NextLink>
@@ -46,10 +45,19 @@ const CartList: FC<CartListPorps> = ({ editable = false }) => {
               </Typography>
               {
                 editable ?
-                  <ItemCounter
-                  />
+                  (
+                    <ItemCounter
+                      currentValue={ product.quantity }
+                      maxValue={ 10 }
+                      updatedQuantity={ () => { } }
+                    />
+                  )
                   :
-                  <Typography variant='body1'><strong>3 items</strong></Typography>
+                  <Typography variant='body1'>
+                    <strong>
+                      { product.quantity } { product.quantity > 1 ? 'items' : 'item' }
+                    </strong>
+                  </Typography>
               }
             </Box>
           </Grid>
