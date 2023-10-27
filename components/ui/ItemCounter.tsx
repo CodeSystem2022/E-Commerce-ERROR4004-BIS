@@ -23,7 +23,7 @@ const ItemCounter: FC<ItemCounterPorps> = ({
       return updatedQuantity(currentValue - 1)
     }
 
-    if (value >= maxValue) return
+    if (currentValue >= maxValue) return
 
     updatedQuantity(currentValue + 1)
   }
