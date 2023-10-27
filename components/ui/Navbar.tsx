@@ -162,7 +162,7 @@ const Navbar = () => {
         <NextLink href='/cart' passHref>
           <IconButton aria-label='go to shopping cart' >
             <Badge badgeContent={ numberOfItems } color='secondary'>
-              < ShoppingCartOutlinedIcon />
+              < ShoppingCartOutlinedIcon aria-label='amunt of items in shopping cart'/>
             </Badge>
           </IconButton>
         </NextLink>
