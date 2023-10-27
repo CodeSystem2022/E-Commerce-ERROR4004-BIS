@@ -1,3 +1,5 @@
+import bcrypt from 'bcryptjs'
+
 interface SeedProduct {
     description: string
     images: string[]
@@ -11,15 +13,38 @@ interface SeedProduct {
     gender: 'men' | 'women' | 'kid' | 'unisex'
 }
 
+interface SeedUser{
+    name    : string
+    email   : string
+    password: string
+    role    : 'admin' | 'cliente'
+}
+
 // type ValidSizes = 'XS' | 'S' | 'M' | 'L' | 'XL' | 'XXL' | 'XXXL'
 type ValidSizes = '30' | '31' | '32' | '33' | '34' | '35' | '36' | '37' | '38' | '39' | '40' | '41' | '42' | '43' | '44' | '45' | '46' | '47' | '48' | '49' | '50'
 type ValidTypes = 'running' | 'sneakers' | 'soccer' | 'basketball' | 'driving' | 'training'
 
 interface SeedData {
+    users: SeedUser[]
     products: SeedProduct[],
 }
 
+
 export const initialData: SeedData = {
+    users:[
+        {
+            name: 'Fernando Herrera',
+            email: 'fernando@gmail.com',
+            password: bcrypt.hashSync('123456'),
+            role:'admin'
+        },
+        {
+            name: 'Eduario Rios',
+            email: 'eduardo@gmail.com',
+            password: bcrypt.hashSync('123456'),
+            role:'admin'
+        },        
+    ],
     products: [
         {
             description: "Sleek, comfortable shoes for little ones. Your little adventurer will be ready to play in these comfy Swift Run 1.0 shoes. Featuring a knit upper and flexible EVA midsole, these shoes keep tiny feet supported and cushioned. Recycled materials and a non-marking outsole ensure each step is gentle on the planet. These lightweight, lace-up shoes inspire dreams of zooming across the playground or racing down the sidewalk — someday.",
