@@ -247,6 +247,7 @@ Si es una tarea solo de estilos en vez de `feat` utilizamos `style`, si es solo 
 > styles
   globals.css
 > theme
+> utils
 .env.template
 .eslintrc.json
 .gitignore

@@ -4,9 +4,9 @@ import NextLink from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 
-import { UiContext } from '../../context'
+import { CartContext, UiContext } from '../../context'
 
-import { AppBar, Badge, Box, Button, IconButton, Input, InputAdornment, Link, Toolbar, Typography } from '@mui/material'
+import { AppBar, Badge, Box, Button, IconButton, Input, InputAdornment, Toolbar, Typography } from '@mui/material'
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
 import { ClearOutlined } from '@mui/icons-material'
@@ -16,6 +16,7 @@ const Navbar = () => {
 
   const { asPath, push } = useRouter()
   const { toggleSideMenu } = useContext(UiContext)
+  const { numberOfItems } = useContext(CartContext)
 
   const [searchTerm, setSearchTerm] = useState<string>('')
   const [isSearchVisible, setIsSearchVisible] = useState<boolean>(false)
@@ -128,7 +129,7 @@ const Navbar = () => {
                 type='text'
                 placeholder='Search...'
                 endAdornment={
-                  <InputAdornment  position='end'>
+                  <InputAdornment position='end'>
                     <IconButton
                       onClick={ () => setIsSearchVisible(false) }
                       aria-label='search product by word'
@@ -159,15 +160,16 @@ const Navbar = () => {
           <SearchOutlinedIcon />
         </IconButton>
         <NextLink href='/cart' passHref>
-          <IconButton
-            aria-label='go to shopping cart'
-            >
-              <Badge badgeContent={ 2 } color='secondary'>
-                < ShoppingCartOutlinedIcon />
-              </Badge>
-            </IconButton>
+          <IconButton aria-label='go to shopping cart' >
+            <Badge badgeContent={ numberOfItems } color='secondary'>
+              < ShoppingCartOutlinedIcon />
+            </Badge>
+          </IconButton>
         </NextLink>
-        <Button onClick={ toggleSideMenu } aria-label='menu open and close'>
+        <Button
+          onClick={ toggleSideMenu }
+          aria-label='menu open and close'
+        >
           Menu
         </Button>
       </Toolbar>
