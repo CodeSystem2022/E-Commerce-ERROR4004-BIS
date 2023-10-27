@@ -190,10 +190,12 @@ export const initialData: SeedData = {
             gender: 'women'
         },
         {
-            description: "Inspired by our original PUMA California, the classic lines and dreamy details of the Cali Dream.",
+            description: "Inspired by our original PUMA California, the classic lines and dreamy details of the Cali Dream make it ready for all city looks – even if you’re not in The Golden State. On the darker days, you'll love the cozy feeling of this Wooly version.",
             images: [
+                '1741416-00-A_0_2001.png',
                 '1741416-00-A_0_2000.png',
                 '1741416-00-A_1.png',
+                '1741416-00-A_0_2002.png',
             ],
             inStock: 50,
             price: 68,
@@ -239,8 +241,10 @@ export const initialData: SeedData = {
         {
             description: "Inspired by our original Puma  California, the classic lines and groovy details of the Cali Dream make it ready for all city looks.",
             images: [
-                '1700280-00-A_1.png',
+                '1700280-00-A_0_2002.png',
                 '1700280-00-A_0_2000.png',
+                '1700280-00-A_1.png',
+                '1700280-00-A_0_2003.png'
             ],
             inStock: 17,
             price: 70,
@@ -256,6 +260,8 @@ export const initialData: SeedData = {
             images: [
                 '8764734-00-A_1.png',
                 '8764734-00-A_0_2000.png',
+                '8764734-00-A_0_2001.png',
+                '8764734-00-A_0_2002.png'
             ],
             inStock: 12,
             price: 85,
@@ -271,6 +277,8 @@ export const initialData: SeedData = {
             images: [
                 '7652426-00-A_1.png',
                 '7652426-00-A_0_2000.png',
+                '7652426-00-A_0_2001.png',
+                '7652426-00-A_0_2002.png'
             ],
             inStock: 5,
             price: 55,
@@ -286,6 +294,8 @@ export const initialData: SeedData = {
             images: [
                 '8528839-00-A_2.png',
                 '8528839-00-A_0_2000.png',
+                '8528839-00-A_0_2001.png',
+                '8528839-00-A_0_2002.png'
             ],
             inStock: 2,
             price: 75,
@@ -301,6 +311,8 @@ export const initialData: SeedData = {
             images: [
                 '1549268-00-A_0_2000.png',
                 '1549268-00-A_2.png',
+                '1549268-00-A_0_2001.png',
+                '1549268-00-A_0_2002.png'
             ],
             inStock: 82,
             price: 85,
@@ -331,10 +343,12 @@ export const initialData: SeedData = {
             images: [
                 '1633802-00-A_2.png',
                 '1633802-00-A_0_2000.png',
+                '1633802-00-A_0_201.png',
+                '1633802-00-A_0_202.png'
             ],
             inStock: 5,
             price: 140,
-            sizes: ['35', '36', '37', '38', '39', '40', '41', '42', '43', '44'],
+            sizes: ['35', '36', '37', '38', '39', '40', '41'],
             slug: "seasons_voyage_nitro_3",
             type: 'running',
             tags: ['running', 'puma', 'women'],
@@ -432,18 +446,37 @@ export const initialData: SeedData = {
             gender: 'women'
         },
         {
-            description: "ICustomizable Platform Chucks are the ultimate canvas for creativity. Let your little one express their style with a selection of new and trending colors and prints, then top it off with fully personalized details for a look that's one-of-a-kind—just like them.",
+            description: "Customizable Platform Chucks are the ultimate canvas for creativity. Let your little one express their style with a selection of new and trending colors and prints, then top it off with fully personalized details for a look that's one-of-a-kind—just like them.",
             images: [
                 '1740051-00-A_1.jpg',
                 '1740051-00-A_0_2000.jpg',
+                '1740051-00-A_0_2001.png',
+                '1740051-00-A_0_2002.png'
             ],
             inStock: 10,
             price: 60,
-            sizes: ['35', '36', '37', '38', '39', '40', '41'],
+            sizes: ['35', '36', '37', '38', '39'],
             slug: "custom_chuck_taylor_kids",
             type: 'sneakers',
             tags: ['sneakers', 'kids', 'converse'],
             title: "Custom Chuck Taylor All Star By You - Converse (Kids)",
+            gender: 'kid'
+        },
+        {
+            description: "It's all about the twinkle and twirl from their first dance moves 'til they kick off their shoes— presumably hours before the ball drops at midnight. Go on, level-up their shine all night. Just lace up and set them loose to be the star of the kids table..",
+            images: [
+                '1740051-00-B-101.png',
+                '1740051-00-B-100.png',
+                '1740051-00-B-102.png',
+                '1740051-00-B-103.png',
+            ],
+            inStock: 12,
+            price: 65,
+            sizes: ['35', '36', '37', '38', '39'],
+            slug: "chuck_taylor_all_star_platform_lift_sparkle",
+            type: 'sneakers',
+            tags: ['sneakers', 'kids', 'converse'],
+            title: "Chuck Taylor All Star Platform Lift Sparkle - Converse (Kids)",
             gender: 'kid'
         },
         {
@@ -481,6 +514,8 @@ export const initialData: SeedData = {
             images: [
                 '1740145-00-A_1.png',
                 '1740145-00-A_2_2000.png',
+                '1740145-00-A_2_2001.png',
+                '1740145-00-A_2_2002.png'
             ],
             inStock: 15,
             price: 110,
