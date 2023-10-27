@@ -13,7 +13,7 @@ interface CartListPorps {
 
 const CartList: FC<CartListPorps> = ({ editable = false }) => {
 
-  const { cart, updateCartQuantity } = useContext(CartContext)
+  const { cart, updateCartQuantity, removeCartProduct } = useContext(CartContext)
 
   const onNewCartQuantityValue = (product: ICartProduct, newQuantityValue: number) => {
     product.quantity = newQuantityValue
@@ -83,7 +83,12 @@ const CartList: FC<CartListPorps> = ({ editable = false }) => {
             </Typography>
             {
               editable &&
-              <Button color='secondary' variant='outlined' aria-label='remove'>
+              <Button
+                  color='secondary'
+                  variant='outlined'
+                  aria-label='remove'
+                  onClick={ () => removeCartProduct(product)}
+                >
                 Remove
               </Button>
             }
