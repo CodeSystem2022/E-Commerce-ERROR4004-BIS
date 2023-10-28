@@ -1,6 +1,8 @@
 import React, { useContext, useState } from 'react'
+
 import { useRouter } from 'next/router'
-import { UiContext } from '../../context'
+
+import { AuthContext, UiContext } from '../../context'
 import {
   Box,
   Button,
@@ -33,6 +35,7 @@ import WcOutlinedIcon from '@mui/icons-material/WcOutlined'
 const SideMenu = () => {
   const router = useRouter()
   const { isMenuOpen, toggleSideMenu } = useContext(UiContext)
+  const { user, isLoggedIn, logout } = useContext(AuthContext)
 
   const [searchTerm, setSearchTerm] = useState('')
 
@@ -79,18 +82,24 @@ const SideMenu = () => {
               }
             />
           </ListItem>
-          <ListItem>
-            <ListItemIcon aria-label='go to profile'>
-              <AccountCircleOutlined />
-            </ListItemIcon>
-            <ListItemText primary={ 'Profile' } />
-          </ListItem>
-          <ListItem>
-            <ListItemIcon aria-label='go to my orders'>
-              <ConfirmationNumberOutlined />
-            </ListItemIcon>
-            <ListItemText primary={ 'My orders' } />
-          </ListItem>
+          {
+            isLoggedIn && (
+              <>
+                <ListItem>
+                  <ListItemIcon aria-label='go to profile'>
+                    <AccountCircleOutlined />
+                  </ListItemIcon>
+                  <ListItemText primary={ 'Profile' } />
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon aria-label='go to my orders'>
+                    <ConfirmationNumberOutlined />
+                  </ListItemIcon>
+                  <ListItemText primary={ 'My orders' } />
+                </ListItem>
+              </>
+            )
+          }
           <Button
             onClick={ () => navigateTo('/category/men') }
             fullWidth
@@ -143,39 +152,63 @@ const SideMenu = () => {
               <ListItemText primary={ 'Unisex' } />
             </ListItem>
           </Button>
-          <ListItem >
-            <ListItemIcon aria-label='login'>
-              <VpnKeyOutlined />
-            </ListItemIcon>
-            <ListItemText primary={ 'Login' } />
-          </ListItem>
-          <ListItem>
-            <ListItemIcon aria-label='exit'>
-              <LoginOutlined />
-            </ListItemIcon>
-            <ListItemText primary={ 'Exit' } />
-          </ListItem>
+          { isLoggedIn ?
+            (
+              <ListItem>
+                <ListItemIcon
+                  aria-label='user logout'
+                  onClick={ logout }
+                >
+                  <LoginOutlined />
+                </ListItemIcon>
+                <ListItemText primary={ 'Exit' } />
+              </ListItem>
+            )
+            :
+            (
+              <ListItem>
+                <Button
+                  aria-label='user login'
+                  onClick={ () => navigateTo(`/auth/login?p=${router.asPath}`) }
+                  sx={ { alignItems: 'flex-start' } }
+                >
+                  <ListItemIcon
+                    aria-label='login'
+                  >
+                    <VpnKeyOutlined />
+                  </ListItemIcon>
+                  <ListItemText primary={ 'Login' } />
+                </Button>
+              </ListItem>
+            )
+          }
           {/* Admin */ }
-          <Divider />
-          <ListSubheader>Admin Panel</ListSubheader>
-          <ListItem >
-            <ListItemIcon aria-label='products'>
-              <CategoryOutlined />
-            </ListItemIcon>
-            <ListItemText primary={ 'Products' } />
-          </ListItem>
-          <ListItem >
-            <ListItemIcon aria-label='orders'>
-              <ConfirmationNumberOutlined />
-            </ListItemIcon>
-            <ListItemText primary={ 'Orders' } />
-          </ListItem>
-          <ListItem >
-            <ListItemIcon aria-label='users'>
-              <AdminPanelSettings />
-            </ListItemIcon>
-            <ListItemText primary={ 'Users' } />
-          </ListItem>
+          {
+            user?.role === 'admin' && (
+              <>
+                <Divider />
+                <ListSubheader>Admin Panel</ListSubheader>
+                <ListItem >
+                  <ListItemIcon aria-label='products'>
+                    <CategoryOutlined />
+                  </ListItemIcon>
+                  <ListItemText primary={ 'Products' } />
+                </ListItem>
+                <ListItem >
+                  <ListItemIcon aria-label='orders'>
+                    <ConfirmationNumberOutlined />
+                  </ListItemIcon>
+                  <ListItemText primary={ 'Orders' } />
+                </ListItem>
+                <ListItem >
+                  <ListItemIcon aria-label='users'>
+                    <AdminPanelSettings />
+                  </ListItemIcon>
+                  <ListItemText primary={ 'Users' } />
+                </ListItem>
+              </>
+            )
+          }
         </List>
       </Box>
     </Drawer >

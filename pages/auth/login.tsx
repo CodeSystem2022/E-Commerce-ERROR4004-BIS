@@ -36,7 +36,8 @@ const LoginPage = () => {
             return
         }
 
-        router.replace('/')
+        const destination = router.query.p?.toString() || '/'
+        router.replace(destination )
 
     }
 

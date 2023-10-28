@@ -1,4 +1,5 @@
 import { FC, useEffect, useReducer, ReactNode } from 'react'
+import { useRouter } from 'next/router'
 
 import { AuthContext, authReducer } from './'
 
@@ -24,12 +25,18 @@ interface AuthProviderProps {
 export const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
 
   const [state, dispatch] = useReducer(authReducer, AUTH_INITIAL_STATE)
+  const router = useRouter()
 
   useEffect(() => {
     checkToken()
   }, [])
 
   const checkToken = async () => {
+
+    if (Cookies.get('token')) {
+      return
+    }
+
     try {
       const { data } = await ohlalaApi.get('/user/validate-token')
       const { token, user } = data
@@ -41,9 +48,9 @@ export const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
     }
   }
 
-  const loginUser = async ( email: string, password: string): Promise<boolean> => {
+  const loginUser = async (email: string, password: string): Promise<boolean> => {
     try {
-      const { data } = await ohlalaApi.post('/user/login', {  email, password })
+      const { data } = await ohlalaApi.post('/user/login', { email, password })
       const { token, user } = data
       Cookies.set('token', token)
       dispatch({ type: '[Auth] - Login', payload: user })
@@ -80,12 +87,19 @@ export const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
     }
   }
 
+  const logout = () => {
+    Cookies.remove('token')
+    Cookies.remove('cart')
+    router.reload()
+  }
+
   return (
     <AuthContext.Provider
       value={ {
         ...state,
         loginUser,
-        registerUser
+        registerUser,
+        logout
       } }
     >
       { children }
