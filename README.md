@@ -55,6 +55,10 @@
 
 - [<img width="30" height="30" src="https://img.icons8.com/color/30/mongodb.png" alt="mongodb"/> **MongoDB**](https://www.mongodb.com/) y [<img width="30" height="30" src="https://img.icons8.com/color/30/mongoose.png" alt="mongoose"/> **Mongoose**](https://mongoosejs.com/) , para la base de datos
 
+- [**jsonwebtoken**](https://jwt.io/)
+
+- [**bcryptjs**](https://www.npmjs.com/package/bcrypt)
+
 - [<img width="30" height="30" src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/30/external-postman-is-the-only-complete-api-development-environment-logo-shadow-tal-revivo.png" alt="postman"/> **Postman**](https://www.postman.com/), para ver las pediciones REST FULL API
 
 - [<img width="30" height="30" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/30/external-docker-a-set-of-coupled-software-as-a-service-logo-color-tal-revivo.png" alt="docker"/> **Docker**](https://www.docker.com/)
@@ -65,6 +69,9 @@
 ## <img width="30" height="30" src="https://img.icons8.com/color/30/console.png" alt="console"/> ¿Cómo ver el proyecto en local?
 
 Este proyecto está creado con [**Next.js**](https://nextjs.org/) con el comando: [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+
+---
 
 ## Primeros pasos
 
@@ -152,6 +159,32 @@ GET: `localhost:3000/api/products/{slug}` slug es la parte que llega dinamica ac
 - **Un producto por tag o por el titulo**:
 
 GET: `localhost:3000/api/search/{string}`
+
+### <img width="24" height="24" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo.png" alt="postman"/> Endpoints de usuarios
+
+- **Para ver todos los usuarios**:
+
+POST: `localhost:3000/api/user/login`
+
+Y se debe emviar el body:
+
+```
+email: string,
+password: string
+```
+
+Para recibir de response:
+
+```
+{
+  "token": string,
+  "user": {
+    "email": string,
+    "role": "string",
+    "name": string
+  }
+}
+```
 
 ---
 
