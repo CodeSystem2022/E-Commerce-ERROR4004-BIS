@@ -5,6 +5,7 @@ import { Box, Button, Grid, TextField, Typography } from '@mui/material'
 import { useForm } from 'react-hook-form'
 
 import { AuthLayout } from '../../components/layouts'
+import { validations } from '../../utils'
 
 type FormData = {
     email: string
@@ -14,6 +15,7 @@ type FormData = {
 const LoginPage = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm<FormData>()
+    console.log('errors: ', errors)
 
     const onLoginUser = (data: FormData) => {
         console.log({ data })
@@ -35,7 +37,13 @@ const LoginPage = () => {
                                 label='E-mail'
                                 variant='filled'
                                 fullWidth
-                                {...register('email')}
+                                {
+                                ...register('email', {
+                                    required: 'The e-mail field is required',
+                                    validate:  validations.isEmail
+                                }) }
+                                error={ !!errors.email }
+                                helperText={ errors.email?.message}
                             />
                         </Grid>
                         <Grid item xs={ 12 }>
@@ -44,7 +52,13 @@ const LoginPage = () => {
                                 type='password'
                                 variant='filled'
                                 fullWidth
-                                {...register('password')}
+                                {
+                                ...register('password', {
+                                    required: 'The password field is required',
+                                    minLength: {value: 6, message: '6 characters minimum'}
+                                })}
+                                error={ !!errors.password }
+                                helperText={ errors.password?.message}
                             />
                         </Grid>
                         <Grid item xs={ 12 } my={ 3 }>
