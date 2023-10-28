@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import NextLink from 'next/link'
+import { useRouter } from 'next/router'
 
 import { Box, Button, Chip, Grid, TextField, Typography } from '@mui/material'
 import { ErrorOutline } from '@mui/icons-material'
@@ -9,6 +10,7 @@ import { useForm } from 'react-hook-form'
 import { AuthLayout } from '../../components/layouts'
 import { validations } from '../../utils'
 import { ohlalaApi } from '../../api'
+import { AuthContext } from '../../context'
 
 type FormData = {
     name: string
@@ -17,22 +19,26 @@ type FormData = {
 }
 
 const RegisterPage = () => {
+    const router = useRouter()
+    const { registerUser } = useContext(AuthContext)
     const [showError, setShowError] = useState<boolean>(false)
+    const [errorMessage, setErrorMessage] = useState<string>('')
+
     const { register, handleSubmit, formState: { errors } } = useForm<FormData>()
 
     const onRegisterForm = async ({ name, email, password }: FormData) => {
-        setShowError(false)
-        // Personal validation - wihtout NextAut
-        try {
-            const { data } = await ohlalaApi.post('/user/register', { name, email, password })
-            const { token, user } = data
-            console.log({ token, user })
 
-        } catch (error) {
-            console.log('Credentials error')
+        setShowError(false)
+        const { hasError, message } = await registerUser(name, email, password)
+
+        if (hasError) {
             setShowError(true)
+            setErrorMessage(message!)
             setTimeout(() => { setShowError(false) }, 3000)
+            return
         }
+
+        router.replace('/')
     }
 
     return (
