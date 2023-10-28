@@ -212,6 +212,10 @@ Para recibir de response:
 }
 ```
 
+- **Para validar tokens**:
+
+GET: `localhost:3000/api/validate-token`
+
 ---
 
 ## <img width="30" height="30" src="https://img.icons8.com/external-flaticons-flat-flat-icons/30/external-scrum-agile-flaticons-flat-flat-icons-7.png" alt="agile"/> ¿Cómo nos organizamos?
@@ -256,7 +260,7 @@ Para recibir de response:
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Completamos las paginas de registro y login, teniamos solo la maquetación, ahora agregamos las validaciones con **React-hook-form**.
 
-<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>  Cremaos los usuarios en la base de datos, utilizando **JSON Web Token**. Y los endpoint para ver a los usuarios (POST): `localhost:3000/api/user/login` y loguearse (POST): localhost:3000/api/user/login
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>  Cremaos los usuarios en la base de datos, utilizando **JSON Web Token**. Y los endpoint para ver a los usuarios (POST): `localhost:3000/api/user/login`, loguearse (POST): `localhost:3000/api/user/login` y validar token: (GET):`localhost:3000/api/validate-token`
 
 ## Sprint 3 - Semana 3 (3Nov - 10Nov):
 
