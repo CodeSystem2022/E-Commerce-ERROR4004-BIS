@@ -5,12 +5,12 @@ import { useRouter } from 'next/router'
 import { Box, Button, Chip, Grid, TextField, Typography } from '@mui/material'
 import { ErrorOutline } from '@mui/icons-material'
 
+import { AuthContext } from '../../context'
+
 import { useForm } from 'react-hook-form'
 
 import { AuthLayout } from '../../components/layouts'
 import { validations } from '../../utils'
-import { ohlalaApi } from '../../api'
-import { AuthContext } from '../../context'
 
 type FormData = {
     name: string
@@ -38,7 +38,8 @@ const RegisterPage = () => {
             return
         }
 
-        router.replace('/')
+        const destination = router.query.p?.toString() || '/'
+        router.replace(destination)
     }
 
     return (
@@ -115,7 +116,10 @@ const RegisterPage = () => {
                             </Button>
                         </Grid>
                         <Grid item xs={ 12 } display='flex' justifyContent='end'>
-                            <NextLink href='/auth/login' passHref>
+                            <NextLink
+                                href={ router.query.p ? `/auth/login?p=${ router.query.p }` : '/auth/login' }
+                                passHref
+                            >
                                 Already has an account?
                             </NextLink>
                         </Grid>
