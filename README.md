@@ -262,6 +262,8 @@ GET: `localhost:3000/api/validate-token`
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>  Cremaos los usuarios en la base de datos, utilizando **JSON Web Token**. Y los endpoint para ver a los usuarios (POST): `localhost:3000/api/user/login`, loguearse (POST): `localhost:3000/api/user/login` y validar token: (GET):`localhost:3000/api/validate-token`
 
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Validaciones en el formulario de registro y login 
+
 ## Sprint 3 - Semana 3 (3Nov - 10Nov):
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>
