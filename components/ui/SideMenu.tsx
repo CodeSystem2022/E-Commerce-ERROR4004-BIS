@@ -155,13 +155,18 @@ const SideMenu = () => {
           { isLoggedIn ?
             (
               <ListItem>
-                <ListItemIcon
-                  aria-label='user logout'
+                <Button
+                  aria-label='logout'
                   onClick={ logout }
+                  sx={ { paddingRight: '24px'} }
                 >
-                  <LoginOutlined />
-                </ListItemIcon>
-                <ListItemText primary={ 'Exit' } />
+                  <ListItemIcon
+                    aria-label='logout icon'
+                  >
+                    <LoginOutlined />
+                  </ListItemIcon>
+                  <ListItemText primary={ 'Exit' } />
+                </Button>
               </ListItem>
             )
             :
@@ -169,11 +174,11 @@ const SideMenu = () => {
               <ListItem>
                 <Button
                   aria-label='user login'
-                  onClick={ () => navigateTo(`/auth/login?p=${router.asPath}`) }
-                  sx={ { alignItems: 'flex-start' } }
+                  onClick={ () => navigateTo(`/auth/login?p=${ router.asPath }`) }
+                  sx={ { paddingRight: '24px'} }
                 >
                   <ListItemIcon
-                    aria-label='login'
+                    aria-label='login icon'
                   >
                     <VpnKeyOutlined />
                   </ListItemIcon>
