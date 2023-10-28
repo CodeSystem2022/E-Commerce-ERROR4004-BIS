@@ -254,7 +254,9 @@ Para recibir de response:
 
 ## Sprint 2 - Semana 2 (27Oct - 2Nov):
 
-<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Completamos las paginas de registro y login, teniamos solo la maquetacòn, ahora agregamos las validaciones con **React-hook-form** y guardamos los usuarios en la base de datos.
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Completamos las paginas de registro y login, teniamos solo la maquetación, ahora agregamos las validaciones con **React-hook-form**.
+
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>  Cremaos los usuarios en la base de datos, utilizando **JSON Web Token**. Y los endpoint para ver a los usuarios (POST): `localhost:3000/api/user/login` y loguearse (POST): localhost:3000/api/user/login
 
 ## Sprint 3 - Semana 3 (3Nov - 10Nov):
 
