@@ -268,7 +268,7 @@ GET: `localhost:3000/api/validate-token`
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Agregar la funcionalidad en el menú lateral para el **login** (que debe redirigir a la pagina de login) y **logout** (que debe desloguear al usuario). También manejar de modo condicional, para olo mostrar el **panel de adminsitrador** al usuario que esté logueado y tenga rol de admin.
 
-<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Si no hay otems en el carro de compras que se muestre la pagina de carro vacío y si tiene items que se muestre la pagina del carro de compras
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Si no hay ítems en el carro de compras que se muestre la pagina de carro vacío y si tiene items que se muestre la pagina del carro de compras
 
 ## Sprint 3 - Semana 3 (3Nov - 10Nov):
 
