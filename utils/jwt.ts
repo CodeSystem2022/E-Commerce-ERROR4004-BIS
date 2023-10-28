@@ -1,4 +1,3 @@
-import { rejects } from 'assert'
 import jwt from 'jsonwebtoken'
 
 export const signToken = (_id: string, email: string) => {
