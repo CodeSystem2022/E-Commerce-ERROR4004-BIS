@@ -49,6 +49,8 @@
 
 - **js-cookie**, para procesar las cookies en el Front End
 
+- **axios**
+
 -  [<img src="https://github.com/devicons/devicon/blob/master/icons/yarn/yarn-original.svg" alt="yarn" width="30" height="30"  /> **Yarn**](https://yarnpkg.com/)
 
 - <img width="30" height="30" src="https://img.icons8.com/color/30/git.png" alt="git"/> Git y <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/github.png" alt="github"/> GitHub
@@ -288,6 +290,7 @@ Si es una tarea solo de estilos en vez de `feat` utilizamos `style`, si es solo 
 
 ```
 >.next
+> api
 > components
   > cart
   > laytouts
@@ -298,6 +301,7 @@ Si es una tarea solo de estilos en vez de `feat` utilizamos `style`, si es solo 
 > hooks
 > interfaces
 > models
+> mongo
 > node_modules
 > pages
   > admin

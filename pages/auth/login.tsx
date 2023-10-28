@@ -1,11 +1,14 @@
+import { useState } from 'react'
 import NextLink from 'next/link'
 
-import { Box, Button, Grid, TextField, Typography } from '@mui/material'
+import { Box, Button, Chip, Grid, TextField, Typography } from '@mui/material'
+import { ErrorOutline } from '@mui/icons-material'
 
 import { useForm } from 'react-hook-form'
 
 import { AuthLayout } from '../../components/layouts'
 import { validations } from '../../utils'
+import { ohlalaApi } from '../../api'
 
 type FormData = {
     email: string
@@ -14,22 +17,41 @@ type FormData = {
 
 const LoginPage = () => {
 
+    const [showError, setShowError] = useState<boolean>(false)
     const { register, handleSubmit, formState: { errors } } = useForm<FormData>()
-    console.log('errors: ', errors)
 
-    const onLoginUser = (data: FormData) => {
-        console.log({ data })
+
+    const onLoginUser = async ({ email, password }: FormData) => {
+        setShowError(false)
+        // Personal validation - wihtout NextAut
+        try {
+            const { data } = await ohlalaApi.post('/user/login', { email, password })
+            const { token, user } = data
+            console.log({ token, user })
+
+        } catch (error) {
+            console.log('Credentials error')
+            setShowError(true)
+            setTimeout(() => { setShowError(false) }, 3000)
+        }
     }
 
     return (
-        <AuthLayout title={ 'Oh-la-la-Shoes | Loguin' }>
-            <form onSubmit={ handleSubmit(onLoginUser) }>
+        <AuthLayout title={ 'Oh-la-la-Shoes | Login' }>
+            <form onSubmit={ handleSubmit(onLoginUser) } noValidate>
                 <Box sx={ { width: 350, padding: '10px 20px' } }>
                     <Grid container spacing={ 3 }>
                         <Grid item>
                             <Typography variant='h1' component='h1' my={ 3 }>
                                 Log in
                             </Typography>
+                            <Chip
+                                label=' Invalid user / passoword'
+                                color='error'
+                                icon={ <ErrorOutline /> }
+                                className='fadeIn'
+                                sx={ { display: showError ? 'flex' : 'none' } }
+                            />
                         </Grid>
                         <Grid item xs={ 12 }>
                             <TextField
@@ -40,10 +62,10 @@ const LoginPage = () => {
                                 {
                                 ...register('email', {
                                     required: 'X - The e-mail field is required',
-                                    validate:  validations.isEmail
+                                    validate: validations.isEmail
                                 }) }
                                 error={ !!errors.email }
-                                helperText={ errors.email?.message}
+                                helperText={ errors.email?.message }
                             />
                         </Grid>
                         <Grid item xs={ 12 }>
@@ -55,10 +77,10 @@ const LoginPage = () => {
                                 {
                                 ...register('password', {
                                     required: 'X - The password field is required',
-                                    minLength: {value: 6, message: '6 characters minimum'}
-                                })}
+                                    minLength: { value: 6, message: '6 characters minimum' }
+                                }) }
                                 error={ !!errors.password }
-                                helperText={ errors.password?.message}
+                                helperText={ errors.password?.message }
                             />
                         </Grid>
                         <Grid item xs={ 12 } my={ 3 }>

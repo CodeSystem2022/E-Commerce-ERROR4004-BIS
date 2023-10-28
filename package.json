@@ -15,6 +15,7 @@
     "@mui/material": "^5.14.14",
     "@mui/x-data-grid": "^6.16.3",
     "@types/bcryptjs": "^2.4.5",
+    "axios": "^1.6.0",
     "bcryptjs": "^2.4.3",
     "js-cookie": "^3.0.5",
     "jsonwebtoken": "^9.0.2",
