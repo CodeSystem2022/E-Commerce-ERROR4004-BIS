@@ -45,7 +45,7 @@ const RegisterPage = () => {
                                 Create an account
                             </Typography>
                             <Chip
-                                label=' Invalid user / passoword'
+                                label=' Invalid user / password'
                                 color='error'
                                 icon={ <ErrorOutline /> }
                                 className='fadeIn'
