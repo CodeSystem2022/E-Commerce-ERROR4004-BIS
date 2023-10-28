@@ -61,6 +61,7 @@ const CartPage = () => {
                     className='circular-btn'
                     fullWidth
                     aria-label='checkout'
+                    href='/checkout/address'
                   >
                     Checkout
                   </Button>

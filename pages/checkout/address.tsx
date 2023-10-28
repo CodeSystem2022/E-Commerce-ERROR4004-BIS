@@ -5,7 +5,6 @@ import {
   Button,
   FormControl,
   Grid,
-  InputLabel,
   MenuItem,
   Select,
   TextField,
@@ -13,6 +12,18 @@ import {
 } from '@mui/material'
 
 import ShopLayout from '../../components/layouts/ShopLayout'
+import { countries } from '../../utils'
+
+type FormData = {
+  firstName: string
+  lastName: string
+  address: string
+  address2: string
+  zip: string
+  city: string
+  country: string
+  phone: string
+}
 
 const AddressPage = () => {
   return (
@@ -48,12 +59,18 @@ const AddressPage = () => {
               <Select
                 variant='filled'
                 label='Country'
-                value={ 1 }
+                value={ 'CRI' }
               >
-                <MenuItem value={ 1 }>Argentina</MenuItem>
-                <MenuItem value={ 2 }>Brasil</MenuItem>
-                <MenuItem value={ 3 }>Uruguay</MenuItem>
-                <MenuItem value={ 4 }>Chile</MenuItem>
+                {
+                  countries.map(country => (
+                    <MenuItem
+                      key={ country.code }
+                      value={ country.code }
+                    >
+                      { country.name }
+                    </MenuItem>
+                  ))
+                }
               </Select>
             </FormControl>
           </Grid>
@@ -61,13 +78,13 @@ const AddressPage = () => {
             <TextField label='Telephone' variant='filled' fullWidth />
           </Grid>
         </Grid>
-        <Box sx={ { mt: 5} } display='flex' justifyContent='center'>
+        <Box sx={ { mt: 5 } } display='flex' justifyContent='center'>
           <Button
             color='secondary'
             className='circular-btn'
             size='large'
             aria-label='Check out order'
-          > 
+          >
             Check out order
           </Button>
         </Box>
