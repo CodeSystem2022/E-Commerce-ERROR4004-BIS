@@ -1,41 +1,39 @@
 import { rejects } from 'assert'
 import jwt from 'jsonwebtoken'
 
-export const signToken = ( _id:string, email: string) => {
-    
-    if( !process.env.JWT_SECRET_SEED ) {
-        throw new Error('No hay semilla de JWT - Revisar variables de entorno')
+export const signToken = (_id: string, email: string) => {
+
+    if (!process.env.JWT_SECRET_SEED) {
+        throw new Error('No seed of JWT - check environment variables')
     }
 
     return jwt.sign(
         // payload
-        { _id, email }, 
-
-        //seed
+        { _id, email },
+        // secretOrPrivateKey (seed)
         process.env.JWT_SECRET_SEED,
-
-        //opciones
+        // options (validate until)
         { expiresIn: '30d' }
     )
 }
 
-export const isValidToken = ( token: string ):Promise<string> => {
-    if( !process.env.JWT_SECRET_SEED ) {
-        throw new Error('No hay semilla de JWT - Revisar variables de entorno')
+export const isValidToken = (token: string): Promise<string> => {
+    if (!process.env.JWT_SECRET_SEED) {
+        throw new Error('No seed of JWT - check environment variables')
     }
 
-    return new Promise( (resolve, reject) => {
+    return new Promise((resolve, reject) => {
 
-        try{
-            jwt.verify( token, process.env.JWT_SECRET_SEED || '', (err, payload) => {
-                if( err ) return reject('JWT no es válido')
+        try {
+            jwt.verify(token, process.env.JWT_SECRET_SEED || '', (err, payload) => {
+                if (err) return reject('Not valid JWT')
 
-                const { _id } = payload as { _id: string}
+                const { _id } = payload as { _id: string }
 
                 resolve(_id)
-            } )
-        } catch( error ) {
-            reject('JWT no es válido')
+            })
+        } catch (error) {
+            reject('Not valid JWT')
         }
-    } )
+    })
 }

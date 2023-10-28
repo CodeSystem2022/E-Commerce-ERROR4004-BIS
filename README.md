@@ -166,11 +166,37 @@ GET: `localhost:3000/api/search/{string}`
 
 POST: `localhost:3000/api/user/login`
 
-Y se debe emviar el body:
+Y se debe emviar en el body:
 
 ```
 email: string,
 password: string
+```
+
+Para recibir de response:
+
+```
+{
+  "token": string,
+  "user": {
+    "email": string,
+    "role": "string",
+    "name": string
+  }
+}
+```
+
+- **Para registrar un usuario**:
+
+POST: `localhost:3000/api/user/register`
+
+Debemos enviarle en el body (por defecto lo creamos con rol de usuario, no de administrador)
+```
+{
+  "email": string,
+  "password" : string, 
+  "name": string
+}
 ```
 
 Para recibir de response:
