@@ -3,7 +3,7 @@ import { createContext } from 'react'
 import { IUser } from '../../interfaces'
 
 interface ContextProps {
-  isLoggeIn: boolean
+  isLoggedIn: boolean
   user?: IUser
 
   loginUser: (email: string, password: string) => Promise<boolean>

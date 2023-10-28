@@ -41,9 +41,9 @@ export const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
     }
   }
 
-  const loginUser = async (email: string, password: string): Promise<boolean> => {
+  const loginUser = async ( email: string, password: string): Promise<boolean> => {
     try {
-      const { data } = await ohlalaApi.post('/user/login', { email, password })
+      const { data } = await ohlalaApi.post('/user/login', {  email, password })
       const { token, user } = data
       Cookies.set('token', token)
       dispatch({ type: '[Auth] - Login', payload: user })
