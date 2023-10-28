@@ -39,7 +39,7 @@ const LoginPage = () => {
                                 fullWidth
                                 {
                                 ...register('email', {
-                                    required: 'The e-mail field is required',
+                                    required: 'X - The e-mail field is required',
                                     validate:  validations.isEmail
                                 }) }
                                 error={ !!errors.email }
@@ -54,7 +54,7 @@ const LoginPage = () => {
                                 fullWidth
                                 {
                                 ...register('password', {
-                                    required: 'The password field is required',
+                                    required: 'X - The password field is required',
                                     minLength: {value: 6, message: '6 characters minimum'}
                                 })}
                                 error={ !!errors.password }
