@@ -1,7 +1,7 @@
 import NextLink from 'next/link'
 
 import { RemoveShoppingCartOutlined } from '@mui/icons-material'
-import { Box, Typography } from '@mui/material'
+import { Box, Link, Typography } from '@mui/material'
 import ShopLayout from '../../components/layouts/ShopLayout'
 
 const EmptyPage = () => {
@@ -25,13 +25,15 @@ const EmptyPage = () => {
           gap='12px'
         >
           <Typography>No items in the shopping cart</Typography>
-          <NextLink href='/' passHref  className='btn-link-primary-link'>
+          <NextLink href='/' passHref className='btn-link-primary-link'>
+            <Link>
             <Typography
               color='secondary'
               className='btn-link-primary'
             >
               Back to store
             </Typography>
+            </Link>
           </NextLink>
         </Box>
       </Box>

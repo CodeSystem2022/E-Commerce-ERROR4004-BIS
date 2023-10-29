@@ -7,6 +7,7 @@ import {
   Chip,
   Divider,
   Grid,
+  Link,
   Typography,
 } from '@mui/material'
 
@@ -37,7 +38,7 @@ const OrderPage = () => {
           label='Paid order'
           variant='outlined'
           color='success'
-          icon={ <CreditScoreOutlined />}
+          icon={ <CreditScoreOutlined /> }
         />
         <Grid container spacing={ 2 }>
           <Grid item xs={ 12 } sm={ 7 }>
@@ -55,7 +56,9 @@ const OrderPage = () => {
                     Delivery address
                   </Typography>
                   <NextLink href='/checkout/address' passHref>
-                    <strong>Edit</strong>
+                    <Link>
+                      <strong>Edit</strong>
+                    </Link>
                   </NextLink>
                 </Box>
                 <Typography>María Eugenia Costa</Typography>
@@ -66,20 +69,22 @@ const OrderPage = () => {
                 <Divider sx={ { my: 1 } } />
                 <Box display='flex' justifyContent='end' my={ 1 }>
                   <NextLink href='/cart' passHref>
-                    <strong>Edit</strong>
+                    <Link>
+                      <strong>Edit</strong>
+                    </Link>
                   </NextLink>
                 </Box>
                 <OrderSummary />
                 <Box sx={ { mt: 2 } }>
-                  { /* TODO */}
+                  { /* TODO */ }
                   <h1>Pay</h1>
                   <Chip
-          sx={ { my: 2 } }
-          label='Paid order'
-          variant='outlined'
-          color='success'
-          icon={ <CreditScoreOutlined />}
-        />
+                    sx={ { my: 2 } }
+                    label='Paid order'
+                    variant='outlined'
+                    color='success'
+                    icon={ <CreditScoreOutlined /> }
+                  />
                 </Box>
               </CardContent>
             </Card>

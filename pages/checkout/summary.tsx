@@ -1,5 +1,7 @@
-import { useContext } from 'react';
+import { useContext } from 'react'
+
 import NextLink from 'next/link'
+
 import {
   Box,
   Button,
@@ -7,24 +9,25 @@ import {
   CardContent,
   Divider,
   Grid,
+  Link,
   Typography,
 } from '@mui/material'
 
-import { CartContext } from '@/context'
+import { CartContext } from '../../context'
 import ShopLayout from '../../components/layouts/ShopLayout'
 import CartList from '../../components/cart/CartList'
 import OrderSummary from '../../components/cart/OrderSummary'
-import { countries } from '@/utils';
+import { countries } from '../../utils'
 
 const SummaryPage = () => {
 
-  const { shippingAddress, numberOfItems } = useContext ( CartContext );
+  const { shippingAddress, numberOfItems } = useContext(CartContext);
 
-  if ( !shippingAddress ){
+  if (!shippingAddress) {
     return <></>;
   }
 
-  const { firstName, lastName, address, address2 = '' ,city, zip, phone, country } = shippingAddress;
+  const { firstName, lastName, address, address2 = '', city, zip, phone, country } = shippingAddress;
 
   return (
     <ShopLayout
@@ -43,7 +46,7 @@ const SummaryPage = () => {
             <Card className='summary-card'>
               <CardContent>
                 <Typography variant='h2' component='h2' mb={ 4 }>
-                  Summary ({ numberOfItems } { numberOfItems === 1 ? 'product':'Products'})
+                  Summary ({ numberOfItems } { numberOfItems === 1 ? 'product' : 'Products' })
                 </Typography>
                 <Divider sx={ { my: 1 } } />
                 <Box display='flex' justifyContent='space-between' my={ 1 }>
@@ -51,19 +54,23 @@ const SummaryPage = () => {
                     Delivery address
                   </Typography>
                   <NextLink href='/checkout/address' passHref>
-                    <strong>Edit</strong>
+                    <Link>
+                      <strong>Edit</strong>
+                    </Link>
                   </NextLink>
                 </Box>
                 <Typography>{ firstName } { lastName }</Typography>
-                <Typography>{ address } { address2 ? `, ${address2}` : '' }</Typography>
+                <Typography>{ address } { address2 ? `, ${ address2 }` : '' }</Typography>
                 <Typography>{ city }, { zip }</Typography>
-                <Typography>{ countries.find(c => c.code === country )?.name }</Typography>
+                <Typography>{ countries.find(c => c.code === country)?.name }</Typography>
                 <Typography>{ phone }</Typography>
-                
+
                 <Divider sx={ { my: 1 } } />
                 <Box display='flex' justifyContent='end' my={ 1 }>
                   <NextLink href='/cart' passHref>
-                    <strong>Edit</strong>
+                    <Link>
+                      <strong>Edit</strong>
+                    </Link>
                   </NextLink>
                 </Box>
                 <OrderSummary />

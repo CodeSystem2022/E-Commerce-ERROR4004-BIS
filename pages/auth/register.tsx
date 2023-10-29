@@ -2,7 +2,7 @@ import { useState, useContext } from 'react'
 import NextLink from 'next/link'
 import { useRouter } from 'next/router'
 
-import { Box, Button, Chip, Grid, TextField, Typography } from '@mui/material'
+import { Box, Button, Chip, Grid, Link, TextField, Typography } from '@mui/material'
 import { ErrorOutline } from '@mui/icons-material'
 
 import { AuthContext } from '../../context'
@@ -120,7 +120,9 @@ const RegisterPage = () => {
                                 href={ router.query.p ? `/auth/login?p=${ router.query.p }` : '/auth/login' }
                                 passHref
                             >
-                                Already has an account?
+                                <Link>
+                                    Already has an account?
+                                </Link>
                             </NextLink>
                         </Grid>
 
