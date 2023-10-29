@@ -3,7 +3,7 @@ import NextLink from 'next/link'
 
 import { CartContext } from '../../context'
 
-import { Box, Button, CardActionArea, CardMedia, Grid, Typography } from '@mui/material'
+import { Box, Button, CardActionArea, CardMedia, Grid, Link, Typography } from '@mui/material'
 import ItemCounter from '../ui/ItemCounter'
 import { ICartProduct } from '../../interfaces'
 
@@ -30,17 +30,22 @@ const CartList: FC<CartListPorps> = ({ editable = false }) => {
           sx={ { mb: 4 } }
         >
           <Grid item xs={ 3 }>
-            <NextLink href={ `/product/${ product.slug }` } passHref>
-              <CardActionArea>
-                <CardMedia
-                  image={ `/products/${ product.image }` }
-                  component='img'
-                  sx={ { borderRadius: '12px', objectFit: 'contain', } }
-                  height='140px'
-                  width='100%'
-                  alt={ product.title }
-                />
-              </CardActionArea>
+            <NextLink
+              href={ `/product/${ product.slug }` }
+              passHref
+            >
+              <Link>
+                <CardActionArea>
+                  <CardMedia
+                    image={ `/products/${ product.image }` }
+                    component='img'
+                    sx={ { borderRadius: '12px', objectFit: 'contain', } }
+                    height='140px'
+                    width='100%'
+                    alt={ product.title }
+                  />
+                </CardActionArea>
+              </Link>
             </NextLink>
           </Grid>
           <Grid item xs={ 7 }>
@@ -84,11 +89,11 @@ const CartList: FC<CartListPorps> = ({ editable = false }) => {
             {
               editable &&
               <Button
-                  color='secondary'
-                  variant='outlined'
-                  aria-label='remove'
-                  onClick={ () => removeCartProduct(product)}
-                >
+                color='secondary'
+                variant='outlined'
+                aria-label='remove'
+                onClick={ () => removeCartProduct(product) }
+              >
                 Remove
               </Button>
             }
