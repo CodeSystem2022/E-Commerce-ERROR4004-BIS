@@ -1,3 +1,4 @@
+import { useContext } from 'react';
 import NextLink from 'next/link'
 import {
   Box,
@@ -9,11 +10,22 @@ import {
   Typography,
 } from '@mui/material'
 
+import { CartContext } from '@/context'
 import ShopLayout from '../../components/layouts/ShopLayout'
 import CartList from '../../components/cart/CartList'
 import OrderSummary from '../../components/cart/OrderSummary'
+import { countries } from '@/utils';
 
 const SummaryPage = () => {
+
+  const { shippingAddress, numberOfItems } = useContext ( CartContext );
+
+  if ( !shippingAddress ){
+    return <></>;
+  }
+
+  const { firstName, lastName, address, address2 = '' ,city, zip, phone, country } = shippingAddress;
+
   return (
     <ShopLayout
       title='Orden summary'
@@ -31,7 +43,7 @@ const SummaryPage = () => {
             <Card className='summary-card'>
               <CardContent>
                 <Typography variant='h2' component='h2' mb={ 4 }>
-                  Summary (3 products)
+                  Summary ({ numberOfItems } { numberOfItems === 1 ? 'product':'Products'})
                 </Typography>
                 <Divider sx={ { my: 1 } } />
                 <Box display='flex' justifyContent='space-between' my={ 1 }>
@@ -42,11 +54,12 @@ const SummaryPage = () => {
                     <strong>Edit</strong>
                   </NextLink>
                 </Box>
-                <Typography>María Eugenia Costa</Typography>
-                <Typography>123 calle de prueba</Typography>
-                <Typography>Buenos Aires, 1122</Typography>
-                <Typography>Argentina</Typography>
-                <Typography>+ 54 11 2222 3333</Typography>
+                <Typography>{ firstName } { lastName }</Typography>
+                <Typography>{ address } { address2 ? `, ${address2}` : '' }</Typography>
+                <Typography>{ city }, { zip }</Typography>
+                <Typography>{ countries.find(c => c.code === country )?.name }</Typography>
+                <Typography>{ phone }</Typography>
+                
                 <Divider sx={ { my: 1 } } />
                 <Box display='flex' justifyContent='end' my={ 1 }>
                   <NextLink href='/cart' passHref>
