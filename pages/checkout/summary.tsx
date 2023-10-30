@@ -1,14 +1,25 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import NextLink from 'next/link'
+import { useRouter } from 'next/router'
+import Cookies from 'js-cookie'
+
 import { Box, Button, Card, CardContent, Divider, Grid, Typography } from '@mui/material'
+
 import { CartContext } from '../../context'
 import ShopLayout from '../../components/layouts/ShopLayout'
 import CartList from '../../components/cart/CartList'
 import OrderSummary from '../../components/cart/OrderSummary'
-import { countries } from '../../utils'
 
 const SummaryPage = () => {
+
+  const router = useRouter()
   const { shippingAddress, numberOfItems } = useContext(CartContext)
+
+  useEffect(() => {
+    if (!Cookies.get('firstName')) {
+      router.push('/checkout/address')
+    }
+  }, [router])
 
   if (!shippingAddress) {
     return <></>
@@ -41,18 +52,18 @@ const SummaryPage = () => {
                     Delivery address
                   </Typography>
                   <NextLink href='/checkout/address' passHref>
-                      Edit
+                    Edit
                   </NextLink>
                 </Box>
                 <Typography>{ firstName } { lastName }</Typography>
                 <Typography>{ address } { address2 ? `, ${ address2 }` : '' }</Typography>
                 <Typography>{ city }, { zip }</Typography>
-                <Typography>{ countries.find(c => c.code === country)?.name }</Typography>
+                <Typography>{ country }</Typography>
                 <Typography>{ phone }</Typography>
                 <Divider sx={ { my: 1 } } />
                 <Box display='flex' justifyContent='end' my={ 1 }>
                   <NextLink href='/cart' passHref>
-                      Edit
+                    Edit
                   </NextLink>
                 </Box>
                 <OrderSummary />
