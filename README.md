@@ -49,6 +49,8 @@
 
 - **js-cookie**, para procesar las cookies en el Front End
 
+- [**NextAuth.js**](https://next-auth.js.org/), autentificación para Next.js
+
 - **axios**
 
 -  [<img src="https://github.com/devicons/devicon/blob/master/icons/yarn/yarn-original.svg" alt="yarn" width="30" height="30"  /> **Yarn**](https://yarnpkg.com/)
