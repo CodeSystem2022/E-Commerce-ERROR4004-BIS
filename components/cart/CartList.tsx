@@ -1,9 +1,7 @@
 import React, { FC, useContext } from 'react'
 import NextLink from 'next/link'
-
 import { CartContext } from '../../context'
-
-import { Box, Button, CardActionArea, CardMedia, Grid, Link, Typography } from '@mui/material'
+import { Box, Button, CardActionArea, CardMedia, Grid,  Typography } from '@mui/material'
 import ItemCounter from '../ui/ItemCounter'
 import { ICartProduct } from '../../interfaces'
 
@@ -34,7 +32,6 @@ const CartList: FC<CartListPorps> = ({ editable = false }) => {
               href={ `/product/${ product.slug }` }
               passHref
             >
-              <Link>
                 <CardActionArea>
                   <CardMedia
                     image={ `/products/${ product.image }` }
@@ -45,7 +42,6 @@ const CartList: FC<CartListPorps> = ({ editable = false }) => {
                     alt={ product.title }
                   />
                 </CardActionArea>
-              </Link>
             </NextLink>
           </Grid>
           <Grid item xs={ 7 }>

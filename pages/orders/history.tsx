@@ -1,10 +1,7 @@
 import React from 'react'
-
 import NextLink from 'next/link'
-
-import { Chip, Grid, Link, Typography } from '@mui/material'
+import { Chip, Grid,  Typography } from '@mui/material'
 import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid'
-
 import ShopLayout from '../../components/layouts/ShopLayout'
 
 const columns: GridColDef[] = [
@@ -41,9 +38,7 @@ const columns: GridColDef[] = [
             textTransform: 'uppercase'
           } }
         >
-          <Link>
           See order
-          </Link>
         </NextLink>
       )
     }

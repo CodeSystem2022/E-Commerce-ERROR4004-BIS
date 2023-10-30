@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { Box, Button, FormControl, Grid, MenuItem, TextField, Typography } from '@mui/material'
 import { useForm } from 'react-hook-form'
@@ -36,9 +36,23 @@ const AddressPage = () => {
   const router = useRouter()
   const { updateAddress } = useContext(CartContext)
 
-  const { register, handleSubmit, formState: { errors } } = useForm<FormData>({
-    defaultValues: getAddressFromCookies()
-  });
+  const { register, handleSubmit, formState: { errors }, reset } = useForm<FormData>({
+    defaultValues: {
+      firstName: '',
+      lastName: '',
+      address: '',
+      address2: '',
+      zip: '',
+      city: '',
+      country: countries[0].code,
+      phone: '',
+    }
+  })
+
+  useEffect(() => {
+    reset(getAddressFromCookies())
+
+  }, [reset])
 
   const onSubmitAddress = (data: FormData) => {
     updateAddress(data)
@@ -135,31 +149,19 @@ const AddressPage = () => {
             />
           </Grid>
           <Grid item xs={ 12 } sm={ 6 }>
-            <FormControl fullWidth>
-              <TextField
-                select
-                variant='filled'
-                label='Country'
-                defaultValue={ Cookies.get('country') || countries[0].code }
-                {
-                ...register('country', {
-                  required: 'X - The country field is required'
-                }) }
-                error={ !!errors.country }
-                helperText={ errors.country?.message }
-              >
-                {
-                  countries.map(country => (
-                    <MenuItem
-                      key={ country.code }
-                      value={ country.code }
-                    >
-                      { country.name }
-                    </MenuItem>
-                  ))
-                }
-              </TextField>
-            </FormControl>
+            <TextField
+              fullWidth
+              variant='filled'
+              label='Country'
+              {
+              ...register('country', {
+                required: 'X - The country field is required'
+              }) }
+              error={ !!errors.country }
+              helperText={ errors.country?.message }
+            >
+              
+            </TextField>
           </Grid>
           <Grid item xs={ 12 } sm={ 6 }>
             <TextField

@@ -1,14 +1,12 @@
 import { FC, useEffect, useReducer, ReactNode } from 'react'
- import { useRouter } from 'next/router'
-
+import { useRouter } from 'next/router'
+import { useSession, signOut } from 'next-auth/react'
 import { AuthContext, authReducer } from './'
-
 import Cookies from 'js-cookie'
-
 import { IUser } from '../../interfaces'
 import { ohlalaApi } from '../../api'
-
 import axios from 'axios'
+
 export interface AuthState {
   isLoggedIn: boolean
   user?: IUser
@@ -25,11 +23,16 @@ interface AuthProviderProps {
 export const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
 
   const [state, dispatch] = useReducer(authReducer, AUTH_INITIAL_STATE)
+  const { data, status } = useSession()
   const router = useRouter()
 
-  useEffect(() => {
-    checkToken()
-  }, [])
+  useEffect(() => { 
+    if (status === 'authenticated') { 
+      console.log({user: data?.user})
+      dispatch({type: '[Auth] - Login', payload: data.user as IUser})
+    }
+
+  }, [status, data])
 
   const checkToken = async () => {
 
@@ -88,7 +91,6 @@ export const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
   }
 
   const logout = () => {
-    Cookies.remove('token')
     Cookies.remove('cart')
     Cookies.remove('firstName')
     Cookies.remove('lastName')
@@ -98,7 +100,8 @@ export const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
     Cookies.remove('city')
     Cookies.remove('country')
     Cookies.remove('phone')
-    router.reload()
+
+    signOut ()
   }
 
   return (

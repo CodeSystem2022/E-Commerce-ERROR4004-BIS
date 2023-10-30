@@ -1,12 +1,9 @@
 import React, { useContext, useState } from 'react'
-
 import NextLink from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
-
 import { CartContext, UiContext } from '../../context'
-
-import { AppBar, Badge, Box, Button, IconButton, Input, InputAdornment, Link, Toolbar, Typography } from '@mui/material'
+import { AppBar, Badge, Box, Button, IconButton, Input, InputAdornment, Toolbar, Typography } from '@mui/material'
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
 import { ClearOutlined } from '@mui/icons-material'
@@ -39,23 +36,14 @@ const Navbar = () => {
             color: 'black'
           } }
         >
-          <Link
-            sx={ {
-              display: 'flex',
-              alignContent: 'center',
-              alignItems: 'center',
-              flexWrap: 'wrap'
-            } }
-          >
             <Image
               src='/logo/logo-name.png'
               alt='Oh-la-la-Shoes'
               width='50'
               height='50'
-              css={ { borderRadius: '50%' } }
+              style={ { borderRadius: '50%' } }
             />
             <Typography sx={ { ml: 0.5 } }>Shop</Typography>
-          </Link>
         </NextLink>
         <Box flex={ 1 } />
         <Box
@@ -64,7 +52,6 @@ const Navbar = () => {
           } }
         >
           <NextLink href='/category/men' passHref>
-            <Link>
               <Button
                 aria-label='go to men category'
                 color={ asPath === '/category/men' ? 'primary' : 'info' }
@@ -77,10 +64,8 @@ const Navbar = () => {
               >
                 Men
               </Button>
-            </Link>
           </NextLink>
           <NextLink href='/category/women' passHref>
-            <Link>
               <Button
                 aria-label='go to women category'
                 color={ asPath === '/category/women' ? 'primary' : 'info' }
@@ -93,10 +78,8 @@ const Navbar = () => {
               >
                 Women
               </Button>
-            </Link>
           </NextLink>
           <NextLink href='/category/unisex' passHref>
-            <Link>
               <Button
                 aria-label='go to unisex category'
                 color={ asPath === '/category/unisex' ? 'primary' : 'info' }
@@ -109,10 +92,8 @@ const Navbar = () => {
               >
                 Unisex
               </Button>
-            </Link>
           </NextLink>
           <NextLink href='/category/kid' passHref>
-            <Link>
               <Button
                 aria-label='go to kid category'
                 color={ asPath === '/category/kid' ? 'primary' : 'info' }
@@ -125,7 +106,6 @@ const Navbar = () => {
               >
                 Kids
               </Button>
-            </Link>
           </NextLink>
         </Box>
         <Box flex={ 1 } />
@@ -176,13 +156,11 @@ const Navbar = () => {
           <SearchOutlinedIcon />
         </IconButton>
         <NextLink href='/cart' passHref>
-          <Link>
             <IconButton aria-label='go to shopping cart' >
               <Badge badgeContent={ numberOfItems } color='secondary'>
                 < ShoppingCartOutlinedIcon aria-label='amunt of items in shopping cart' />
               </Badge>
             </IconButton>
-          </Link>
         </NextLink>
         <Button
           onClick={ toggleSideMenu }
