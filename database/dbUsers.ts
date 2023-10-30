@@ -34,11 +34,11 @@ export const checkUserEmailPassword = async (email: string, password: string) =>
 // Create or verify an  OAuth user
 export const oAUthToDbUser = async (oAuthEmail: string, oAuthName: string) => {
 
-  await db.connect();
+  await db.connect()
   const user = await User.findOne({ email: oAuthEmail })
 
   if (user) {
-    await db.disconnect();
+    await db.disconnect()
     const { _id, name, email, role } = user
     return { _id, name, email, role }
   }
@@ -48,6 +48,6 @@ export const oAUthToDbUser = async (oAuthEmail: string, oAuthName: string) => {
   await db.disconnect()
 
   const { _id, name, email, role } = newUser
-  return { _id, name, email, role }
 
+  return { _id, name, email, role }
 }

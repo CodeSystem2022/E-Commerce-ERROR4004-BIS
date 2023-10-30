@@ -1,7 +1,6 @@
 import NextAuth from 'next-auth'
 import GithubProvider from 'next-auth/providers/github'
 import Credentials from 'next-auth/providers/credentials'
-
 import { dbUsers } from '../../../database'
 
 export default NextAuth({
@@ -22,17 +21,30 @@ export default NextAuth({
     }),
 
     GithubProvider({
-      clientId: process.env.GITHUB_ID,
-      clientSecret: process.env.GITHUB_SECRET,
+      clientId: process.env.GITHUB_ID!!,
+      clientSecret: process.env.GITHUB_SECRET!!,
     }),
 
   ],
 
-  // Callbacks
+  // Custom Pages
+  pages: {
+    signIn: '/auth/login',
+    newUser: '/auth/register'
+  },
+
+
   jwt: {
     // secret: process.env.JWT_SECRET_SEED, // deprecated
   },
 
+  session: {
+    maxAge: 2592000, // 30 days
+    strategy: 'jwt',
+    updateAge: 86400, // every day
+  },
+
+  // Callbacks
   callbacks: {
     async jwt({ token, account, user }) {
 
@@ -56,7 +68,7 @@ export default NextAuth({
 
     async session({ session, token, user }) {
 
-      session.accessToken = token.accessToken 
+      session.accessToken = token.accessToken
       session.user = token.user as any
 
       return session

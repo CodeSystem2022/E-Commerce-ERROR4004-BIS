@@ -1,6 +1,9 @@
 import { useState, useContext } from 'react'
 import NextLink from 'next/link'
 import { useRouter } from 'next/router'
+import { GetServerSideProps } from 'next'
+import { signIn, getSession } from 'next-auth/react'
+
 import { Box, Button, Chip, Grid, TextField, Typography } from '@mui/material'
 import { ErrorOutline } from '@mui/icons-material'
 import { AuthContext } from '../../context'
@@ -17,10 +20,10 @@ type FormData = {
 const RegisterPage = () => {
     const router = useRouter()
     const { registerUser } = useContext(AuthContext)
-    const [showError, setShowError] = useState<boolean>(false)
-    const [errorMessage, setErrorMessage] = useState<string>('')
 
     const { register, handleSubmit, formState: { errors } } = useForm<FormData>()
+    const [showError, setShowError] = useState<boolean>(false)
+    const [errorMessage, setErrorMessage] = useState<string>('')
 
     const onRegisterForm = async ({ name, email, password }: FormData) => {
 
@@ -34,8 +37,7 @@ const RegisterPage = () => {
             return
         }
 
-        const destination = router.query.p?.toString() || '/'
-        router.replace(destination)
+        await signIn('credentials',{ email, password })
     }
 
     return (
@@ -125,6 +127,28 @@ const RegisterPage = () => {
             </form>
         </AuthLayout>
     )
+}
+
+export const getServerSideProps: GetServerSideProps = async ({ req, query }) => {
+    
+    const session = await getSession({ req });
+    // console.log({session});
+
+    const { p = '/' } = query;
+
+    if ( session ) {
+        return {
+            redirect: {
+                destination: p.toString(),
+                permanent: false
+            }
+        }
+    }
+
+
+    return {
+        props: { }
+    }
 }
 
 export default RegisterPage
