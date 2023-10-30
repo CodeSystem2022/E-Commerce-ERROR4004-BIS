@@ -19,7 +19,6 @@ export async function middleware(req: NextRequest) {
   return NextResponse.next()
 }
 
-
 // See "Matching Paths" below to learn more
 export const config = {
   matcher: ['/checkout/address', '/checkout/summary']
