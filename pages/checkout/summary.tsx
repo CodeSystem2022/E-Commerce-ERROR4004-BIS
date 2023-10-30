@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import NextLink from 'next/link'
-import { Box, Button, Card, CardContent, Divider, Grid, Link, Typography } from '@mui/material'
+import { Box, Button, Card, CardContent, Divider, Grid, Typography } from '@mui/material'
 import { CartContext } from '../../context'
 import ShopLayout from '../../components/layouts/ShopLayout'
 import CartList from '../../components/cart/CartList'
@@ -41,13 +41,7 @@ const SummaryPage = () => {
                     Delivery address
                   </Typography>
                   <NextLink href='/checkout/address' passHref>
-                    <Link
-                      underline='always'
-                      color='secondary'
-                      sx={ { fontWeight: '700' } }
-                    >
                       Edit
-                    </Link>
                   </NextLink>
                 </Box>
                 <Typography>{ firstName } { lastName }</Typography>
@@ -58,13 +52,7 @@ const SummaryPage = () => {
                 <Divider sx={ { my: 1 } } />
                 <Box display='flex' justifyContent='end' my={ 1 }>
                   <NextLink href='/cart' passHref>
-                    <Link
-                      underline='always'
-                      color='secondary'
-                      sx={ { fontWeight: '700' } }
-                    >
                       Edit
-                    </Link>
                   </NextLink>
                 </Box>
                 <OrderSummary />

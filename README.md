@@ -124,7 +124,22 @@ A tener en cuenta para las configuraciones de Docker y Base de datos:
 
 7. Configurar las **variables de entorno**
 
-Copiar el archivo ```.env.template``` y renombrarlo a ```.env```
+Copiar el archivo ```.env.template``` y renombrarlo a ```.env```. Van a ver que tenemos las variables de GITHUB, para obtener **GITHUB_ID** y **GITHUB_SECRET**:
+
+- registrarse y loguearse en GitHub
+
+- Ir a `settings` > `developer settings` > `New GitHub App` y completar:
+
+-GitHub App name: `Ohlalal Shoes`
+
+-Description: `Ohlala Shoes, an e-commerce to buy shoes. Created with Nextjs`
+
+-HomePage URL: `http://localhost:3000`
+
+-Callback URL: `http://localhost:3000`
+
+-Copiamos el **Client ID** y hacemos click en **Generate a new clienten secret**, ambos datos los dejamos en el archivo `.env`
+
 
 8. MongoDB URL Local:
 
@@ -274,6 +289,8 @@ GET: `localhost:3000/api/validate-token`
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Que la página de resumen de compra muestre la dirección de envío acorde a lo completado en el formulario.
 
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Implementamos NextAuth.js y creamos la página: `http://localhost:3000/api/auth/signin`
+
 ## Sprint 3 - Semana 3 (3Nov - 10Nov):
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>
@@ -305,6 +322,9 @@ Si es una tarea solo de estilos en vez de `feat` utilizamos `style`, si es solo 
   > products
   > ui
 > context
+  > auth
+  > cart
+  > ui
 > database
 > hooks
 > interfaces
@@ -314,12 +334,17 @@ Si es una tarea solo de estilos en vez de `feat` utilizamos `style`, si es solo 
 > pages
   > admin
   > api
+    > auth
+    > products
+    > search
+    > user
   > auth
   > cart
   > category
   > checkout
   > orders
   > product
+  > search
 > public
   > logo
   > products

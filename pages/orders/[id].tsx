@@ -1,16 +1,5 @@
 import NextLink from 'next/link'
-
-import {
-  Box,
-  Card,
-  CardContent,
-  Chip,
-  Divider,
-  Grid,
-  Link,
-  Typography,
-} from '@mui/material'
-
+import { Box, Card, CardContent, Chip, Divider, Grid, Typography, } from '@mui/material'
 import ShopLayout from '../../components/layouts/ShopLayout'
 import CartList from '../../components/cart/CartList'
 import OrderSummary from '../../components/cart/OrderSummary'
@@ -56,9 +45,7 @@ const OrderPage = () => {
                     Delivery address
                   </Typography>
                   <NextLink href='/checkout/address' passHref>
-                    <Link>
-                      <strong>Edit</strong>
-                    </Link>
+                    <strong>Edit</strong>
                   </NextLink>
                 </Box>
                 <Typography>María Eugenia Costa</Typography>
@@ -69,9 +56,7 @@ const OrderPage = () => {
                 <Divider sx={ { my: 1 } } />
                 <Box display='flex' justifyContent='end' my={ 1 }>
                   <NextLink href='/cart' passHref>
-                    <Link>
-                      <strong>Edit</strong>
-                    </Link>
+                    <strong>Edit</strong>
                   </NextLink>
                 </Box>
                 <OrderSummary />

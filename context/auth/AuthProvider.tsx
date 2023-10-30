@@ -1,14 +1,12 @@
 import { FC, useEffect, useReducer, ReactNode } from 'react'
- import { useRouter } from 'next/router'
-
+import { useRouter } from 'next/router'
+import { useSession } from 'next-auth/react'
 import { AuthContext, authReducer } from './'
-
 import Cookies from 'js-cookie'
-
 import { IUser } from '../../interfaces'
 import { ohlalaApi } from '../../api'
-
 import axios from 'axios'
+
 export interface AuthState {
   isLoggedIn: boolean
   user?: IUser
@@ -25,11 +23,20 @@ interface AuthProviderProps {
 export const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
 
   const [state, dispatch] = useReducer(authReducer, AUTH_INITIAL_STATE)
+  const { data, status } = useSession()
   const router = useRouter()
 
-  useEffect(() => {
-    checkToken()
-  }, [])
+  useEffect(() => { 
+    if (status === 'authenticated') { 
+      // TODO
+      // dispatch({type: '[Auth] - Login', payload: data.user as IUser})
+    }
+
+  }, [status, data])
+
+  // useEffect(() => {
+  //   checkToken()
+  // }, [])
 
   const checkToken = async () => {
 

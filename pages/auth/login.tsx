@@ -1,13 +1,9 @@
 import { useState, useContext } from 'react'
 import NextLink from 'next/link'
-
-import { Box, Button, Chip, Grid, Link, TextField, Typography } from '@mui/material'
+import { Box, Button, Chip, Grid,  TextField, Typography } from '@mui/material'
 import { ErrorOutline } from '@mui/icons-material'
-
 import { AuthContext } from '../../context'
-
 import { useForm } from 'react-hook-form'
-
 import { AuthLayout } from '../../components/layouts'
 import { validations } from '../../utils'
 import { useRouter } from 'next/router'
@@ -105,9 +101,7 @@ const LoginPage = () => {
                                 href={ router.query.p ? `/auth/register?p=${ router.query.p }` : '/auth/register' }
                                 passHref
                             >
-                                <Link>
-                                    Don&#8217;t have an account?
-                                </Link>
+                                Don&#8217;t have an account?
                             </NextLink>
                         </Grid>
                     </Grid>

@@ -1,17 +1,6 @@
 import React, { FC, useState, useMemo } from 'react'
 import NextLink from 'next/link'
-
-import {
-  Box,
-  Card,
-  CardActionArea,
-  CardMedia,
-  Chip,
-  Grid,
-  Link,
-  Typography
-} from '@mui/material'
-
+import { Box, Card, CardActionArea, CardMedia, Chip, Grid, Typography } from '@mui/material'
 import { IProduct } from '../../interfaces'
 
 interface ProductCardPorps {
@@ -44,45 +33,43 @@ const ProductCard: FC<ProductCardPorps> = ({ product }) => {
           passHref
           prefetch={ false }
         >
-          <Link>
-            <CardActionArea
+          <CardActionArea
+            sx={ {
+              height: {
+                xs: '130px',
+                sm: '200px'
+              }
+            } }
+          >
+            {
+              (product.inStock === 0) && (
+                <Chip
+                  color='primary'
+                  label='No stock'
+                  sx={ {
+                    position: 'absolute',
+                    zIndex: 99,
+                    top: '10px',
+                    right: '10px'
+                  } }
+                />
+              )
+            }
+            <CardMedia
+              className='fadeIn'
+              component='img'
+              image={ productImage }
+              alt={ product.title }
               sx={ {
                 height: {
-                  xs: '130px',
-                  sm: '200px'
-                }
+                  xs: '110px',
+                  sm: '180px'
+                },
+                objectFit: 'contain'
               } }
-            >
-              {
-                (product.inStock === 0) && (
-                  <Chip
-                    color='primary'
-                    label='No stock'
-                    sx={ {
-                      position: 'absolute',
-                      zIndex: 99,
-                      top: '10px',
-                      right: '10px'
-                    } }
-                  />
-                )
-              }
-              <CardMedia
-                className='fadeIn'
-                component='img'
-                image={ productImage }
-                alt={ product.title }
-                sx={ {
-                  height: {
-                    xs: '110px',
-                    sm: '180px'
-                  },
-                  objectFit: 'contain'
-                } }
-                onLoad={ () => setIsImageLoaded(true) }
-              />
-            </CardActionArea>
-          </Link>
+              onLoad={ () => setIsImageLoaded(true) }
+            />
+          </CardActionArea>
         </NextLink>
       </Card>
       <Box
