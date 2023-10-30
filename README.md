@@ -51,7 +51,7 @@
 
 - [**NextAuth.js**](https://next-auth.js.org/), autentificación para Next.js
 
-- **axios**
+- [**axios**](https://axios-http.com/)
 
 -  [<img src="https://github.com/devicons/devicon/blob/master/icons/yarn/yarn-original.svg" alt="yarn" width="30" height="30"  /> **Yarn**](https://yarnpkg.com/)
 
@@ -112,9 +112,9 @@ yarn dev
 docker-compose up -d
 ```
 
-El ```-d```, significa detached
+-> El ```-d```, significa detached
 
-A tener en cuenta para las configuraciones de Docker y Base de datos:
+->A tener en cuenta para las configuraciones de Docker y Base de datos:
 
 -El **service** es ``ohlalalshoesdb``, en el archivo `.env`: `MONGO_URL=mongodb://localhost:27017/ohlalalshoesdb`.
 
