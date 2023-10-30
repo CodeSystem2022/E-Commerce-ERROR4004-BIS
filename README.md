@@ -270,6 +270,8 @@ GET: `localhost:3000/api/validate-token`
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Si no hay ítems en el carro de compras que se muestre la pagina de carro vacío y si tiene items que se muestre la pagina del carro de compras
 
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Que la página de resumen de compra muestre la dirección de envío acorde a lo completado en el formulario.
+
 ## Sprint 3 - Semana 3 (3Nov - 10Nov):
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>
