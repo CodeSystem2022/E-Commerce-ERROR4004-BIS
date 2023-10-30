@@ -1,21 +1,8 @@
 import React, { useContext } from 'react'
-
 import { useRouter } from 'next/router'
-
-import {
-  Box,
-  Button,
-  FormControl,
-  Grid,
-  MenuItem,
-  TextField,
-  Typography
-} from '@mui/material'
-
+import { Box, Button, FormControl, Grid, MenuItem, TextField, Typography } from '@mui/material'
 import { useForm } from 'react-hook-form'
-
 import Cookies from 'js-cookie'
-
 import ShopLayout from '../../components/layouts/ShopLayout'
 import { countries } from '../../utils'
 import { CartContext } from '../../context'
@@ -31,31 +18,30 @@ type FormData = {
   phone: string
 }
 
-const getAddressFromCookies = ():FormData => {
-  return{
+const getAddressFromCookies = (): FormData => {
+  return {
     firstName: Cookies.get('firstName') || '',
-    lastName : Cookies.get('lastName') || '',
-    address  : Cookies.get('address') || '',
-    address2 : Cookies.get('address2') || '',
-    zip      : Cookies.get('zip') || '',
-    city     : Cookies.get('city') || '',
-    country  : Cookies.get('country') || '',
-    phone    : Cookies.get('phone') || '',
+    lastName: Cookies.get('lastName') || '',
+    address: Cookies.get('address') || '',
+    address2: Cookies.get('address2') || '',
+    zip: Cookies.get('zip') || '',
+    city: Cookies.get('city') || '',
+    country: Cookies.get('country') || '',
+    phone: Cookies.get('phone') || '',
   }
-
 }
 
 const AddressPage = () => {
 
   const router = useRouter()
-  const {updateAddress} = useContext( CartContext);
+  const { updateAddress } = useContext(CartContext)
 
   const { register, handleSubmit, formState: { errors } } = useForm<FormData>({
     defaultValues: getAddressFromCookies()
   });
 
-  const onSubmitAddress = ( data: FormData ) => {
-    updateAddress( data );
+  const onSubmitAddress = (data: FormData) => {
+    updateAddress(data)
     router.push('/checkout/summary')
   }
 
@@ -154,7 +140,7 @@ const AddressPage = () => {
                 select
                 variant='filled'
                 label='Country'
-                defaultValue={ Cookies.get('country') || countries[0].code}
+                defaultValue={ Cookies.get('country') || countries[0].code }
                 {
                 ...register('country', {
                   required: 'X - The country field is required'
