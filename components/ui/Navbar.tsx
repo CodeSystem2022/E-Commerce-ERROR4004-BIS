@@ -41,7 +41,7 @@ const Navbar = () => {
               alt='Oh-la-la-Shoes'
               width='50'
               height='50'
-              css={ { borderRadius: '50%' } }
+              style={ { borderRadius: '50%' } }
             />
             <Typography sx={ { ml: 0.5 } }>Shop</Typography>
         </NextLink>
@@ -91,7 +91,7 @@ const Navbar = () => {
                 } }
               >
                 Unisex
-              </Button>>
+              </Button>
           </NextLink>
           <NextLink href='/category/kid' passHref>
               <Button

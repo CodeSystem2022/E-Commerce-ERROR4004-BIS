@@ -8,14 +8,17 @@ export const checkUserEmailPassword = async (email: string, password: string) =>
   const user = await User.findOne({ email })
   await db.disconnect()
 
+  // If the user does not exist
   if (!user) {
     return null
   }
 
+  // If the user exist -> check password
   if (!bcrypt.compareSync(password, user.password!)) {
     return null
   }
 
+  // If the user exist and it's ok password
   const { role, name, _id } = user
 
 
