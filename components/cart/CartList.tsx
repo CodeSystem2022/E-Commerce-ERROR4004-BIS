@@ -1,8 +1,9 @@
 import React, { FC, useContext } from 'react'
 import NextLink from 'next/link'
-import { CartContext } from '../../context'
-import { Box, Button, CardActionArea, CardMedia, Grid,  Typography } from '@mui/material'
+import { Box, Button, CardActionArea, CardMedia, Grid, Typography } from '@mui/material'
+
 import ItemCounter from '../ui/ItemCounter'
+import { CartContext } from '../../context'
 import { ICartProduct } from '../../interfaces'
 
 interface CartListPorps {
@@ -32,16 +33,19 @@ const CartList: FC<CartListPorps> = ({ editable = false }) => {
               href={ `/product/${ product.slug }` }
               passHref
             >
-                <CardActionArea>
-                  <CardMedia
-                    image={ `/products/${ product.image }` }
-                    component='img'
-                    sx={ { borderRadius: '12px', objectFit: 'contain', } }
-                    height='140px'
-                    width='100%'
-                    alt={ product.title }
-                  />
-                </CardActionArea>
+              <CardActionArea>
+                <CardMedia
+                  image={ `/products/${ product.image }` }
+                  component='img'
+                  sx={ {
+                    borderRadius: '12px',
+                    objectFit: 'contain'
+                  } }
+                  height='140px'
+                  width='100%'
+                  alt={ product.title }
+                />
+              </CardActionArea>
             </NextLink>
           </Grid>
           <Grid item xs={ 7 }>
