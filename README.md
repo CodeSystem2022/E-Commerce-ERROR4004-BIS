@@ -128,9 +128,9 @@ Copiar el archivo ```.env.template``` y renombrarlo a ```.env```. Van a ver que 
 
 - registrarse y loguearse en GitHub
 
-- Ir a `settings` > `developer settings` > `New GitHub App` y completar:
+- Ir a `settings` > `developer settings` > `OAuthApps` > `NewOAuth App` y completar:
 
--GitHub App name: `Ohlalal Shoes`
+-GitHub App name: `Ohlala Shoes`
 
 -Description: `Ohlala Shoes, an e-commerce to buy shoes. Created with Nextjs`
 
