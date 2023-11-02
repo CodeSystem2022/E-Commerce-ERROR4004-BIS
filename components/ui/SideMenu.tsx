@@ -91,19 +91,34 @@ const SideMenu = () => {
                   </ListItemIcon>
                   <ListItemText primary={ 'Profile' } />
                 </ListItem>
-                <ListItem>
-                  <ListItemIcon aria-label='go to my orders'>
-                    <ConfirmationNumberOutlined />
-                  </ListItemIcon>
-                  <ListItemText primary={ 'My orders' } />
-                </ListItem>
+                <Button
+                  sx={ {
+                    paddingRight: '24px',
+                    margin: '6px',
+                    minWidth: '196px'
+                  } }
+                  onClick={ () => navigateTo('/orders/history') }
+                  aria-label='button to go and check the orders'
+                >
+                  <ListItem>
+                    <ListItemIcon aria-label='go to my orders'>
+                      <ConfirmationNumberOutlined />
+                    </ListItemIcon>
+                    <ListItemText primary={ 'My orders' } />
+                  </ListItem>
+                </Button>
               </>
             )
           }
           <Button
             onClick={ () => navigateTo('/category/men') }
             fullWidth
-            sx={ { display: { xs: '', sm: 'none' } } }
+            sx={ {
+              display: { xs: '', sm: 'none' },
+              paddingRight: '24px',
+              margin: '6px',
+              minWidth: '196px'
+            } }
             aria-label='go to men category'
           >
             <ListItem >
@@ -116,7 +131,12 @@ const SideMenu = () => {
           <Button
             onClick={ () => navigateTo('/category/women') }
             fullWidth
-            sx={ { display: { xs: '', sm: 'none' } } }
+            sx={ {
+              display: { xs: '', sm: 'none' },
+              paddingRight: '24px',
+              margin: '6px',
+              minWidth: '196px'
+            } }
             aria-label='go to women category'
           >
             <ListItem >
@@ -129,7 +149,12 @@ const SideMenu = () => {
           <Button
             onClick={ () => navigateTo('/category/kid') }
             fullWidth
-            sx={ { display: { xs: '', sm: 'none' } } }
+            sx={ {
+              display: { xs: '', sm: 'none' },
+              paddingRight: '24px',
+              margin: '6px',
+              minWidth: '196px'
+            } }
             aria-label='go to kids category'
           >
             <ListItem >
@@ -142,7 +167,12 @@ const SideMenu = () => {
           <Button
             onClick={ () => navigateTo('/category/unisex') }
             fullWidth
-            sx={ { display: { xs: '', sm: 'none' } } }
+            sx={ {
+              display: { xs: '', sm: 'none' },
+              paddingRight: '24px',
+              margin: '6px',
+              minWidth: '196px'
+            } }
             aria-label='go to unisex category'
           >
             <ListItem >
@@ -154,20 +184,24 @@ const SideMenu = () => {
           </Button>
           { isLoggedIn ?
             (
-              <ListItem>
-                <Button
-                  aria-label='logout'
-                  onClick={ logout }
-                  sx={ { paddingRight: '24px'} }
-                >
+              <Button
+                aria-label='logout'
+                onClick={ logout }
+                sx={ {
+                  paddingRight: '24px',
+                  margin: '6px',
+                  minWidth: '196px'
+                } }
+              >
+                <ListItem>
                   <ListItemIcon
                     aria-label='logout icon'
                   >
                     <LoginOutlined />
                   </ListItemIcon>
                   <ListItemText primary={ 'Exit' } />
-                </Button>
-              </ListItem>
+                </ListItem>
+              </Button>
             )
             :
             (
@@ -175,7 +209,10 @@ const SideMenu = () => {
                 <Button
                   aria-label='user login'
                   onClick={ () => navigateTo(`/auth/login?p=${ router.asPath }`) }
-                  sx={ { paddingRight: '24px'} }
+                  sx={ {
+                    paddingRight: '24px',
+                    minWidth: '196px'
+                  } }
                 >
                   <ListItemIcon
                     aria-label='login icon'
