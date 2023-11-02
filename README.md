@@ -293,7 +293,7 @@ GET: `localhost:3000/api/validate-token`
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Creamos en API para poder consultar los productos: GET: `http://localhost:3000/api/products` y tambien en las paginas `api/orders` para ver las ordenes
 
-<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Creamos la base de datos para las **ordenes** de las compras de los productos en el carro de compras
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Creamos la base de datos para las **ordenes** de las compras de los productos en el carro de compras y completamos toda la parte funcional de la orden, para tener completos los pasos del carrito desde seleccionar un producto, pasando por agregarlo al carro de compras, completar el domicilio de envio, poder modificarlo y completar la orden
 
 ## Sprint 3 - Semana 3 (3Nov - 10Nov):
 
