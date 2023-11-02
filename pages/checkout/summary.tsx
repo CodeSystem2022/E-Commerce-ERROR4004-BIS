@@ -13,13 +13,17 @@ import OrderSummary from '../../components/cart/OrderSummary'
 const SummaryPage = () => {
 
   const router = useRouter()
-  const { shippingAddress, numberOfItems } = useContext(CartContext)
+  const { shippingAddress, numberOfItems, createOrder } = useContext(CartContext)
 
   useEffect(() => {
     if (!Cookies.get('firstName')) {
       router.push('/checkout/address')
     }
   }, [router])
+
+  const onCreateOrder = () => {
+    createOrder()
+  }
 
   if (!shippingAddress) {
     return <></>
@@ -73,6 +77,8 @@ const SummaryPage = () => {
                     className='circular-btn'
                     fullWidth
                     aria-label='confirm order'
+                    
+                    onClick={onCreateOrder}
                   >
                     Confirm order
                   </Button>

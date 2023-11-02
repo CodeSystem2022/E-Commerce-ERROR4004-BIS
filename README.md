@@ -291,6 +291,10 @@ GET: `localhost:3000/api/validate-token`
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Implementamos NextAuth.js y vamos a tener usuarios que pueden loguearse con sus datos de GitHub y usuarios de nuestra base de datos
 
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Creamos en API para poder connsultar los productos: GET: `http://localhost:3000/api/products` y tambien en las paginas `api/orders` para ver las ordenes
+
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Creamos la base de datos para las **ordenes** de las compras de los productos en el carro de compras
+
 ## Sprint 3 - Semana 3 (3Nov - 10Nov):
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>
