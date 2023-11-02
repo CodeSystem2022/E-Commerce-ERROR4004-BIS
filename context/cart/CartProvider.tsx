@@ -152,6 +152,8 @@ export const CartProvider: FC<CartProviderProps> = ({
         try {
             const { data } = await ohlalaApi.post<IOrder>('/orders', body)
 
+            dispatch({type: '[Cart] - Order complete'})
+
             return {
                 hasError: false,
                 message: data._id!
