@@ -33,7 +33,20 @@ const createOrder = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
     
     const dbProducts = await Product.find({ _id: { $in: productsIds } })
     
-    console.log('dbProducts ', dbProducts)
+    try {
+        
+        const subTotal = orderItems.reduce((prev, current) => { 
+            const currentPrice = dbProducts.find(prod => prod._id === current._id)?.price
+            if (!currentPrice) { 
+                throw new Error('Check the shopping card, the product is not there')
+            }
+
+            return (currentPrice * current.quantity) + prev
+        }, 0)
+
+    } catch (error) {
+        
+    }
 
     return res.status(201).json(req.body)
 }
