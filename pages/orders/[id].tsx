@@ -1,10 +1,10 @@
-import NextLink from 'next/link'
 import { GetServerSideProps, NextPage } from 'next'
 import { getSession } from 'next-auth/react'
-import { PayPalButtons } from '@paypal/react-paypal-js';
+import { PayPalButtons } from '@paypal/react-paypal-js'
 
 import { Box, Card, CardContent, Chip, Divider, Grid, Typography, } from '@mui/material'
 import { CreditCardOffOutlined, CreditScoreOutlined } from '@mui/icons-material'
+
 import ShopLayout from '../../components/layouts/ShopLayout'
 import CartList from '../../components/cart/CartList'
 import OrderSummary from '../../components/cart/OrderSummary'
@@ -93,26 +93,26 @@ const OrderPage: NextPage<OrderPagProps> = ({ order }) => {
                         />
                       )
                       :
-                      (                        
+                      (
                         <PayPalButtons
-                            createOrder={(data, actions) => {
-                                return actions.order.create({
-                                    purchase_units: [
-                                        {
-                                            amount: {                                                
-                                                value: `${order.total}`,
-                                            },
-                                        },
-                                    ],
-                                });
-                            }}
-                            onApprove={(data, actions) => {
-                                return actions.order!.capture().then((details) => {                                    
-                                    console.log({ details  })
-                                    const name = details.payer.name.given_name;
-                                    //alert(`Transaction completed by ${name}`);
-                                });
-                            }}
+                          createOrder={ (data, actions) => {
+                            return actions.order.create({
+                              purchase_units: [
+                                {
+                                  amount: {
+                                    value: `${ order.total }`,
+                                  },
+                                },
+                              ],
+                            });
+                          } }
+                          onApprove={ (data, actions) => {
+                            return actions.order!.capture().then((details) => {
+                              console.log({ details })
+                              const name = details.payer.name.given_name;
+                              //alert(`Transaction completed by ${name}`);
+                            });
+                          } }
                         />
                       )
                   }
