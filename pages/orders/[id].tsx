@@ -9,37 +9,45 @@ import OrderSummary from '../../components/cart/OrderSummary'
 import { dbOrders } from '../../database'
 import { IOrder } from '../../interfaces'
 
-interface OrderPagProps { 
+interface OrderPagProps {
   order: IOrder
 }
 
-const OrderPage: NextPage<OrderPagProps> = ({ order}) => {
+const OrderPage: NextPage<OrderPagProps> = ({ order }) => {
 
   console.log(order)
-  
+
   return (
     <ShopLayout
-      title='Orden summary | 123456'
-      pageDescription='Orden summary: 123456'
+      title={ `Orden summary | ${ order._id }` }
+      pageDescription={ `Orden summary: ${ order._id }` }
     >
       <>
         <Typography variant='h1' component='h1' my={ 4 }>
-          Order: 123456
+          Order: { order._id }
         </Typography>
-        {/* <Chip
-          sx={ { my: 2 } }
-          label='Payment pending'
-          variant='outlined'
-          color='error'
-          icon={ <CreditCardOffOutlined />}
-        /> */}
-        <Chip
-          sx={ { my: 2 } }
-          label='Paid order'
-          variant='outlined'
-          color='success'
-          icon={ <CreditScoreOutlined /> }
-        />
+        {
+          order.isPaid ?
+            (
+              <Chip
+                sx={ { my: 2 } }
+                label='Paid order'
+                variant='outlined'
+                color='success'
+                icon={ <CreditScoreOutlined /> }
+              />
+            )
+            :
+            (
+              <Chip
+                sx={ { my: 2 } }
+                label='Payment pending'
+                variant='outlined'
+                color='error'
+                icon={ <CreditCardOffOutlined /> }
+              />
+            )
+        }
         <Grid container spacing={ 2 }>
           <Grid item xs={ 12 } sm={ 7 }>
             <CartList />
