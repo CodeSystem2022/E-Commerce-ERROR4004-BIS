@@ -297,6 +297,8 @@ GET: `localhost:3000/api/validate-token`
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Se trabaja sobra la pagina `/orders/{id}` para tomar los datos del la orden y mostrarlos en pantalla.
 
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Hacemos que la pagina `/orders/history` tenga las ordenes del usuario registrado, ya que antes estaba maquetada con los datos harcodeados.
+
 ## Sprint 3 - Semana 3 (3Nov - 10Nov):
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>
