@@ -1,6 +1,8 @@
 import NextLink from 'next/link'
 import { GetServerSideProps, NextPage } from 'next'
 import { getSession } from 'next-auth/react'
+import { PayPalButtons } from '@paypal/react-paypal-js';
+
 import { Box, Card, CardContent, Chip, Divider, Grid, Typography, } from '@mui/material'
 import { CreditCardOffOutlined, CreditScoreOutlined } from '@mui/icons-material'
 import ShopLayout from '../../components/layouts/ShopLayout'
@@ -91,8 +93,27 @@ const OrderPage: NextPage<OrderPagProps> = ({ order }) => {
                         />
                       )
                       :
-                      (
-                        <h2>Pay</h2>
+                      (                        
+                        <PayPalButtons
+                            createOrder={(data, actions) => {
+                                return actions.order.create({
+                                    purchase_units: [
+                                        {
+                                            amount: {
+                                                value: "0.01",
+                                            },
+                                        },
+                                    ],
+                                });
+                            }}
+                            onApprove={(data, actions) => {
+                                return actions.order!.capture().then((details) => {                                    
+                                     console.log({ details  })
+                                     const name = details.payer.name.given_name;
+                                     alert(`Transaction completed by ${name}`);
+                                });
+                            }}
+                        />
                       )
                   }
                 </Box>
