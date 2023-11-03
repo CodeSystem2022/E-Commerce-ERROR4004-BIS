@@ -15,11 +15,11 @@ interface OrderPagProps {
 
 const OrderPage: NextPage<OrderPagProps> = ({ order }) => {
 
-  console.log(order)
+  const { shippingAddress } = order
 
   return (
     <ShopLayout
-      title={ `Orden summary | ${ order._id }` }
+      title='Orden summary'
       pageDescription={ `Orden summary: ${ order._id }` }
     >
       <>
@@ -50,45 +50,51 @@ const OrderPage: NextPage<OrderPagProps> = ({ order }) => {
         }
         <Grid container spacing={ 2 }>
           <Grid item xs={ 12 } sm={ 7 }>
-            <CartList />
+            <CartList products={ order.orderItems } />
           </Grid>
           <Grid item xs={ 12 } sm={ 5 }>
             <Card className='summary-card'>
               <CardContent>
                 <Typography variant='h2' mb={ 4 }>
-                  Summary (3 products)
+                  Summary ({ order.numberOfItems } { order.numberOfItems > 1 ? 'products' : 'product' })
                 </Typography>
                 <Divider sx={ { my: 1 } } />
                 <Box display='flex' justifyContent='space-between' my={ 1 }>
                   <Typography variant='subtitle1' >
                     Delivery address
                   </Typography>
-                  <NextLink href='/checkout/address' passHref>
-                    <strong>Edit</strong>
-                  </NextLink>
                 </Box>
-                <Typography>María Eugenia Costa</Typography>
-                <Typography>123 calle de prueba</Typography>
-                <Typography>Buenos Aires, 1122</Typography>
-                <Typography>Argentina</Typography>
-                <Typography>+ 54 11 2222 3333</Typography>
-                <Divider sx={ { my: 1 } } />
-                <Box display='flex' justifyContent='end' my={ 1 }>
-                  <NextLink href='/cart' passHref>
-                    <strong>Edit</strong>
-                  </NextLink>
-                </Box>
-                <OrderSummary />
-                <Box sx={ { mt: 2 } }>
-                  { /* TODO */ }
-                  <h1>Pay</h1>
-                  <Chip
-                    sx={ { my: 2 } }
-                    label='Paid order'
-                    variant='outlined'
-                    color='success'
-                    icon={ <CreditScoreOutlined /> }
-                  />
+                <Typography>{ shippingAddress.firstName } { shippingAddress.lastName }</Typography>
+                <Typography>{ shippingAddress.address } { shippingAddress.address2 ? `, ${ shippingAddress.address2 }` : '' }</Typography>
+                <Typography>{ shippingAddress.city }, { shippingAddress.zip }</Typography>
+                <Typography>{ shippingAddress.country }</Typography>
+                <Typography>{ shippingAddress.phone }</Typography>
+                <Divider sx={ { my: 2 } } />
+                <OrderSummary
+                  orderValues={ {
+                    numberOfItems: order.numberOfItems,
+                    subTotal: order.subTotal,
+                    total: order.total,
+                    tax: order.tax
+                  } }
+                />
+                <Box sx={ { mt: 2 } } display='flex' flexDirection='column'>
+                  {
+                    order.isPaid ?
+                      (
+                        <Chip
+                          sx={ { my: 2 } }
+                          label='Paid order'
+                          variant='outlined'
+                          color='success'
+                          icon={ <CreditScoreOutlined /> }
+                        />
+                      )
+                      :
+                      (
+                        <h2>Pay</h2>
+                      )
+                  }
                 </Box>
               </CardContent>
             </Card>

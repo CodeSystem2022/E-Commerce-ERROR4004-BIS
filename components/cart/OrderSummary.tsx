@@ -1,10 +1,21 @@
-import React, { useContext} from 'react'
+import React, { FC, useContext } from 'react'
 import { Divider, Grid, Typography } from '@mui/material'
 import { CartContext } from '../../context'
 import { currency } from '../../utils'
 
-const OrderSummary = () => {
-  const { numberOfItems, subTotal, total, tax} = useContext(CartContext)
+interface OrderSummaryProps {
+  orderValues: {
+    numberOfItems: number
+    subTotal: number
+    total: number
+    tax: number
+  }
+}
+
+const OrderSummary: FC<OrderSummaryProps> = ({ orderValues }) => {
+  const { numberOfItems, subTotal, total, tax } = useContext(CartContext)
+
+  const summaryValues = orderValues ? orderValues : { numberOfItems, subTotal, total, tax }
 
   return (
     <Grid container>
@@ -16,7 +27,7 @@ const OrderSummary = () => {
       </Grid>
       <Grid item xs={ 6 } display='flex' justifyContent='end'>
         <Typography>
-          { numberOfItems } { numberOfItems > 1? 'items': 'item' }
+          { summaryValues.numberOfItems } { summaryValues.numberOfItems > 1 ? 'items' : 'item' }
         </Typography>
       </Grid>
       { /* Subtotal */ }
@@ -25,21 +36,21 @@ const OrderSummary = () => {
       </Grid>
       <Grid item xs={ 6 } display='flex' justifyContent='end'>
         <Typography>
-          { currency.formatToUSD(subTotal) }
+          { currency.formatToUSD(summaryValues.subTotal) }
         </Typography>
       </Grid>
       { /* Taxes*/ }
       <Grid item xs={ 6 }>
         <Typography>
-          Taxes ({ Number(process.env.NEXT_PUBLIC_TAX_RATE)*100 }%):
+          Taxes ({ Number(process.env.NEXT_PUBLIC_TAX_RATE) * 100 }%):
         </Typography>
       </Grid>
       <Grid item xs={ 6 } display='flex' justifyContent='end'>
         <Typography>
-          { currency.formatToUSD(tax) }
+          { currency.formatToUSD(summaryValues.tax) }
         </Typography>
       </Grid>
-      <Grid item xs={ 12 } my={ 1}>
+      <Grid item xs={ 12 } my={ 1 }>
         <Divider />
       </Grid>
       { /* Total*/ }
@@ -50,7 +61,7 @@ const OrderSummary = () => {
       </Grid>
       <Grid item xs={ 6 } display='flex' justifyContent='end'>
         <Typography variant='subtitle1' sx={ { my: 1 } }>
-          { currency.formatToUSD(total) }
+          { currency.formatToUSD(summaryValues.total) }
         </Typography>
       </Grid>
     </Grid>
