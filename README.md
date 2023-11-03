@@ -303,6 +303,22 @@ GET: `localhost:3000/api/validate-token`
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>
 
+Botones de cobro de Paypal y tarjeta de crédito
+
+REST Endpoints de cobros
+
+Validar pago contra PayPal
+
+Información de cómo se pagó una orden
+
+Tokens de autenticación
+
+Basic
+
+Bearer
+
+Procesos automáticos después del cobro
+
 ---
 
 ## <img width="30" height="30" src="https://img.icons8.com/color/48/merge-git.png" alt="merge-git"/> Workflow de Git y GitHub
