@@ -47,15 +47,18 @@
 
 - [**SWR**](https://swr.vercel.app/) (**stale-while-revalidate**), bibilioteca React Hooks para la obtención de datos, el componente obtendrá sonstante y automáticamente el último flujo de datos. Y la interfaz de usuario será siempre rápida y reactiva.
 
-- **js-cookie**, para procesar las cookies en el Front End
+- [**js-cookie**](https://www.npmjs.com/package/js-cookie), para procesar las cookies en el Front End
 
 - [**NextAuth.js**](https://next-auth.js.org/), autentificación para Next.js
 
 - [**axios**](https://axios-http.com/)
 
+
+- [**react-paypal-js**](https://www.npmjs.com/package/@paypal/react-paypal-js)
+
 -  [<img src="https://github.com/devicons/devicon/blob/master/icons/yarn/yarn-original.svg" alt="yarn" width="30" height="30"  /> **Yarn**](https://yarnpkg.com/)
 
-- <img width="30" height="30" src="https://img.icons8.com/color/30/git.png" alt="git"/> Git y <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/github.png" alt="github"/> GitHub
+- <img width="30" height="30" src="https://img.icons8.com/color/30/git.png" alt="git"/> **Git** y <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/github.png" alt="github"/> **GitHub**
 
 - [<img width="30" height="30" src="https://img.icons8.com/color/30/mongodb.png" alt="mongodb"/> **MongoDB**](https://www.mongodb.com/) y [<img width="30" height="30" src="https://img.icons8.com/color/30/mongoose.png" alt="mongoose"/> **Mongoose**](https://mongoosejs.com/) , para la base de datos
 
@@ -192,18 +195,7 @@ email: string,
 password: string
 ```
 
-Para recibir de response:
-
-```
-{
-  "token": string,
-  "user": {
-    "email": string,
-    "role": "string",
-    "name": string
-  }
-}
-```
+Para recibir de response el **token** con el **user** (email, role y name)
 
 - **Para registrar un usuario**:
 
@@ -218,18 +210,7 @@ Debemos enviarle en el body (por defecto lo creamos con rol de usuario, no de ad
 }
 ```
 
-Para recibir de response:
-
-```
-{
-  "token": string,
-  "user": {
-    "email": string,
-    "role": "string",
-    "name": string
-  }
-}
-```
+Para recibir de response el **token** con el **user** (email, role y name)
 
 - **Para validar tokens**:
 
