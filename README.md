@@ -303,8 +303,9 @@ Si es una tarea solo de estilos en vez de `feat` utilizamos `style`, si es solo 
 >.next
 > api
 > components
+  > admin
   > cart
-  > laytouts
+  > layouts
   > products
   > ui
 > context
