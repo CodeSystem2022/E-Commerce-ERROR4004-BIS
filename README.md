@@ -216,7 +216,10 @@ Para recibir de response el **token** con el **user** (email, role y name)
 
 GET: `localhost:3000/api/validate-token`
 
+
 ---
+---
+
 
 ## <img width="30" height="30" src="https://img.icons8.com/external-flaticons-flat-flat-icons/30/external-scrum-agile-flaticons-flat-flat-icons-7.png" alt="agile"/> ¿Cómo nos organizamos?
 
@@ -282,21 +285,15 @@ GET: `localhost:3000/api/validate-token`
 
 ## Sprint 3 - Semana 3 (3Nov - 10Nov):
 
-<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Botones de cobro de Paypal y tarjeta de crédito
 
-Botones de cobro de Paypal y tarjeta de crédito
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> REST Endpoints de cobros
 
-REST Endpoints de cobros
-
-Validar pago contra PayPal
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Validar pago contra PayPal
 
 Información de cómo se pagó una orden
 
 Tokens de autenticación
-
-Basic
-
-Bearer
 
 Procesos automáticos después del cobro
 
