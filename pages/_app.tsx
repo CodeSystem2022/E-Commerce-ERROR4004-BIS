@@ -11,7 +11,11 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <SessionProvider>
       <PayPalScriptProvider
-        options={ { 'clientId': process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID || '' } }
+        options={ {
+          'clientId': process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID || '',
+          currency: 'USD',
+          'locale': 'en_US'
+        } }
       >
         <SWRConfig
           value={ {
