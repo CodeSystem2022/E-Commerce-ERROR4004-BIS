@@ -4,24 +4,24 @@
 
 ## <img width="40" height="40" src="https://img.icons8.com/stickers/40/user-group-man-woman.png" alt="group man woman"/> Integrantes y Roles
 
-| Integrante | Rol |
-| ---------- | --- |
-| [**Calle, Sonia**](https://github.com/SoCalle) | Analista Funcional (realiza la documentación Funcional del proyecto) / Scrum Master / Tester QA (documentar casos de prueba durante el desarrollo) / FrontEnd - BackEnd Developer / Base de Datos |
+| Integrante                                                 | Rol                                                                                                                                                                                                        |
+| ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [**Calle, Sonia**](https://github.com/SoCalle)             | Analista Funcional (realiza la documentación Funcional del proyecto) / Scrum Master / Tester QA (documentar casos de prueba durante el desarrollo) / FrontEnd - BackEnd Developer / Base de Datos          |
 | [**Costa, María Eugenia**](https://github.com/eugenia1984) | Team Lead / Diseñadora UX/UI (realiza la documentación de Diseño y presentación) / Documenta el desarrollo en el README del proyecto en GitHub y en la Wiki / FrontEnd - BackEnd Developer / Base de Datos |
-| [**Alsina, Maximiliano**](https://github.com/MalsinaG) | Product Owner / Realizara el video final de presentación / FrontEnd - BackEnd Developer / Base de Datos |
-| [**Matias Alancay**](https://github.com/matias9486) | FrontEnd - BackEnd Developer / Base de Datos |
+| [**Alsina, Maximiliano**](https://github.com/MalsinaG)     | Product Owner / Realizara el video final de presentación / FrontEnd - BackEnd Developer / Base de Datos                                                                                                    |
+| [**Matias Alancay**](https://github.com/matias9486)        | FrontEnd - BackEnd Developer / Base de Datos                                                                                                                                                               |
 
 ---
 
 ## <img width="40" height="40" src="https://img.icons8.com/color/40/dynamic-links.png" alt="links"/> Links
 
-| Links |
-| ---- |
-| [<img width="24" height="24" src="https://img.icons8.com/stickers/24/brief.png" alt="brief"/> Brief](https://docs.google.com/document/d/1LPc0LTbNF5unnrfiF8R59yl9BBKEm1BsEWLsPGhDPJI/edit?usp=sharing) |
+| Links                                                                                                                                                                                                                                                                                                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [<img width="24" height="24" src="https://img.icons8.com/stickers/24/brief.png" alt="brief"/> Brief](https://docs.google.com/document/d/1LPc0LTbNF5unnrfiF8R59yl9BBKEm1BsEWLsPGhDPJI/edit?usp=sharing)                                                                                                                        |
 | [<img width="24" height="24" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/24/external-documentation-agile-flaticons-lineal-color-flat-icons-2.png" alt="documentation"/> Documentación funcional](https://docs.google.com/document/d/1YNPMAWqXpl7aj9xLWDiIT1L7vwaxbv-jqRyhpXVV4Hc/edit?usp=sharing) |
-|  [<img width="24" height="24" src="https://img.icons8.com/external-good-lines-kalash/24/external-site-map-seo-and-web-development-good-lines-kalash.png" alt="site map"/> Mapa del sitio](https://docs.google.com/document/d/1Ec3KNFZzIzSQiBec-16NTbqHis8xm4VU2E9OXlZHgHQ/edit?usp=sharing) |
-| [<img width="24" height="24" src="https://img.icons8.com/dusk/24/presentation--v1.png" alt="presentation"/> Presentación](https://www.canva.com/design/DAFuEnIx6ZQ/WqMlVRlpdpPYe6gUj71rOw/edit?utm_content=DAFuEnIx6ZQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) | 
-| <img width="24" height="24" src="https://img.icons8.com/color/24/video.png" alt="video"/> Video (en construcción) |
+| [<img width="24" height="24" src="https://img.icons8.com/external-good-lines-kalash/24/external-site-map-seo-and-web-development-good-lines-kalash.png" alt="site map"/> Mapa del sitio](https://docs.google.com/document/d/1Ec3KNFZzIzSQiBec-16NTbqHis8xm4VU2E9OXlZHgHQ/edit?usp=sharing)                                    |
+| [<img width="24" height="24" src="https://img.icons8.com/dusk/24/presentation--v1.png" alt="presentation"/> Presentación](https://www.canva.com/design/DAFuEnIx6ZQ/WqMlVRlpdpPYe6gUj71rOw/edit?utm_content=DAFuEnIx6ZQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)                                      |
+| <img width="24" height="24" src="https://img.icons8.com/color/24/video.png" alt="video"/> Video (en construcción)                                                                                                                                                                                                             |
 
 ---
 
@@ -37,7 +37,7 @@
 
 - [<img width="30" height="30" src="https://img.icons8.com/ultraviolet/30/react--v1.png" alt="react--v1"/> **React**](https://react.dev/) y **react-dom**
 
-- [<img width="30" height="30" src="https://img.icons8.com/fluency-systems-regular/30/nextjs.png" alt="nextjs"/> **NEXTjs**](https://nextjs.org/)   
+- [<img width="30" height="30" src="https://img.icons8.com/fluency-systems-regular/30/nextjs.png" alt="nextjs"/> **NEXTjs**](https://nextjs.org/)
 
 - [**react-slideshow-image**](https://www.npmjs.com/package/react-slideshow-image), para los sliders de productos en la página de detalle del producto
 
@@ -51,10 +51,9 @@
 
 - [**axios**](https://axios-http.com/)
 
-
 - [**react-paypal-js**](https://www.npmjs.com/package/@paypal/react-paypal-js)
 
--  [<img src="https://github.com/devicons/devicon/blob/master/icons/yarn/yarn-original.svg" alt="yarn" width="30" height="30"  /> **Yarn**](https://yarnpkg.com/)
+- [<img src="https://github.com/devicons/devicon/blob/master/icons/yarn/yarn-original.svg" alt="yarn" width="30" height="30"  /> **Yarn**](https://yarnpkg.com/)
 
 - <img width="30" height="30" src="https://img.icons8.com/color/30/git.png" alt="git"/> **Git** y <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/github.png" alt="github"/> **GitHub**
 
@@ -68,13 +67,11 @@
 
 - [<img width="30" height="30" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/30/external-docker-a-set-of-coupled-software-as-a-service-logo-color-tal-revivo.png" alt="docker"/> **Docker**](https://www.docker.com/)
 
-  
 ---
 
 ## <img width="30" height="30" src="https://img.icons8.com/color/30/console.png" alt="console"/> ¿Cómo ver el proyecto en local?
 
 Este proyecto está creado con [**Next.js**](https://nextjs.org/) con el comando: [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 
 ---
 
@@ -86,7 +83,7 @@ Este proyecto está creado con [**Next.js**](https://nextjs.org/) con el comando
 
 - **Yarn**
 
-### <img width="24" height="24" src="https://img.icons8.com/fluency/24/2.png" alt="2"/> Bajarte el código del repositorio, creando una carpeta en tu local, y luego: 
+### <img width="24" height="24" src="https://img.icons8.com/fluency/24/2.png" alt="2"/> Bajarte el código del repositorio, creando una carpeta en tu local, y luego:
 
 ```BASH
 git clone https://github.com/CodeSystem2022/E-Commerce-ERROR4004-BIS.git .
@@ -114,19 +111,19 @@ Primero de necesita la base de datos, en la terminal con el comando:
 docker-compose up -d
 ```
 
--> El ```-d```, significa detached
+-> El `-d`, significa detached
 
 ->A tener en cuenta para las configuraciones de Docker y Base de datos:
 
--El **service** es ``ohlalalshoesdb``, en el archivo `.env`: `MONGO_URL=mongodb://localhost:27017/ohlalalshoesdb`.
+-El **service** es `ohlalalshoesdb`, en el archivo `.env`: `MONGO_URL=mongodb://localhost:27017/ohlalalshoesdb`.
 
--El nombre del **contenedor** es ``holalashoes-database``, este nombre irá en el archivo **docker-compose.yaml** y es el nombre que veréen Docker 
+-El nombre del **contenedor** es `holalashoes-database`, este nombre irá en el archivo **docker-compose.yaml** y es el nombre que veréen Docker
 
 -El nombre del **volumen** es `mongo`.
 
 ### <img width="24" height="24" src="https://img.icons8.com/fluency/24/6.png" alt="6"/> Configurar las variables de entorno
 
-Copiar el archivo ```.env.template``` y renombrarlo a ```.env```. Van a ver que tenemos las variables de GITHUB, para obtener **GITHUB_ID** y **GITHUB_SECRET**:
+Copiar el archivo `.env.template` y renombrarlo a `.env`. Van a ver que tenemos las variables de GITHUB, para obtener **GITHUB_ID** y **GITHUB_SECRET**:
 
 - registrarse y loguearse en GitHub
 
@@ -142,10 +139,9 @@ Copiar el archivo ```.env.template``` y renombrarlo a ```.env```. Van a ver que 
 
 -Copiamos el **Client ID** y hacemos click en **Generate a new clienten secret**, ambos datos los dejamos en el archivo `.env`
 
-
 ### <img width="24" height="24" src="https://img.icons8.com/fluency/24/7.png" alt="7"/> MongoDB URL Local:
 
-```MONGO_URL=mongodb://localhost:27017/ohlalalshoesdb```
+`MONGO_URL=mongodb://localhost:27017/ohlalalshoesdb`
 
 ### <img width="24" height="24" src="https://img.icons8.com/fluency/24/8.png" alt="8"/> Reconstruir los módulos de node y levantar Next
 
@@ -156,7 +152,7 @@ yarn dev
 
 ### <img width="24" height="24" src="https://img.icons8.com/fluency/24/9.png" alt="9"/> Llenar la base de datos con información de pruebas
 
-Llamar a: ```http://localhost:3000/api/seed```
+Llamar a: `http://localhost:3000/api/seed`
 
 - Con <img width="20" height="20" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/20/external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo.png" alt="postman"/> **Postman** podemos hacer las peticiones REST FUL API, creandonos:
 
@@ -167,7 +163,6 @@ Llamar a: ```http://localhost:3000/api/seed```
 - **Todos los productos**: GET: `localhost:3000/api/products`
 
 - **Productos por genero**: GET: `localhost:3000/api/products?gender=men` para ver los productos por genero masculino, los demás géneros posibles son: `women`, `kid` y `unisex`
-
 
 - **Un producto por su slug**: GET: `localhost:3000/api/products/{slug}` slug es la parte que llega dinamica acorde al producto a mostrar un producto por el slug
 
@@ -189,7 +184,7 @@ Para recibir de response el **token** con el **user** (email, role y name)
 ```
 {
   "email": string,
-  "password" : string, 
+  "password" : string,
   "name": string
 }
 ```
@@ -198,10 +193,19 @@ Para recibir de response el **token** con el **user** (email, role y name)
 
 - **Para validar tokens**: GET: `localhost:3000/api/validate-token`
 
+#### <img width="20" height="20" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/20/external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo.png" alt="postman"/> Endpoints de oedener
+
+POST `localhost:3000/api/orders`
+
+GET `localhost:3000/api/orders/pay`
+
+#### <img width="20" height="20" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/20/external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo.png" alt="postman"/> Endpoints de administrador
+
+- Para ver **el detalle**: GET `localhost:3000/api/admin/dashboard`, para recibir la response con la sigueinte información: "numberOfOrders", "paidOrders", "numberOfClients", "numberOfProducts", "productsWithNoInventory", "lowInventory" y "notPaidOrders"
 
 ---
----
 
+---
 
 ## <img width="30" height="30" src="https://img.icons8.com/external-flaticons-flat-flat-icons/30/external-scrum-agile-flaticons-flat-flat-icons-7.png" alt="agile"/> ¿Cómo nos organizamos?
 
@@ -219,15 +223,15 @@ Para recibir de response el **token** con el **user** (email, role y name)
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Creación de la HomePage con las tarjetas de los productos, que contienen la imagen del producto, el nombre y el precio
 
-<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> **Página con el detalle del producto**, que tiene: slider con las imagenes del producto, titulo, precio, boton de - y + para modificar la cantidad de productos, botones con los talles disponibles, botón para agregar al carro de compra y la descripción        
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> **Página con el detalle del producto**, que tiene: slider con las imagenes del producto, titulo, precio, boton de - y + para modificar la cantidad de productos, botones con los talles disponibles, botón para agregar al carro de compra y la descripción
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> **Página del carro de compras** (`/cart`), donde muestra la imagen del producto, el título, la talla, el precio, se pueden agregar o quitar productos. Y también se ve el resumen del pedido, con la suma total a abonar. Y también la **Página de carro de compras vacío** (`` /cart/empty), la cual tiene un ícono del carro de compras, el mensaje y un boton para volver.
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> **Página del la dirección de envío de la compra**(`/checkout/address`), con el título, varios campos apra completar la dirección de envío y el botón de confirmación.
 
-<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>**Página del resumen de la compra**(`/checkout/summary`), donde se ve en tarjetas el detalle con imagen, titulo, precio, talla y total de ítems de cada producto. Y se ve el resumend e la compra con la dirección de envío (que permite editar)  y el total a pagar(también editable para modificar la cantidad de items desde el carro de compra) con el botón para confirmar la compra.
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>**Página del resumen de la compra**(`/checkout/summary`), donde se ve en tarjetas el detalle con imagen, titulo, precio, talla y total de ítems de cada producto. Y se ve el resumend e la compra con la dirección de envío (que permite editar) y el total a pagar(también editable para modificar la cantidad de items desde el carro de compra) con el botón para confirmar la compra.
 
-<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> **Página de pago**(`/orders/{id}`) con un badge con informe si el pago esta ok o no. Debe tener tarjetas con los articulos a comprar y el resumen de la dirección de envío y el total a  pagar.
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> **Página de pago**(`/orders/{id}`) con un badge con informe si el pago esta ok o no. Debe tener tarjetas con los articulos a comprar y el resumen de la dirección de envío y el total a pagar.
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>**Página de historial de ordenes**(`/orders/history`), donde se ve en una tabla el historial de las ordenes, con los id, el nombre completo, si está pago o no y un link para ir al detalle de la orden.
 
@@ -237,7 +241,7 @@ Para recibir de response el **token** con el **user** (email, role y name)
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Crear los **REST FULL API** para tener los endpoints de busqueda de **productos**: GET:`/api/products`, GET:`api/products?gender=men` para buscar por genero (men, women, kid, unisex), GET:`/api/products/{slug}` para buscar el producto por el slug y `/api/search/{string}` donde string es una palabra ya sea del titulo o de las tags
 
-<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>Crear la **pantalla de carga** par que el usuario sepa que se están buscando los productos  
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>Crear la **pantalla de carga** par que el usuario sepa que se están buscando los productos
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>Crear las **páginas por genero**: hombre, mujer, niños y unisex, para que al hacer click en las opciones del navbar tengamos los productos por género
 
@@ -245,9 +249,9 @@ Para recibir de response el **token** con el **user** (email, role y name)
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Completamos las paginas de registro y login, teniamos solo la maquetación, ahora agregamos las validaciones con **React-hook-form**.
 
-<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>  Cremaos los usuarios en la base de datos, utilizando **JSON Web Token**. Y los endpoint para ver a los usuarios (POST): `localhost:3000/api/user/login`, loguearse (POST): `localhost:3000/api/user/login` y validar token: (GET):`localhost:3000/api/validate-token`
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Cremaos los usuarios en la base de datos, utilizando **JSON Web Token**. Y los endpoint para ver a los usuarios (POST): `localhost:3000/api/user/login`, loguearse (POST): `localhost:3000/api/user/login` y validar token: (GET):`localhost:3000/api/validate-token`
 
-<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Validaciones en el formulario de registro y login 
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Validaciones en el formulario de registro y login
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Agregar la funcionalidad en el menú lateral para el **login** (que debe redirigir a la pagina de login) y **logout** (que debe desloguear al usuario). También manejar de modo condicional, para olo mostrar el **panel de adminsitrador** al usuario que esté logueado y tenga rol de admin.
 
@@ -291,7 +295,7 @@ Panel administrativo con pantallas de: Ordenes, Usuarios y Dashboard informativo
 
 ### <img width="20" height="20" src="https://img.icons8.com/water-color/20/merge-git.png" alt="merge git"/> ¿Cómo nombramos las ramas?
 
-``feat/#<nro-issue>-<tarea>``, donde el **nro de issue** corresponde al issue creado y a la historia d eusuario en la que se trabaja y **tarea** es un nombre descriptivo de la tarea a realizar.
+`feat/#<nro-issue>-<tarea>`, donde el **nro de issue** corresponde al issue creado y a la historia d eusuario en la que se trabaja y **tarea** es un nombre descriptivo de la tarea a realizar.
 
 Si es una tarea solo de estilos en vez de `feat` utilizamos `style`, si es solo de documentación utilizamos `doc` y si es para arreglar un gub `bugfix`
 
