@@ -193,7 +193,7 @@ Para recibir de response el **token** con el **user** (email, role y name)
 
 - **Para validar tokens**: GET: `localhost:3000/api/validate-token`
 
-#### <img width="20" height="20" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/20/external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo.png" alt="postman"/> Endpoints de oedener
+#### <img width="20" height="20" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/20/external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo.png" alt="postman"/> Endpoints de ordenes
 
 POST `localhost:3000/api/orders`
 
@@ -203,8 +203,8 @@ GET `localhost:3000/api/orders/pay`
 
 - Para ver **el detalle**: GET `localhost:3000/api/admin/dashboard`, para recibir la response con la sigueinte información: "numberOfOrders", "paidOrders", "numberOfClients", "numberOfProducts", "productsWithNoInventory", "lowInventory" y "notPaidOrders"
 
----
 
+---
 ---
 
 ## <img width="30" height="30" src="https://img.icons8.com/external-flaticons-flat-flat-icons/30/external-scrum-agile-flaticons-flat-flat-icons-7.png" alt="agile"/> ¿Cómo nos organizamos?
