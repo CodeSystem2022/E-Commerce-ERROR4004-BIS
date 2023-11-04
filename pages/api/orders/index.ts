@@ -66,7 +66,7 @@ const createOrder = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
             throw new Error("The total to paid it's wrong")
         }
 
-        // Everithing it's fine
+        // Everything it's fine
         const userId = session.user._id
         const newOrder = new Order({ ...req.body, isPaid: false, user: userId })
         
@@ -83,6 +83,4 @@ const createOrder = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
         console.log(error)
         res.status(400).json({ message: error.message || 'Check server logs' })
     }
-
-    // return res.status(201).json(req.body)
 }
