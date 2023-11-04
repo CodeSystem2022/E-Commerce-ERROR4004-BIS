@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import useSWR from 'swr'
 
-import { Grid } from '@mui/material'
+import { Grid, Typography } from '@mui/material'
 import {
   AccessTimeOutlined,
   AttachMoneyOutlined,
@@ -15,8 +16,44 @@ import {
 
 import AdminLayout from '../../components/layouts/AdminLayout'
 import SummaryTile from '../../components/admin/SummaryTile'
+import { DashboardSummaryResponse } from '../../interfaces'
 
 const DashboardPage = () => {
+
+  const { data, error } = useSWR<DashboardSummaryResponse>('/api/admin/dashboard', {
+    refreshInterval: 30 * 1000 // 30seg
+  })
+
+  const [refreshIn, setRefreshIn] = useState<number>(30)
+
+  useEffect(() => {
+
+    const interval = setInterval(() => {
+      setRefreshIn(refreshIn => refreshIn > 0 ? refreshIn - 1 : 30)
+    }, 1000)
+
+    return () => clearInterval(interval)
+  }, [])
+
+  if (!error && !data) {
+    return <></>
+  }
+
+  if (error) {
+    console.error(error)
+    return <Typography>Error when loading the information</Typography>
+  }
+
+  const {
+    numberOfOrders,
+    numberOfClients,
+    numberOfProducts,
+    productsWithNoInventory,
+    lowInventory,
+    paidOrders,
+    notPaidOrders
+  } = data!
+
   return (
     <AdminLayout
       title='Dashboard'
@@ -25,42 +62,42 @@ const DashboardPage = () => {
     >
       <Grid container spacing={ 3 }>
         <SummaryTile
-          title='1'
+          title={ numberOfOrders }
           subTitle='Total orders'
           icon={ <CreditCardOutlined color='secondary' sx={ { fontSize: 40 } } /> }
         />
         <SummaryTile
-          title='2'
+          title={ paidOrders }
           subTitle='Paid orders'
           icon={ <AttachMoneyOutlined color='success' sx={ { fontSize: 40 } } /> }
         />
         <SummaryTile
-          title='3'
+          title={ paidOrders - notPaidOrders }
           subTitle='Pending orders'
           icon={ <CreditCardOffOutlined color='error' sx={ { fontSize: 40 } } /> }
         />
         <SummaryTile
-          title='4'
+          title={ numberOfClients }
           subTitle='Clients'
           icon={ <GroupOutlined color='primary' sx={ { fontSize: 40 } } /> }
         />
         <SummaryTile
-          title='5'
+          title={ numberOfProducts }
           subTitle='Products'
           icon={ <CategoryOutlined color='warning' sx={ { fontSize: 40 } } /> }
         />
         <SummaryTile
-          title='6'
+          title={ productsWithNoInventory }
           subTitle='No stock products'
           icon={ <CancelPresentationOutlined color='error' sx={ { fontSize: 40 } } /> }
         />
         <SummaryTile
-          title='7'
+          title={ lowInventory }
           subTitle='Low stock products'
           icon={ <ProductionQuantityLimitsOutlined color='warning' sx={ { fontSize: 40 } } /> }
         />
         <SummaryTile
-          title='8'
+          title={ refreshIn }
           subTitle='Update at'
           icon={ <AccessTimeOutlined color='secondary' sx={ { fontSize: 40 } } /> }
         />
