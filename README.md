@@ -273,11 +273,11 @@ Para recibir de response el **token** con el **user** (email, role y name)
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Validar pago contra PayPal
 
-Información de cómo se pagó una orden
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Información de cómo se pagó una orden
 
-Tokens de autenticación
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Tokens de autenticación
 
-Procesos automáticos después del cobro
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Procesos automáticos después del cobro
 
 ---
 
