@@ -14,7 +14,7 @@ const SummaryTile: FC<SummaryTileProps> = ({
   icon
 }) => {
   return (
-    <Grid item xs={ 12 } sm={ 4 } md={ 3 }>
+    <Grid item xs={ 11 } sm={ 4 } md={ 3 }>
       <Card sx={ { display: 'flex' } } elevation={ 5 }>
         <CardContent
           sx={ {
