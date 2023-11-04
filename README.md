@@ -15,15 +15,13 @@
 
 ## <img width="40" height="40" src="https://img.icons8.com/color/40/dynamic-links.png" alt="links"/> Links
 
-- [Brief](https://docs.google.com/document/d/1LPc0LTbNF5unnrfiF8R59yl9BBKEm1BsEWLsPGhDPJI/edit?usp=sharing)
-
-- [Documentación funcional](https://docs.google.com/document/d/1YNPMAWqXpl7aj9xLWDiIT1L7vwaxbv-jqRyhpXVV4Hc/edit?usp=sharing)
-
-- [Mapa del sitio](https://docs.google.com/document/d/1Ec3KNFZzIzSQiBec-16NTbqHis8xm4VU2E9OXlZHgHQ/edit?usp=sharing)
-
-- [Presentación](https://www.canva.com/design/DAFuEnIx6ZQ/WqMlVRlpdpPYe6gUj71rOw/edit?utm_content=DAFuEnIx6ZQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
-
-- Video (en construcción)
+| Links |
+| ---- |
+| [<img width="24" height="24" src="https://img.icons8.com/stickers/24/brief.png" alt="brief"/> Brief](https://docs.google.com/document/d/1LPc0LTbNF5unnrfiF8R59yl9BBKEm1BsEWLsPGhDPJI/edit?usp=sharing) |
+| [<img width="24" height="24" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/24/external-documentation-agile-flaticons-lineal-color-flat-icons-2.png" alt="documentation"/> Documentación funcional](https://docs.google.com/document/d/1YNPMAWqXpl7aj9xLWDiIT1L7vwaxbv-jqRyhpXVV4Hc/edit?usp=sharing) |
+|  [<img width="24" height="24" src="https://img.icons8.com/external-good-lines-kalash/24/external-site-map-seo-and-web-development-good-lines-kalash.png" alt="site map"/> Mapa del sitio](https://docs.google.com/document/d/1Ec3KNFZzIzSQiBec-16NTbqHis8xm4VU2E9OXlZHgHQ/edit?usp=sharing) |
+| [<img width="24" height="24" src="https://img.icons8.com/dusk/24/presentation--v1.png" alt="presentation"/> Presentación](https://www.canva.com/design/DAFuEnIx6ZQ/WqMlVRlpdpPYe6gUj71rOw/edit?utm_content=DAFuEnIx6ZQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) | 
+| <img width="24" height="24" src="https://img.icons8.com/color/24/video.png" alt="video"/> Video (en construcción) |
 
 ---
 
@@ -82,13 +80,13 @@ Este proyecto está creado con [**Next.js**](https://nextjs.org/) con el comando
 
 ## Primeros pasos
 
-1. Antes que nada debes tener insatalado:
+### <img width="24" height="24" src="https://img.icons8.com/fluency/24/1.png" alt="1"/> Antes que nada debes tener insatalado:
 
 - **Node** de versión 16 en adelante
 
 - **Yarn**
 
-2. Bajarte el código del repositorio, creando una carpeta en tu local, y luego: 
+### <img width="24" height="24" src="https://img.icons8.com/fluency/24/2.png" alt="2"/> Bajarte el código del repositorio, creando una carpeta en tu local, y luego: 
 
 ```BASH
 git clone https://github.com/CodeSystem2022/E-Commerce-ERROR4004-BIS.git .
@@ -96,20 +94,21 @@ git clone https://github.com/CodeSystem2022/E-Commerce-ERROR4004-BIS.git .
 
 Una vez creado entra dentro de la carpeta del proyecto.
 
-3. Instalar las **dependencias** (**node_modules**) con:
+### <img width="24" height="24" src="https://img.icons8.com/fluency/24/3.png" alt="3"/> Instalar las dependencias (node_modules) con:
+
 ```BASH
 yarn install
 ```
 
-4. Correr el **servidor** en local, con:
+### <img width="24" height="24" src="https://img.icons8.com/fluency/24/4.png" alt="4"/> Correr el servidor en local, con:
 
 ```bash
 yarn dev
 ```
 
-5. Abrir [http://localhost:3000](http://localhost:3000) en tu navegador localmente, para ver la aplicación.
+### <img width="24" height="24" src="https://img.icons8.com/fluency/24/5.png" alt="5"/> Abrir [http://localhost:3000](http://localhost:3000) en tu navegador localmente, para ver la aplicación.
 
-6. Para correr localmente, se necesita la base de datos, con:
+Primero de necesita la base de datos, en la terminal con el comando:
 
 ```bash
 docker-compose up -d
@@ -125,7 +124,7 @@ docker-compose up -d
 
 -El nombre del **volumen** es `mongo`.
 
-7. Configurar las **variables de entorno**
+### <img width="24" height="24" src="https://img.icons8.com/fluency/24/6.png" alt="6"/> Configurar las variables de entorno
 
 Copiar el archivo ```.env.template``` y renombrarlo a ```.env```. Van a ver que tenemos las variables de GITHUB, para obtener **GITHUB_ID** y **GITHUB_SECRET**:
 
@@ -144,51 +143,39 @@ Copiar el archivo ```.env.template``` y renombrarlo a ```.env```. Van a ver que 
 -Copiamos el **Client ID** y hacemos click en **Generate a new clienten secret**, ambos datos los dejamos en el archivo `.env`
 
 
-8. MongoDB URL Local:
+### <img width="24" height="24" src="https://img.icons8.com/fluency/24/7.png" alt="7"/> MongoDB URL Local:
 
 ```MONGO_URL=mongodb://localhost:27017/ohlalalshoesdb```
 
-9. Reconstruir los módulos de node y levantar Next
+### <img width="24" height="24" src="https://img.icons8.com/fluency/24/8.png" alt="8"/> Reconstruir los módulos de node y levantar Next
 
 ```bash
 yarn install
 yarn dev
 ```
 
-10. Llenar la base de datos con información de pruebas
+### <img width="24" height="24" src="https://img.icons8.com/fluency/24/9.png" alt="9"/> Llenar la base de datos con información de pruebas
 
 Llamar a: ```http://localhost:3000/api/seed```
 
-11. Con <img width="20" height="20" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/20/external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo.png" alt="postman"/> **Postman** podemos hacer las peticiones REST FUL API, creandonos:
+- Con <img width="20" height="20" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/20/external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo.png" alt="postman"/> **Postman** podemos hacer las peticiones REST FUL API, creandonos:
 
-GET: `localhost:3000/api/seed` para confirmar que tenemos bien la base de datos
+- GET: `localhost:3000/api/seed` para confirmar que tenemos bien la base de datos
 
-### <img width="24" height="24" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo.png" alt="postman"/> Endpoints para ver todos los productos:
+#### <img width="20" height="20" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/20/external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo.png" alt="postman"/> Endpoints para ver todos los productos:
 
-- **Todos los productos**:
+- **Todos los productos**: GET: `localhost:3000/api/products`
 
-GET: `localhost:3000/api/products` para ver todos los productos
-
-- **Productos por genero**:
-
-GET: `localhost:3000/api/products?gender=men` para ver los productos por genero masculino, los demás géneros posibles son: `women`, `kid` y `unisex`
+- **Productos por genero**: GET: `localhost:3000/api/products?gender=men` para ver los productos por genero masculino, los demás géneros posibles son: `women`, `kid` y `unisex`
 
 
-- **Un producto por su slug**:
+- **Un producto por su slug**: GET: `localhost:3000/api/products/{slug}` slug es la parte que llega dinamica acorde al producto a mostrar un producto por el slug
 
-GET: `localhost:3000/api/products/{slug}` slug es la parte que llega dinamica acorde al producto a mostrar un producto por el slug
+- **Un producto por tag o por el titulo**: GET: `localhost:3000/api/search/{string}`
 
-- **Un producto por tag o por el titulo**:
+#### <img width="20" height="20" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/20/external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo.png" alt="postman"/> Endpoints de usuarios
 
-GET: `localhost:3000/api/search/{string}`
-
-### <img width="24" height="24" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo.png" alt="postman"/> Endpoints de usuarios
-
-- **Para ver todos los usuarios**:
-
-POST: `localhost:3000/api/user/login`
-
-Y se debe emviar en el body:
+- **Para ver todos los usuarios**: POST: `localhost:3000/api/user/login`. Y se debe emviar en el body:
 
 ```
 email: string,
@@ -197,11 +184,8 @@ password: string
 
 Para recibir de response el **token** con el **user** (email, role y name)
 
-- **Para registrar un usuario**:
+- **Para registrar un usuario**: POST: `localhost:3000/api/user/register`. Debemos enviarle en el body (por defecto lo creamos con rol de usuario, no de administrador):
 
-POST: `localhost:3000/api/user/register`
-
-Debemos enviarle en el body (por defecto lo creamos con rol de usuario, no de administrador)
 ```
 {
   "email": string,
@@ -212,9 +196,7 @@ Debemos enviarle en el body (por defecto lo creamos con rol de usuario, no de ad
 
 Para recibir de response el **token** con el **user** (email, role y name)
 
-- **Para validar tokens**:
-
-GET: `localhost:3000/api/validate-token`
+- **Para validar tokens**: GET: `localhost:3000/api/validate-token`
 
 
 ---
@@ -227,7 +209,7 @@ GET: `localhost:3000/api/validate-token`
 
 - Dividimos todo el proyecto en **3 Sprints** de **una semana** cada uno.
 
-## Sprint 1 - Semana 1 (20Oct - 26Oct):
+## SPRINT 1 - SEMANA 1 (20 OCT - 26 OCT):
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Creación del **repositorio** en GitHub
 
@@ -259,7 +241,7 @@ GET: `localhost:3000/api/validate-token`
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/>Crear las **páginas por genero**: hombre, mujer, niños y unisex, para que al hacer click en las opciones del navbar tengamos los productos por género
 
-## Sprint 2 - Semana 2 (27Oct - 2Nov):
+## SPRINT 2 - SEMANA 2 (27 OCT - 2 NOV):
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Completamos las paginas de registro y login, teniamos solo la maquetación, ahora agregamos las validaciones con **React-hook-form**.
 
@@ -283,7 +265,7 @@ GET: `localhost:3000/api/validate-token`
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Hacemos que la pagina `/orders/history` tenga las ordenes del usuario registrado, ya que antes estaba maquetada con los datos harcodeados.
 
-## Sprint 3 - Semana 3 (3Nov - 10Nov):
+## SPRINT 3 - SEMANA 3 (3 NOV - 10 NOV):
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Botones de cobro de Paypal y tarjeta de crédito
 
@@ -305,7 +287,7 @@ Procesos automáticos después del cobro
 
 - En base a la rama main se crean las nuevas ramas para ir trabajando en las tareas. Una vez completada la tarea, dicha rama es unida a main y eliminada.
 
--> ¿Cómo nombramos las ramas?
+### <img width="20" height="20" src="https://img.icons8.com/water-color/20/merge-git.png" alt="merge git"/> ¿Cómo nombramos las ramas?
 
 ``feat/#<nro-issue>-<tarea>``, donde el **nro de issue** corresponde al issue creado y a la historia d eusuario en la que se trabaja y **tarea** es un nombre descriptivo de la tarea a realizar.
 
@@ -313,7 +295,7 @@ Si es una tarea solo de estilos en vez de `feat` utilizamos `style`, si es solo 
 
 ---
 
-## Estructura del proyecto
+## <img width="24" height="24" src="https://img.icons8.com/office/24/folder-tree.png" alt="foldertree"/> Estructura del proyecto
 
 ```
 >.next
@@ -337,6 +319,7 @@ Si es una tarea solo de estilos en vez de `feat` utilizamos `style`, si es solo 
   > admin
   > api
     > auth
+    > orders
     > products
     > search
     > user
