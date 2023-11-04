@@ -279,6 +279,8 @@ Para recibir de response el **token** con el **user** (email, role y name)
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Procesos automáticos después del cobro
 
+Panel administrativo con pantallas de: Ordenes, Usuarios y Dashboard informativo, se aplican las validaciones respectivas para los nuevos endpoints y páginas para que solo Administradores puedan ingresar.
+
 ---
 
 ## <img width="30" height="30" src="https://img.icons8.com/color/48/merge-git.png" alt="merge-git"/> Workflow de Git y GitHub
