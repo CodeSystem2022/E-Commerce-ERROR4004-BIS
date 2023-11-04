@@ -27,45 +27,53 @@
 
 ## <img width="40" height="40" src="https://img.icons8.com/emoji/40/laptop-emoji.png" alt="laptop-emoji"/> Tecnologías
 
-- <img width="30" height="30" src="https://img.icons8.com/color/30/html-5--v1.png" alt="html-5--v1"/> HTML5
+| Front End y Back End |
+| -------------------- |
+| <img width="30" height="30" src="https://img.icons8.com/color/30/html-5--v1.png" alt="html-5--v1"/> **HTML5** |
+| <img width="30" height="30" src="https://img.icons8.com/color/30/css3.png" alt="css3"/> **CSS3** |
+| <img width="30" height="30" src="https://img.icons8.com/color/30/javascript--v1.png" alt="javascript"/> **JavaScript** |
+| [<img width="30" height="30" src="https://img.icons8.com/color/30/typescript.png" alt="typescript"/> **TypeScript**](https://www.typescriptlang.org/) |
+| [<img width="30" height="30" src="https://img.icons8.com/ultraviolet/30/react--v1.png" alt="react--v1"/> **React**](https://react.dev/) y **react-dom** |
+| [<img width="30" height="30" src="https://img.icons8.com/color/30/material-ui.png" alt="material-ui"/> **Material UI**](https://mui.com/material-ui/): @emotion/react - @emotion/styled - @mui/material - @mui/icons-material - @mui/x-data-grid |
+| [<img width="30" height="30" src="https://img.icons8.com/fluency-systems-regular/30/nextjs.png" alt="nextjs"/> **NEXTjs**](https://nextjs.org/) |
 
-- <img width="30" height="30" src="https://img.icons8.com/color/30/css3.png" alt="css3"/> CSS 3
+| Manejo de formularios |
+| --------------------- |
+| [**react-hook-form**](https://react-hook-form.com/) |
 
-- [<img width="30" height="30" src="https://img.icons8.com/color/30/typescript.png" alt="typescript"/> **TypeScript**](https://www.typescriptlang.org/)
+| Sliders  |
+| -------- |
+| [**react-slideshow-image**](https://www.npmjs.com/package/react-slideshow-image) |
 
-- [<img width="30" height="30" src="https://img.icons8.com/color/30/material-ui.png" alt="material-ui"/> **Material UI**](https://mui.com/material-ui/): @emotion/react - @emotion/styled - @mui/material - @mui/icons-material - @mui/x-data-grid
+| Dependencias |
+| ------------ |
+| [**SWR**](https://swr.vercel.app/) (**stale-while-revalidate**), bibilioteca React Hooks para la obtención de datos, el componente obtendrá sonstante y automáticamente el último flujo de datos. Y la interfaz de usuario será siempre rápida y reactiva |
+| [**js-cookie**](https://www.npmjs.com/package/js-cookie), para procesar las cookies en el Front End |
+| [**NextAuth.js**](https://next-auth.js.org/), autentificación para Next.js |
+| [**axios**](https://axios-http.com/) |
+| [**react-paypal-js**](https://www.npmjs.com/package/@paypal/react-paypal-js) |
+| [**jsonwebtoken**](https://jwt.io/) |
+| [**bcryptjs**](https://www.npmjs.com/package/bcrypt) |
+| [<img width="30" height="30" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/30/external-docker-a-set-of-coupled-software-as-a-service-logo-color-tal-revivo.png" alt="docker"/> **Docker**](https://www.docker.com/) |
 
-- [<img width="30" height="30" src="https://img.icons8.com/ultraviolet/30/react--v1.png" alt="react--v1"/> **React**](https://react.dev/) y **react-dom**
+| Base de datos |
+| ------------- |
+| [<img width="30" height="30" src="https://img.icons8.com/color/30/mongodb.png" alt="mongodb"/> **MongoDB**](https://www.mongodb.com/) |
+| [<img width="30" height="30" src="https://img.icons8.com/color/30/mongoose.png" alt="mongoose"/> **Mongoose**](https://mongoosejs.com/) |
 
-- [<img width="30" height="30" src="https://img.icons8.com/fluency-systems-regular/30/nextjs.png" alt="nextjs"/> **NEXTjs**](https://nextjs.org/)
+| Peticiones REST API |
+| ------------------- |
+| [<img width="30" height="30" src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/30/external-postman-is-the-only-complete-api-development-environment-logo-shadow-tal-revivo.png" alt="postman"/> **Postman**](https://www.postman.com/) |
 
-- [**react-slideshow-image**](https://www.npmjs.com/package/react-slideshow-image), para los sliders de productos en la página de detalle del producto
+| Manejador de paquetes |
+| ----------------------|
+| [<img src="https://github.com/devicons/devicon/blob/master/icons/yarn/yarn-original.svg" alt="yarn" width="30" height="30"  /> **Yarn**](https://yarnpkg.com/) |
 
-- [**react-hook-form**](https://react-hook-form.com/), para el manejo de los formularios
+| Control de versiones |
+| -------------------- |
+| <img width="30" height="30" src="https://img.icons8.com/color/30/git.png" alt="git"/> **Git** |
+| <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/github.png" alt="github"/> **GitHub** |
 
-- [**SWR**](https://swr.vercel.app/) (**stale-while-revalidate**), bibilioteca React Hooks para la obtención de datos, el componente obtendrá sonstante y automáticamente el último flujo de datos. Y la interfaz de usuario será siempre rápida y reactiva.
-
-- [**js-cookie**](https://www.npmjs.com/package/js-cookie), para procesar las cookies en el Front End
-
-- [**NextAuth.js**](https://next-auth.js.org/), autentificación para Next.js
-
-- [**axios**](https://axios-http.com/)
-
-- [**react-paypal-js**](https://www.npmjs.com/package/@paypal/react-paypal-js)
-
-- [<img src="https://github.com/devicons/devicon/blob/master/icons/yarn/yarn-original.svg" alt="yarn" width="30" height="30"  /> **Yarn**](https://yarnpkg.com/)
-
-- <img width="30" height="30" src="https://img.icons8.com/color/30/git.png" alt="git"/> **Git** y <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/github.png" alt="github"/> **GitHub**
-
-- [<img width="30" height="30" src="https://img.icons8.com/color/30/mongodb.png" alt="mongodb"/> **MongoDB**](https://www.mongodb.com/) y [<img width="30" height="30" src="https://img.icons8.com/color/30/mongoose.png" alt="mongoose"/> **Mongoose**](https://mongoosejs.com/) , para la base de datos
-
-- [**jsonwebtoken**](https://jwt.io/)
-
-- [**bcryptjs**](https://www.npmjs.com/package/bcrypt)
-
-- [<img width="30" height="30" src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/30/external-postman-is-the-only-complete-api-development-environment-logo-shadow-tal-revivo.png" alt="postman"/> **Postman**](https://www.postman.com/), para ver las pediciones REST FULL API
-
-- [<img width="30" height="30" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/30/external-docker-a-set-of-coupled-software-as-a-service-logo-color-tal-revivo.png" alt="docker"/> **Docker**](https://www.docker.com/)
 
 ---
 
@@ -77,13 +85,13 @@ Este proyecto está creado con [**Next.js**](https://nextjs.org/) con el comando
 
 ## Primeros pasos
 
-### <img width="24" height="24" src="https://img.icons8.com/fluency/24/1.png" alt="1"/> Antes que nada debes tener insatalado:
+### <img width="34" height="34" src="https://img.icons8.com/fluency/34/1.png" alt="1"/> Antes que nada debes tener insatalado:
 
 - **Node** de versión 16 en adelante
 
 - **Yarn**
 
-### <img width="24" height="24" src="https://img.icons8.com/fluency/24/2.png" alt="2"/> Bajarte el código del repositorio, creando una carpeta en tu local, y luego:
+### <img width="34" height="34" src="https://img.icons8.com/fluency/34/2.png" alt="2"/> Bajarte el código del repositorio, creando una carpeta en tu local, y luego:
 
 ```BASH
 git clone https://github.com/CodeSystem2022/E-Commerce-ERROR4004-BIS.git .
@@ -91,19 +99,19 @@ git clone https://github.com/CodeSystem2022/E-Commerce-ERROR4004-BIS.git .
 
 Una vez creado entra dentro de la carpeta del proyecto.
 
-### <img width="24" height="24" src="https://img.icons8.com/fluency/24/3.png" alt="3"/> Instalar las dependencias (node_modules) con:
+### <img width="34" height="34" src="https://img.icons8.com/fluency/34/3.png" alt="3"/> Instalar las dependencias (node_modules) con:
 
 ```BASH
 yarn install
 ```
 
-### <img width="24" height="24" src="https://img.icons8.com/fluency/24/4.png" alt="4"/> Correr el servidor en local, con:
+### <img width="34" height="34" src="https://img.icons8.com/fluency/34/4.png" alt="4"/> Correr el servidor en local, con:
 
 ```bash
 yarn dev
 ```
 
-### <img width="24" height="24" src="https://img.icons8.com/fluency/24/5.png" alt="5"/> Abrir [http://localhost:3000](http://localhost:3000) en tu navegador localmente, para ver la aplicación.
+### <img width="34" height="34" src="https://img.icons8.com/fluency/34/5.png" alt="5"/> Abrir [http://localhost:3000](http://localhost:3000) en tu navegador localmente, para ver la aplicación.
 
 Primero de necesita la base de datos, en la terminal con el comando:
 
@@ -121,7 +129,7 @@ docker-compose up -d
 
 -El nombre del **volumen** es `mongo`.
 
-### <img width="24" height="24" src="https://img.icons8.com/fluency/24/6.png" alt="6"/> Configurar las variables de entorno
+### <img width="34" height="34" src="https://img.icons8.com/fluency/34/6.png" alt="6"/> Configurar las variables de entorno
 
 Copiar el archivo `.env.template` y renombrarlo a `.env`. Van a ver que tenemos las variables de GITHUB, para obtener **GITHUB_ID** y **GITHUB_SECRET**:
 
