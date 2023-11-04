@@ -1,4 +1,6 @@
+import React, { useState } from 'react'
 import { GetServerSideProps, NextPage } from 'next'
+import { useRouter } from 'next/router'
 import { getSession } from 'next-auth/react'
 import { PayPalButtons } from '@paypal/react-paypal-js'
 
@@ -10,6 +12,17 @@ import CartList from '../../components/cart/CartList'
 import OrderSummary from '../../components/cart/OrderSummary'
 import { dbOrders } from '../../database'
 import { IOrder } from '../../interfaces'
+import { ohlalaApi } from '../../api'
+
+export type OrderResponseBody = {
+  id: string
+  status:
+  | 'COMPLETED'
+  | 'SAVED'
+  | 'APPROVED'
+  | 'VOIDED'
+  | 'PAYER_ACTION_REQUIRED'
+}
 
 interface OrderPagProps {
   order: IOrder
@@ -17,7 +30,32 @@ interface OrderPagProps {
 
 const OrderPage: NextPage<OrderPagProps> = ({ order }) => {
 
+  const router = useRouter()
   const { shippingAddress } = order
+  const [isPaying, setIsPaying] = useState(false)
+
+  const onOrderCompleted = async (details: OrderResponseBody) => {
+
+    if (details.status !== 'COMPLETED') {
+      return alert('No payment at Paypal')
+    }
+
+    setIsPaying(true)
+
+    try {
+      const { data } = await ohlalaApi.post(`/orders/pay`, {
+        transactionId: details.id,
+        orderId: order._id
+      })
+
+      router.reload()
+
+    } catch (error) {
+      setIsPaying(false)
+      console.log(error)
+      alert('Error')
+    }
+  }
 
   return (
     <ShopLayout
@@ -26,7 +64,10 @@ const OrderPage: NextPage<OrderPagProps> = ({ order }) => {
     >
       <>
         <Typography variant='h1' component='h1' my={ 4 }>
-          Order: { order._id }
+          Order:
+        </Typography>
+        <Typography variant='subtitle1'>
+          { order._id }
         </Typography>
         {
           order.isPaid ?
@@ -51,10 +92,10 @@ const OrderPage: NextPage<OrderPagProps> = ({ order }) => {
             )
         }
         <Grid container spacing={ 2 } className='fadeIn'>
-          <Grid item xs={ 12 } sm={ 7 }>
+          <Grid item xs={ 11 } sm={ 6 }>
             <CartList products={ order.orderItems } />
           </Grid>
-          <Grid item xs={ 12 } sm={ 5 }>
+          <Grid item xs={ 11 } sm={ 5 }>
             <Card className='summary-card'>
               <CardContent>
                 <Typography variant='h2' mb={ 4 }>
@@ -112,8 +153,9 @@ const OrderPage: NextPage<OrderPagProps> = ({ order }) => {
                           onApprove={ (data, actions) => {
 
                             return actions.order!.capture().then((details) => {
-                              console.log({ details })
-                              const name = details.payer.name.given_name
+                              //console.log({ details })
+                              //const name = details.payer.name.given_name
+                              onOrderCompleted(details)
                             })
 
                           } }
