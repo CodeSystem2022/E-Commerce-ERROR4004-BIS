@@ -321,6 +321,7 @@ Si es una tarea solo de estilos en vez de `feat` utilizamos `style`, si es solo 
 > pages
   > admin
   > api
+    > admin
     > auth
     > orders
     > products

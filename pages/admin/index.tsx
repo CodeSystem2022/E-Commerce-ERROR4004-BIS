@@ -61,7 +61,7 @@ const DashboardPage = () => {
         />
         <SummaryTile
           title='8'
-          subTitle='Update at:'
+          subTitle='Update at'
           icon={ <AccessTimeOutlined color='secondary' sx={ { fontSize: 40 } } /> }
         />
       </Grid>
