@@ -23,6 +23,7 @@ import {
   AdminPanelSettings,
   CategoryOutlined,
   ConfirmationNumberOutlined,
+  DashboardOutlined,
   EscalatorWarningOutlined,
   FemaleOutlined,
   LoginOutlined,
@@ -231,22 +232,39 @@ const SideMenu = () => {
                 <Divider />
                 <ListSubheader>Admin Panel</ListSubheader>
                 <ListItem >
-                  <ListItemIcon aria-label='products'>
-                    <CategoryOutlined />
-                  </ListItemIcon>
-                  <ListItemText primary={ 'Products' } />
+                  <Button
+                    aria-label='go to dashboard panel'
+                    onClick={ () => navigateTo('/admin') }
+                  >
+                    <ListItemIcon aria-label='dashboard'>
+                      <DashboardOutlined />
+                    </ListItemIcon>
+                    <ListItemText primary={ 'Dashboard' } />
+                  </Button>
                 </ListItem>
                 <ListItem >
-                  <ListItemIcon aria-label='orders'>
-                    <ConfirmationNumberOutlined />
-                  </ListItemIcon>
-                  <ListItemText primary={ 'Orders' } />
+                  <Button>
+                    <ListItemIcon aria-label='products'>
+                      <CategoryOutlined />
+                    </ListItemIcon>
+                    <ListItemText primary={ 'Products' } />
+                  </Button>
                 </ListItem>
                 <ListItem >
-                  <ListItemIcon aria-label='users'>
-                    <AdminPanelSettings />
-                  </ListItemIcon>
-                  <ListItemText primary={ 'Users' } />
+                  <Button>
+                    <ListItemIcon aria-label='orders'>
+                      <ConfirmationNumberOutlined />
+                    </ListItemIcon>
+                    <ListItemText primary={ 'Orders' } />
+                  </Button>
+                </ListItem>
+                <ListItem >
+                  <Button>
+                    <ListItemIcon aria-label='users'>
+                      <AdminPanelSettings />
+                    </ListItemIcon>
+                    <ListItemText primary={ 'Users' } />
+                  </Button>
                 </ListItem>
               </>
             )
