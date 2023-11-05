@@ -59,7 +59,7 @@ const OrderPage: NextPage<OrderPagProps> = ({ order }) => {
 
   return (
     <ShopLayout
-      title='Orden summary'
+      title='Order summary'
       pageDescription={ `Orden summary: ${ order._id }` }
     >
       <>

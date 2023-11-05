@@ -10,10 +10,18 @@ export default NextAuth({
     Credentials({
       name: 'Custom login',
       credentials: {
-        email: { label: 'Email: ', type: 'email', placeholder: 'example@email.com' },
-        password: { label: 'Password:', type: 'password', placeholder: 'Type your password here' },
+        email: {
+          label: 'Email: ',
+          type: 'email',
+          placeholder: 'example@email.com'
+        },
+        password: {
+          label: 'Password:',
+          type: 'password',
+          placeholder: 'Type your password here'
+        },
       },
-      async authorize(credentials) {
+      async authorize(credentials): Promise<any> {
         console.log({ credentials })
         // return { name: 'Pedro Rodriguez', email: 'p-rodriguez@google.com', role: 'admin' }
         return await dbUsers.checkUserEmailPassword(credentials!.email, credentials!.password)
@@ -68,6 +76,8 @@ export default NextAuth({
 
     async session({ session, token, user }) {
 
+      // TODO: en el build sale este error: Property 'accessToken' does not exist on type 'Session'
+      console.log('session: ', session)
       session.accessToken = token.accessToken
       session.user = token.user as any
 
