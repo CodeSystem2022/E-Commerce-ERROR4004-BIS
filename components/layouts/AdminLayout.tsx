@@ -20,10 +20,10 @@ const AdminLayout: FC<AdminLayoutPops> = ({
   return (
     <>
       <Head>
-        <title>{ title }</title>
-        <meta name='description' content='Admin panel' />
+        <title>{ `Admin | ${ title }` }</title>
+        <meta name='description' content={`Admin panel: ${title}`} />
         <meta name='og:title' content={ title } />
-        <meta name='og:description' content='Admin panel' />
+        <meta name='og:description' content={ `Admin panel: ${subTitle}`} />
         <link rel="shortcut icon" href="/logo/logo-name.png" type="image/jpg" />
       </Head>
       <nav>
@@ -38,7 +38,7 @@ const AdminLayout: FC<AdminLayoutPops> = ({
         } }
       >
         <Box display='flex' flexDirection='column'>
-          <Typography variant='h2' component='h2' my={ 1}>
+          <Typography variant='h2' component='h2' my={ 1 }>
             { icon } { title }
           </Typography>
           <Typography variant='h3' component='h3' mb={ 1 }>

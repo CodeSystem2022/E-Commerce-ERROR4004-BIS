@@ -259,7 +259,10 @@ const SideMenu = () => {
                   </Button>
                 </ListItem>
                 <ListItem >
-                  <Button>
+                  <Button
+                    aria-label='go to users'
+                    onClick={ () => navigateTo('/admin/users') }
+                  >
                     <ListItemIcon aria-label='users'>
                       <AdminPanelSettings />
                     </ListItemIcon>
