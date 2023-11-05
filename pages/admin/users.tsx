@@ -89,7 +89,7 @@ const UsersPage = () => {
   return (
     <AdminLayout
       title='Users'
-      subTitle=''
+      subTitle='Maintenance of users'
       icon={ <PeopleOutline /> }
     >
       <Grid container className='fadeIn'>

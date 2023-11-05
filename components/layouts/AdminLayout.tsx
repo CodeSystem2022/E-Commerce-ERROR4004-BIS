@@ -39,9 +39,9 @@ const AdminLayout: FC<AdminLayoutPops> = ({
       >
         <Box display='flex' flexDirection='column'>
           <Typography variant='h2' component='h2' my={ 1 }>
-            { icon } { title }
+            { icon }{ ' '} { title }
           </Typography>
-          <Typography variant='h3' component='h3' mb={ 1 }>
+          <Typography variant='h3' component='h3' mb={ 2 }>
             { subTitle }
           </Typography>
         </Box>

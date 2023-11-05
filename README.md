@@ -211,7 +211,9 @@ GET `localhost:3000/api/orders/pay`
 
 - Para ver **el detalle**: GET `localhost:3000/api/admin/dashboard`, para recibir la response con la siguiente información: "numberOfOrders", "paidOrders", "numberOfClients", "numberOfProducts", "productsWithNoInventory", "lowInventory" y "notPaidOrders"
 
-- Para ver usuarios: GET `localhost:3000/api/admin/users` y asi poder ver todos los usuarios. Y en el caso de necesitar modificar un role de un usuario: POST `localhost:3000/api/admin/users/{id}`, se debe psar como parametro el id del usuario que se desea modificar y el nuevo rol.
+- Para ver **usuarios**: GET `localhost:3000/api/admin/users` y asi poder ver todos los usuarios. Y en el caso de necesitar modificar un role de un usuario: POST `localhost:3000/api/admin/users/{id}`, se debe psar como parametro el id del usuario que se desea modificar y el nuevo rol.
+
+- Para ver las **çordenes**: GET `localhost:3000/api/admin/orders`
 
 
 ---
