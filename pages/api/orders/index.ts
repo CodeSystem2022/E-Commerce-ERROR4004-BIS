@@ -33,23 +33,31 @@ const createOrder = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
     // Check price of products with data base
     // create an array of products id in the shopping cart
     const productsIds = orderItems.map(product => product._id)
-
+    console.log('orderItems: ', orderItems)
+    console.log('productsIds: ', productsIds)
     await db.connect()
 
-    // Create an arrya with the products
+    // Create an array with the products
     const dbProducts = await Product.find({ _id: { $in: productsIds } })
 
     try {
 
+        console.log('dbProducts: ', dbProducts)
         const subTotal = orderItems.reduce((prev, current) => {
             // TODO: problema -
             // el "_id" en orderItems es una cadena (string), mientras que el "_id" en dbProducts es un ObjectId de MongoDB
             // Asi estaba:
+            
             //const currentPrice = dbProducts.find(prod => prod._id === current._id)?.price
 
-            // Asi lo dejo
-            const currentProductId = mongoose.Types.ObjectId(current._id); // Convierte a ObjectId
-            const currentPrice = dbProducts.find(prod => prod._id.equals(currentProductId))?.price;
+            // una posible solucion
+            const currentProduct = dbProducts.find(prod => prod._id.toString() === current._id)
+            const currentPrice = currentProduct!.price
+            console.log('currentPrice; ', currentPrice)
+            
+            // Esta es otra posible opcion
+            // const currentProductId = mongoose.Types.ObjectId(current._id); // Convierte a ObjectId
+            // const currentPrice = dbProducts.find(prod => prod._id.equals(currentProductId))?.price;
 
 
             if (!currentPrice) {
@@ -69,13 +77,13 @@ const createOrder = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
         // Everything it's fine
         const userId = session.user._id
         const newOrder = new Order({ ...req.body, isPaid: false, user: userId })
-        
+
         //redondear a 2 decimales
-        newOrder.total = Math.round(newOrder.total*100)/100
-        
+        newOrder.total = Math.round(newOrder.total * 100) / 100
+
         await newOrder.save()
         await db.disconnect()
-        
+
         return res.status(201).json(newOrder)
 
     } catch (error: any) {

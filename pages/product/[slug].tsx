@@ -8,7 +8,7 @@ import { CartContext } from '../../context'
 import { Box, Button, Chip, Grid, Typography } from '@mui/material'
 
 import { IProduct, ISize } from '../../interfaces'
-import { ICartProduct } from '@/interfaces/cart'
+import { ICartProduct } from '../../interfaces/cart'
 import ShopLayout from '../../components/layouts/ShopLayout'
 import ProductSlideshow from '../../components/products/ProductSlideshow'
 import ItemCounter from '../../components/ui/ItemCounter'

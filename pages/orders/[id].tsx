@@ -22,6 +22,7 @@ export type OrderResponseBody = {
   | 'APPROVED'
   | 'VOIDED'
   | 'PAYER_ACTION_REQUIRED'
+  | 'CREATED'
 }
 
 interface OrderPagProps {

@@ -2,11 +2,10 @@ import { GetServerSideProps, NextPage } from 'next'
 
 import { Box, Typography } from '@mui/material'
 
-import { dbProducts } from '@/database'
-import { IProduct } from '@/interfaces'
-
 import ShopLayout from '../../components/layouts/ShopLayout'
 import ProductList from '../../components/products/ProductList'
+import { IProduct } from '../../interfaces'
+import { dbProducts } from '../../database'
 
 interface SearchPageProps {
   products: IProduct[]

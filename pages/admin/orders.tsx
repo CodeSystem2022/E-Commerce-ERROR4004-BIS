@@ -16,18 +16,18 @@ const columns: GridColDef[] = [
     width: 250,
     description: 'Order ID'
   },
-  {
-    field: 'email',
-    headerName: 'E-mail',
-    width: 300,
-    description: 'Email'
-  },
-  {
-    field: 'name',
-    headerName: 'Full name',
-    width: 300,
-    description: 'Full name'
-  },
+  // {
+  //   field: 'email',
+  //   headerName: 'E-mail',
+  //   width: 300,
+  //   description: 'Email'
+  // },
+  // {
+  //   field: 'name',
+  //   headerName: 'Full name',
+  //   width: 300,
+  //   description: 'Full name'
+  // },
   {
     field: 'total',
     headerName: 'Total',
@@ -84,16 +84,18 @@ const OrdersPage = () => {
   const { data, error } = useSWR<IOrder[]>('/api/admin/orders')
 
   if (!data && !error) return <></>
-  console.log({ data }) // TODO: es paara debuguear el error, despues borrarlo
+  // TODO: es paara debuguear el error, despues borrarlo
+  console.log({ data })
 
   const rows = data!.map(order => ({
     id: order._id,
     // TODO: el user llega como null
     // capaz que es lo que cambie del Object(user) a que sea user
     // porque sino no buscaba bien el usuario por id
-    // por ahora lo dejo vacio, peor hay que arreglarlo
-    email: '', //(order.user as IUser).email,
-    name: '', //(order.user as IUser).name,
+    // por ahora dejo comentadas las dos columnas que tiene al user
+    //pero hay que arreglarlo
+    //email: (order.user as IUser).email,
+    //name: (order.user as IUser).name,
     total: order.total,
     isPaid: order.isPaid,
     noProducts: order.numberOfItems,

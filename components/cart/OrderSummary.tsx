@@ -4,7 +4,7 @@ import { CartContext } from '../../context'
 import { currency } from '../../utils'
 
 interface OrderSummaryProps {
-  orderValues: {
+  orderValues?: {
     numberOfItems: number
     subTotal: number
     total: number
