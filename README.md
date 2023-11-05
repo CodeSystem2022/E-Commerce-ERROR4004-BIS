@@ -295,7 +295,10 @@ GET `localhost:3000/api/orders/pay`
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Procesos automáticos después del cobro
 
-Panel administrativo con pantallas de: Ordenes, Usuarios y Dashboard informativo, se aplican las validaciones respectivas para los nuevos endpoints y páginas para que solo Administradores puedan ingresar.
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Panel administrativo con pantallas de: Ordenes, Usuarios y Dashboard informativo, se aplican las validaciones respectivas para los nuevos endpoints y páginas para que solo Administradores puedan ingresar.
+
+Manejo del mantenimiento de productos, con: carga de archivos, validaciones personalizadas con React Hook Form, manejo de File System, subida a Cloudinary desde nuestro backend, creación de productos, actualización de productos, eliminación de imágenes, carga múltiple, diferentes rest endpoints, manejo de Radios y Checks y 
+Watch y observables de React Hook Form
 
 ---
 
