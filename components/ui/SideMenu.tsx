@@ -251,7 +251,10 @@ const SideMenu = () => {
                   </Button>
                 </ListItem>
                 <ListItem >
-                  <Button>
+                  <Button
+                    aria-label='go to orders'
+                    onClick={ () => navigateTo('/admin/orders') }
+                  >
                     <ListItemIcon aria-label='orders'>
                       <ConfirmationNumberOutlined />
                     </ListItemIcon>
