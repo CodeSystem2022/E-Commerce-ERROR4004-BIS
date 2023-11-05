@@ -209,7 +209,9 @@ GET `localhost:3000/api/orders/pay`
 
 #### <img width="20" height="20" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/20/external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo.png" alt="postman"/> Endpoints de administrador
 
-- Para ver **el detalle**: GET `localhost:3000/api/admin/dashboard`, para recibir la response con la sigueinte información: "numberOfOrders", "paidOrders", "numberOfClients", "numberOfProducts", "productsWithNoInventory", "lowInventory" y "notPaidOrders"
+- Para ver **el detalle**: GET `localhost:3000/api/admin/dashboard`, para recibir la response con la siguiente información: "numberOfOrders", "paidOrders", "numberOfClients", "numberOfProducts", "productsWithNoInventory", "lowInventory" y "notPaidOrders"
+
+- Para ver usuarios: GET `localhost:3000/api/admin/users` y asi poder ver todos los usuarios. Y en el caso de necesitar modificar un role de un usuario: POST `localhost:3000/api/admin/users/{id}`, se debe psar como parametro el id del usuario que se desea modificar y el nuevo rol.
 
 
 ---
