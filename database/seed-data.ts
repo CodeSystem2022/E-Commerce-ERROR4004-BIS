@@ -39,7 +39,7 @@ export const initialData: SeedData = {
             role: 'admin'
         },
         {
-            name: 'Eduario Rios',
+            name: 'Eduardo Rios',
             email: 'eduardor@google.com',
             password: bcrypt.hashSync('123456'),
             role: 'client'

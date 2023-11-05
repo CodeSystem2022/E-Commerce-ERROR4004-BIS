@@ -3,7 +3,7 @@ import { NextPage, GetServerSideProps } from 'next'
 import NextLink from 'next/link'
 
 import { Chip, Grid, Typography } from '@mui/material'
-import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid'
+import { DataGrid, GridColDef } from '@mui/x-data-grid'
 
 import { getSession } from 'next-auth/react'
 import ShopLayout from '../../components/layouts/ShopLayout'
@@ -11,14 +11,23 @@ import { dbOrders } from '../../database'
 import { IOrder } from '../../interfaces'
 
 const columns: GridColDef[] = [
-  { field: 'id', headerName: 'ID', width: 90 },
-  { field: 'fullname', headerName: 'Full Name', description: 'First Name and Last Name', width: 300 },
+  {
+    field: 'id',
+    headerName: 'ID',
+    width: 90,
+    description: 'Order ID'
+  },
+  {
+    field: 'fullname',
+    headerName: 'Full Name',
+    description: 'First Name and Last Name',
+    width: 300
+  },
   {
     field: 'paid',
     headerName: 'Order paid',
     description: 'Shows if the order is paid or not',
     width: 140,
-    // renderCell: (params: GridValueGetterParams ) => {
     renderCell: (params) => {
       return (
         params.row.paid ?

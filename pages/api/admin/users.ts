@@ -15,7 +15,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Data>)
       return getUsers(req, res)
 
     case 'PUT':
-      return updateUsers(req, res)
+      return updateUser(req, res)
+    
     default:
       res.status(400).json({ message: 'Bad request' })
   }
@@ -33,12 +34,12 @@ const getUsers = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
   return res.status(200).json(users)
 }
 
-const updateUsers = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
+const updateUser = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
 
   const { userId = '', role = '' } = req.body
   
   if (!isValidObjectId(userId)) {
-    return res.status(400).json({ message: 'No user with the id' })
+    return res.status(400).json({ message: `No user with the id: ${userId}` })
   }
 
   const validRoles = ['admin', 'client', 'super-user', 'SEO']
