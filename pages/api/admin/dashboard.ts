@@ -24,13 +24,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     numberOfProducts,
     productsWithNoInventory,
     lowInventory,
+    notPaidOrders
   ] = await Promise.all([
     Order.count(),
     Order.find({ isPaid: true }).count(),
     User.find({ role: 'client' }).count(),
     Product.count(),
     Product.find({ inStock: 0 }).count(),
-    Product.find({ inStock: { $lte: 10 } }).count()
+    Product.find({ inStock: { $lte: 10 } }).count(),
+    Order.find({ isPaid: false }).count(),
   ])
 
   await db.disconnect()
@@ -42,7 +44,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     numberOfProducts,
     productsWithNoInventory,
     lowInventory,
-    notPaidOrders: numberOfOrders - paidOrders,
+    // notPaidOrders: numberOfOrders - paidOrders,
+    notPaidOrders
   })
 
 }
