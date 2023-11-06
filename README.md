@@ -56,6 +56,7 @@
 | [**bcryptjs**](https://www.npmjs.com/package/bcrypt), una librería de Nodejs para hashear passwords |
 | [<img width="30" height="30" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/30/external-docker-a-set-of-coupled-software-as-a-service-logo-color-tal-revivo.png" alt="docker"/> **Docker**](https://www.docker.com/) |
 | [**Formidable**](https://www.npmjs.com/package/formidable), un módulo de Nodejs para parsear data, especialmente al subir archivos |
+| [**Cloudinary**](https://cloudinary.com/), ofrece servicios de gestión de imágenes y vídeos en la nube. Permite a los usuarios cargar, almacenar, gestionar, manipular y distribuir imágenes y vídeos para sitios web y aplicaciones. |
 
 | Base de datos |
 | ------------- |
