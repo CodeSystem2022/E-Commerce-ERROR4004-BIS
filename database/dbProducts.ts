@@ -13,6 +13,8 @@ export const getProductBySlug = async (slug: string): Promise<IProduct | null> =
     return null
   }
 
+  // TODO: process images 
+
   return JSON.parse(JSON.stringify(product))
 }
 

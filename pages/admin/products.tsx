@@ -1,5 +1,7 @@
 import React from 'react'
 
+import NextLink from 'next/link'
+
 import useSWR from 'swr'
 
 import { CardMedia, Grid } from '@mui/material'
@@ -35,7 +37,16 @@ const columns: GridColDef[] = [
     field: 'title',
     headerName: 'Title',
     width: 250,
-    description: 'Title of the product'
+    description: 'Title of the product',
+    renderCell: (params) => {
+      return (
+        <NextLink
+          href={ `/admin/products/${params.row.slug}`}
+        >
+          <span>{ params.row.title}</span>
+        </NextLink>
+      )
+    }
   },
   {
     field: 'gender',
