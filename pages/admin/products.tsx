@@ -4,9 +4,9 @@ import NextLink from 'next/link'
 
 import useSWR from 'swr'
 
-import { CardMedia, Grid } from '@mui/material'
+import { Box, Button, CardMedia, Grid } from '@mui/material'
 import { DataGrid, GridColDef } from '@mui/x-data-grid'
-import { CategoryOutlined } from '@mui/icons-material'
+import { AddOutlined, CategoryOutlined } from '@mui/icons-material'
 
 import AdminLayout from '../../components/layouts/AdminLayout'
 import { IProduct } from '../../interfaces'
@@ -118,6 +118,23 @@ const ProductsPage = () => {
       subTitle='Maintenance of products'
       icon={ <CategoryOutlined /> }
     >
+      <Box display='flex' justifyContent='end' sx={ { mb: 3 } }>
+        <Button
+          aria-label='Create a new product'
+          startIcon={ <AddOutlined /> }
+          color='secondary'
+          href='/admin/products/new'
+          sx={ {
+            textTransform: 'uppercase',
+            '&:hover': {
+              border: '1px solid #3A64D8',
+              color: '#3A64D8'
+            }
+          } }
+        >
+          Create product
+        </Button>
+      </Box>
       <Grid container className='fadeIn'>
         <Grid
           item

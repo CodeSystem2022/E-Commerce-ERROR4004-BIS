@@ -1,14 +1,16 @@
 import React, { FC, useState, useEffect } from 'react'
 import { GetServerSideProps } from 'next'
+import { useRouter } from 'next/router'
 import { useForm } from 'react-hook-form'
 
-import { Box, Button, capitalize, Card, CardActions, CardMedia, Checkbox, Chip, Divider, FormControl, FormControlLabel, FormGroup, FormLabel, Grid, ListItem, Paper, Radio, RadioGroup, TextField } from '@mui/material'
+import { Box, Button, capitalize, Card, CardActions, CardMedia, Checkbox, Chip, Divider, FormControl, FormControlLabel, FormGroup, FormLabel, Grid, Radio, RadioGroup, TextField } from '@mui/material'
 import { DriveFileRenameOutline, SaveOutlined, UploadOutlined } from '@mui/icons-material'
 
 import AdminLayout from '../../../components/layouts/AdminLayout'
 import { IProduct } from '../../../interfaces'
 import { dbProducts } from '../../../database'
 import { ohlalaApi } from '../../../api'
+import { Product } from '../../../models'
 
 
 const validTypes = ['running', 'sneakers', 'soccer', 'basketball', 'driving', 'training']
@@ -33,7 +35,7 @@ interface ProductAdminPageProps {
 }
 
 const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
-
+  const router = useRouter()
   const [newTagValue, setNewTagValue] = useState<string>('')
   const [isSaving, setIsSaving] = useState<boolean>(false)
 
@@ -93,7 +95,7 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
     setValue('tags', updatedTags, { shouldValidate: true })
   }
 
-  const onSubmit = async(form: FormData) => {
+  const onSubmit = async (form: FormData) => {
 
     // check to have at least 2 image and double post
     if (form.images.length < 2) return alert('2 images at least')
@@ -102,15 +104,15 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
     try {
       const res = await ohlalaApi({
         url: '/admin/products',
-        method: 'PUT',
+        method: form._id ? 'PUT' : 'POST',
         data: form
       })
 
       console.log({ res })
 
       if (form._id) {
-        // TODO: reload
-      } else { 
+        router.replace(`/admin/products/${form.slug}`)
+      } else {
         setIsSaving(false)
       }
 
@@ -404,7 +406,17 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
 
   const { slug = '' } = query
 
-  const product = await dbProducts.getProductBySlug(slug.toString())
+  let product: IProduct | null
+
+  if (slug === 'new') {
+    const tempProduct = JSON.parse(JSON.stringify(new Product()))
+    delete tempProduct._id
+    tempProduct.images = ['img1.jpg', 'img2.jpg']
+    product = tempProduct
+
+  } else {
+    product = await dbProducts.getProductBySlug(slug.toString())
+  }
 
   if (!product) {
     return {
