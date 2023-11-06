@@ -130,9 +130,8 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
         data: form
       })
 
-      console.log({ res })
-
       if (form._id) {
+        // TODO: see because it`s arriving here, but not re render of the new info
         router.replace(`/admin/products/${ form.slug }`)
       } else {
         setIsSaving(false)

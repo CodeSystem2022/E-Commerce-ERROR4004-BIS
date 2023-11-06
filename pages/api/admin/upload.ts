@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
+import formidable from 'formidable'
 
-type Data = { message: string}
+type Data = { message: string }
 
 export const config = {
   api: {
@@ -9,27 +10,27 @@ export const config = {
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
-  
-  switch (req.method) { 
+
+  switch (req.method) {
     case 'POST':
       return uploadFile(req, res)
-    
+
     default:
-      res.status(400).json({message: 'Bad request'})
+      res.status(400).json({ message: 'Bad request' })
   }
 }
 
-const parseFiles = async(req: NextApiRequest) => {
-  
+const parseFiles = async (req: NextApiRequest) => {
+
 
 
 }
 
-const uploadFile = async(req: NextApiRequest, res: NextApiResponse<Data>) => {
-  
+const uploadFile = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
+
   await parseFiles(req)
 
-  return res.status(200).json({message: 'Image uploaded'})
+  return res.status(200).json({ message: 'Image uploaded' })
 }
 
 
