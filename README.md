@@ -39,22 +39,23 @@
 
 | Manejo de formularios |
 | --------------------- |
-| [**react-hook-form**](https://react-hook-form.com/) |
+| [**react-hook-form**](https://react-hook-form.com/), para crear formularios eficaces, flexibles y ampliables con una validación fácil de usar. |
 
 | Sliders  |
 | -------- |
-| [**react-slideshow-image**](https://www.npmjs.com/package/react-slideshow-image) |
+| [**react-slideshow-image**](https://www.npmjs.com/package/react-slideshow-image), un simple componente de presentación de diapositivas construido con React que soporta efectos de deslizamiento, fundido y zoom. |
 
 | Dependencias |
 | ------------ |
 | [**SWR**](https://swr.vercel.app/) (**stale-while-revalidate**), bibilioteca React Hooks para la obtención de datos, el componente obtendrá sonstante y automáticamente el último flujo de datos. Y la interfaz de usuario será siempre rápida y reactiva |
 | [**js-cookie**](https://www.npmjs.com/package/js-cookie), para procesar las cookies en el Front End |
 | [**NextAuth.js**](https://next-auth.js.org/), autentificación para Next.js |
-| [**axios**](https://axios-http.com/) |
-| [**react-paypal-js**](https://www.npmjs.com/package/@paypal/react-paypal-js) |
-| [**jsonwebtoken**](https://jwt.io/) |
-| [**bcryptjs**](https://www.npmjs.com/package/bcrypt) |
+| [**axios**](https://axios-http.com/), es un cliente HTTP basado en promesas para Node.js y el navegador. Es isomórfico (puede ejecutarse en el navegador y en Node.js con el mismo código base). En el lado del servidor utiliza el módulo http nativo de node.js, mientras que en el cliente (navegador) utiliza XMLHttpRequests. |
+| [**react-paypal-js**](https://www.npmjs.com/package/@paypal/react-paypal-js), ofrece a los desarrolladores una solución que elimina la complejidad de cargar el SDK de JavaScript. Aplica las mejores prácticas por defecto para que los compradores obtengan la mejor experiencia de usuario posible. |
+| [**jsonwebtoken**](https://jwt.io/), un estándar de Internet propuesto para crear datos con firma opcional y/o cifrado opcional , los tokens se firman utilizando un secreto privado o una clave pública/privada. |
+| [**bcryptjs**](https://www.npmjs.com/package/bcrypt), una librería de Nodejs para hashear passwords |
 | [<img width="30" height="30" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/30/external-docker-a-set-of-coupled-software-as-a-service-logo-color-tal-revivo.png" alt="docker"/> **Docker**](https://www.docker.com/) |
+| [**Formidable**](https://www.npmjs.com/package/formidable), un módulo de Nodejs para parsear data, especialmente al subir archivos |
 
 | Base de datos |
 | ------------- |

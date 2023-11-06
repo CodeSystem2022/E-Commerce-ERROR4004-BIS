@@ -97,19 +97,21 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
     setValue('tags', updatedTags, { shouldValidate: true })
   }
 
-  const onFilesSelected = ({target}: ChangeEvent<HTMLInputElement>) => { 
+  const onFilesSelected = async ({ target }: ChangeEvent<HTMLInputElement>) => {
 
-    if (!target.files || target.files.length === 0) { 
+    if (!target.files || target.files.length === 0) {
       return
     }
 
 
     try {
-      for (const file of target.files) { 
+      for (const file of target.files) {
         const formData = new FormData()
-        console.log(file)
+        formData.append('file', file)
+        const { data } = await ohlalaApi.post<{ message: string }>('/admin/upload', formData)
+        console.log({ data })
       }
-    } catch (error) { 
+    } catch (error) {
 
     }
 
@@ -359,7 +361,7 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
                     sx={ { color: 'black', '&:hover': { color: '#3A64D8' } } }
                   /> }
                 sx={ { mb: 3, py: 1, '&:hover': { border: '1px solid #3A64D8', color: '#3A64D8' } } }
-                onClick={ () => fileInputRef.current?.click()}
+                onClick={ () => fileInputRef.current?.click() }
               >
                 Upload images
               </Button>
