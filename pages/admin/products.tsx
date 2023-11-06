@@ -10,6 +10,7 @@ import { CategoryOutlined } from '@mui/icons-material'
 
 import AdminLayout from '../../components/layouts/AdminLayout'
 import { IProduct } from '../../interfaces'
+import { formatToUSD } from '../../utils/currency'
 
 const columns: GridColDef[] = [
   {
@@ -36,14 +37,14 @@ const columns: GridColDef[] = [
   {
     field: 'title',
     headerName: 'Title',
-    width: 250,
+    width: 350,
     description: 'Title of the product',
     renderCell: (params) => {
       return (
         <NextLink
-          href={ `/admin/products/${params.row.slug}`}
+          href={ `/admin/products/${ params.row.slug }` }
         >
-          <span>{ params.row.title}</span>
+          <span>{ params.row.title }</span>
         </NextLink>
       )
     }
@@ -51,7 +52,15 @@ const columns: GridColDef[] = [
   {
     field: 'gender',
     headerName: 'Gender',
-    description: 'Gender of the product'
+    description: 'Gender of the product',
+    align: 'center',
+    renderCell: (params) => {
+      return (
+        <span>
+          { `${ params.row.gender.toString().toUpperCase() }` }
+        </span>
+      )
+    }
   },
   {
     field: 'type',
@@ -61,12 +70,21 @@ const columns: GridColDef[] = [
   {
     field: 'inStock',
     headerName: 'Inventary',
-    description: 'Amount of products'
+    description: 'Amount of products',
+    align: 'center',
   },
   {
     field: 'price',
     headerName: 'Price',
-    description: "Product's price"
+    description: "Product's price",
+    align: 'center',
+    renderCell: (params) => {
+      return (
+        <span>
+          { `${ formatToUSD(params.row.price) }` }
+        </span>
+      )
+    }
   },
   {
     field: 'sizes',

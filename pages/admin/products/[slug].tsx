@@ -127,8 +127,16 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
               </RadioGroup>
             </FormControl>
 
-            <FormGroup>
-              <FormLabel>Sizes</FormLabel>
+            <FormGroup sx={ {flexDirection: 'row'}}>
+              <FormLabel
+                sx={ {
+                  marginRight: '12px',
+                  display: 'flex',
+                  alignItems: 'center'
+                } }
+              >
+                Sizes
+              </FormLabel>
               {
                 validSizes.map(size => (
                   <FormControlLabel key={ size } control={ <Checkbox /> } label={ size } />
