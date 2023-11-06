@@ -217,6 +217,7 @@ GET `localhost:3000/api/orders/pay`
 
 - Para ver **productos**: GET `localhost:3000/api/admin/products` para tener la lista de los productos
 
+- Para ver **archivos subidos**: GET `localhost:3000/api/admin/upload` para tener las imagenes de productos que se suben al actualizar o crear un producto
 ---
 ---
 
@@ -296,9 +297,9 @@ GET `localhost:3000/api/orders/pay`
 
 <img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Procesos automáticos después del cobro
 
-<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Panel administrativo con pantallas de: Ordenes, Usuarios y Dashboard informativo, se aplican las validaciones respectivas para los nuevos endpoints y páginas para que solo Administradores puedan ingresar.
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> **Panel administrativo** con pantallas de: Ordenes, Usuarios, Productos y Dashboard informativo, se aplican las validaciones respectivas para los nuevos endpoints y páginas para que solo Administradores puedan ingresar.
 
-Manejo del mantenimiento de productos, con: carga de archivos, validaciones personalizadas con React Hook Form, manejo de File System, subida a Cloudinary desde nuestro backend, creación de productos, actualización de productos, eliminación de imágenes, carga múltiple, diferentes rest endpoints, manejo de Radios y Checks y 
+<img width="20" height="20" src="https://img.icons8.com/emoji/48/check-mark-button-emoji.png" alt="check mark"/> Con las nuevas páginas que solo puede ver el usuario con rol de **Admin** agregamos: manejo del **mantenimiento de productos**, con: carga de archivos, validaciones personalizadas con React Hook Form, manejo de File System, subida a Cloudinary desde nuestro backend, creación de productos, actualización de productos, eliminación de imágenes, carga múltiple, diferentes rest endpoints, manejo de Radios y Checks y 
 Watch y observables de React Hook Form
 
 ---
