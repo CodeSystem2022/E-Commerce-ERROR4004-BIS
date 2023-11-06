@@ -8,6 +8,7 @@ import { DriveFileRenameOutline, SaveOutlined, UploadOutlined } from '@mui/icons
 import AdminLayout from '../../../components/layouts/AdminLayout'
 import { IProduct } from '../../../interfaces'
 import { dbProducts } from '../../../database'
+import { ohlalaApi } from '../../../api'
 
 
 const validTypes = ['running', 'sneakers', 'soccer', 'basketball', 'driving', 'training']
@@ -34,6 +35,7 @@ interface ProductAdminPageProps {
 const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
 
   const [newTagValue, setNewTagValue] = useState<string>('')
+  const [isSaving, setIsSaving] = useState<boolean>(false)
 
   const {
     register,
@@ -91,8 +93,31 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
     setValue('tags', updatedTags, { shouldValidate: true })
   }
 
-  const onSubmit = (form: FormData) => {
-    console.log({ form })
+  const onSubmit = async(form: FormData) => {
+
+    // check to have at least 2 image and double post
+    if (form.images.length < 2) return alert('2 images at least')
+    setIsSaving(true)
+
+    try {
+      const res = await ohlalaApi({
+        url: '/admin/products',
+        method: 'PUT',
+        data: form
+      })
+
+      console.log({ res })
+
+      if (form._id) {
+        // TODO: reload
+      } else { 
+        setIsSaving(false)
+      }
+
+    } catch (error) {
+      console.log(error)
+      setIsSaving(false)
+    }
   }
 
   return (
@@ -118,6 +143,7 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
               }
             } }
             type="submit"
+            disabled={ isSaving }
           >
             SAVE
           </Button>
