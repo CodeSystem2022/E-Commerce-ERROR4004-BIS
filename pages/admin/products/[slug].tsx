@@ -25,7 +25,7 @@ interface FormData {
   tags: string[]
   title: string
   type: string
-  gender: 'men' | 'women' | 'kid' | 'unisex'
+  gender: string
 }
 interface ProductAdminPageProps {
   product: IProduct
