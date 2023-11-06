@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from 'react'
+import React, { FC, useState, useEffect } from 'react'
 import { GetServerSideProps } from 'next'
 import { useForm } from 'react-hook-form'
 
@@ -33,6 +33,8 @@ interface ProductAdminPageProps {
 
 const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
 
+  const [newTagValue, setNewTagValue] = useState<string>('')
+
   const {
     register,
     handleSubmit,
@@ -52,7 +54,7 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
           .replaceAll(' ', '_')
           .replaceAll("'", '')
           .toLowerCase() || '';
-        
+
         setValue('slug', newSlug)
       }
     });
@@ -72,8 +74,21 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
     setValue('sizes', [...currentSizes, size], { shouldValidate: true })
   }
 
-  const onDeleteTag = (tag: string) => {
+  const onNewTag = () => {
+    const newTag = newTagValue.trim().toLowerCase()
+    setNewTagValue('')
+    const currentTags = getValues('tags')
 
+    if (currentTags.includes(newTag)) { 
+      return
+    }
+
+    currentTags.push(newTag)
+  }
+
+  const onDeleteTag = (tag: string) => {
+    const updatedTags = getValues('tags').filter(t => t !== tag);
+    setValue('tags', updatedTags, {shouldValidate: true})
   }
 
   const onSubmit = (form: FormData) => {
@@ -248,6 +263,9 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
               fullWidth
               sx={ { mb: 1 } }
               helperText="Press [spacebar] to add"
+              value={ newTagValue }
+              onChange={ ({ target }) => setNewTagValue(target.value) }
+              onKeyUp={ ({ code }) => code === 'Space' ? onNewTag() : undefined }
             />
 
             <Box sx={ {
@@ -259,7 +277,7 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
             } }
               component="ul">
               {
-                product.tags.map((tag) => {
+                getValues('tags').map((tag) => {
 
                   return (
                     <Chip
