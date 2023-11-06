@@ -94,8 +94,8 @@ const OrdersPage = () => {
     // porque sino no buscaba bien el usuario por id
     // por ahora dejo comentadas las dos columnas que tiene al user
     //pero hay que arreglarlo
-    //email: (order.user as IUser).email,
-    //name: (order.user as IUser).name,
+    // email: (order.user as IUser).email,
+    // name: (order.user as IUser).name,
     total: order.total,
     isPaid: order.isPaid,
     noProducts: order.numberOfItems,

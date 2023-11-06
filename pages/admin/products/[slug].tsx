@@ -43,6 +43,17 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
     defaultValues: product
   })
 
+  const onChangeSize = (size: string) => {
+    const currentSizes = getValues('sizes')
+    // If it's already exist -> deletes
+    if (currentSizes.includes(size)) {
+      return setValue('sizes', currentSizes.filter(s => s !== size), { shouldValidate: true })
+    }
+
+    // If it`s nos existing -> add
+    setValue('sizes', [...currentSizes, size], { shouldValidate: true })
+  }
+
   const onDeleteTag = (tag: string) => {
 
   }
@@ -186,7 +197,12 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
               </FormLabel>
               {
                 validSizes.map(size => (
-                  <FormControlLabel key={ size } control={ <Checkbox /> } label={ size } />
+                  <FormControlLabel
+                    key={ size }
+                    control={ <Checkbox checked={ getValues('sizes').includes(size) } /> }
+                    label={ size }
+                    onChange={ () => onChangeSize(size) }
+                  />
                 ))
               }
             </FormGroup>
