@@ -79,7 +79,7 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
     setNewTagValue('')
     const currentTags = getValues('tags')
 
-    if (currentTags.includes(newTag)) { 
+    if (currentTags.includes(newTag)) {
       return
     }
 
@@ -88,7 +88,7 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
 
   const onDeleteTag = (tag: string) => {
     const updatedTags = getValues('tags').filter(t => t !== tag);
-    setValue('tags', updatedTags, {shouldValidate: true})
+    setValue('tags', updatedTags, { shouldValidate: true })
   }
 
   const onSubmit = (form: FormData) => {
@@ -109,7 +109,14 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
           <Button
             color="secondary"
             startIcon={ <SaveOutlined /> }
-            sx={ { width: '150px', my: 1 } }
+            sx={ {
+              width: '150px',
+              my: 1,
+              '&:hover': {
+                border: '1px solid #3A64D8',
+                color: '#3A64D8'
+              }
+            } }
             type="submit"
           >
             SAVE
@@ -299,8 +306,21 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
               <Button
                 color="secondary"
                 fullWidth
-                startIcon={ <UploadOutlined sx={ { color: 'white' } } /> }
-                sx={ { mb: 3, py: 1 } }
+                startIcon={
+                  <UploadOutlined
+                    sx={ {
+                      color: 'black',
+                      '&:hover': { color: '#3A64D8' }
+                    } }
+                  /> }
+                sx={ {
+                  mb: 3,
+                  py: 1,
+                  '&:hover': {
+                    border: '1px solid #3A64D8',
+                    color: '#3A64D8'
+                  }
+                } }
               >
                 Upload images
               </Button>
@@ -323,7 +343,17 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
                           alt={ img }
                         />
                         <CardActions>
-                          <Button fullWidth color="error">
+                          <Button
+                            fullWidth
+                            color="error"
+                            aria-label='Delete image of the product'
+                            sx={ {
+                              '&:hover': {
+                                border: '1px solid rgba(211, 47, 47, 0.7)',
+                                color: '#d32f2f'
+                              }
+                            } }
+                          >
                             Delete
                           </Button>
                         </CardActions>
