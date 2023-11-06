@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect } from 'react'
+import React, { FC, useState, useEffect, useRef, ChangeEvent } from 'react'
 import { GetServerSideProps } from 'next'
 import { useRouter } from 'next/router'
 import { useForm } from 'react-hook-form'
@@ -35,7 +35,9 @@ interface ProductAdminPageProps {
 }
 
 const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
+
   const router = useRouter()
+  const fileInputRef = useRef<HTMLInputElement>(null)
   const [newTagValue, setNewTagValue] = useState<string>('')
   const [isSaving, setIsSaving] = useState<boolean>(false)
 
@@ -95,6 +97,24 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
     setValue('tags', updatedTags, { shouldValidate: true })
   }
 
+  const onFilesSelected = ({target}: ChangeEvent<HTMLInputElement>) => { 
+
+    if (!target.files || target.files.length === 0) { 
+      return
+    }
+
+
+    try {
+      for (const file of target.files) { 
+        const formData = new FormData()
+        console.log(file)
+      }
+    } catch (error) { 
+
+    }
+
+  }
+
   const onSubmit = async (form: FormData) => {
 
     // check to have at least 2 image and double post
@@ -111,7 +131,7 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
       console.log({ res })
 
       if (form._id) {
-        router.replace(`/admin/products/${form.slug}`)
+        router.replace(`/admin/products/${ form.slug }`)
       } else {
         setIsSaving(false)
       }
@@ -336,23 +356,21 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
                 fullWidth
                 startIcon={
                   <UploadOutlined
-                    sx={ {
-                      color: 'black',
-                      '&:hover': { color: '#3A64D8' }
-                    } }
+                    sx={ { color: 'black', '&:hover': { color: '#3A64D8' } } }
                   /> }
-                sx={ {
-                  mb: 3,
-                  py: 1,
-                  '&:hover': {
-                    border: '1px solid #3A64D8',
-                    color: '#3A64D8'
-                  }
-                } }
+                sx={ { mb: 3, py: 1, '&:hover': { border: '1px solid #3A64D8', color: '#3A64D8' } } }
+                onClick={ () => fileInputRef.current?.click()}
               >
                 Upload images
               </Button>
-
+              <input
+                ref={ fileInputRef }
+                type='file'
+                multiple
+                accept='image/png, image/gif, image/jpeg, image/jpg'
+                style={ { display: 'none' } }
+                onChange={ onFilesSelected }
+              />
               <Chip
                 label="2 images at least"
                 color='error'
