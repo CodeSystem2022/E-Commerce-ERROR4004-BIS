@@ -167,8 +167,6 @@ const OrderPage: NextPage<OrderPagProps> = ({ order }) => {
                             onApprove={ (data, actions) => {
 
                               return actions.order!.capture().then((details) => {
-                                //console.log({ details })
-                                //const name = details.payer.name.given_name
                                 onOrderCompleted(details)
                               })
 

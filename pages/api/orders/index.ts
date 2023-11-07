@@ -33,32 +33,17 @@ const createOrder = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
     // Check price of products with data base
     // create an array of products id in the shopping cart
     const productsIds = orderItems.map(product => product._id)
-    console.log('orderItems: ', orderItems)
-    console.log('productsIds: ', productsIds)
-    await db.connect()
 
+    await db.connect()
     // Create an array with the products
     const dbProducts = await Product.find({ _id: { $in: productsIds } })
 
     try {
 
-        console.log('dbProducts: ', dbProducts)
         const subTotal = orderItems.reduce((prev, current) => {
-            // TODO: problema -
-            // el "_id" en orderItems es una cadena (string), mientras que el "_id" en dbProducts es un ObjectId de MongoDB
-            // Asi estaba:
             
-            //const currentPrice = dbProducts.find(prod => prod._id === current._id)?.price
-
-            // una posible solucion
             const currentProduct = dbProducts.find(prod => prod._id.toString() === current._id)
             const currentPrice = currentProduct!.price
-            console.log('currentPrice; ', currentPrice)
-            
-            // Esta es otra posible opcion
-            // const currentProductId = mongoose.Types.ObjectId(current._id); // Convierte a ObjectId
-            // const currentPrice = dbProducts.find(prod => prod._id.equals(currentProductId))?.price;
-
 
             if (!currentPrice) {
                 throw new Error('Check the shopping card, the product is not there')

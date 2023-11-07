@@ -135,7 +135,6 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
         data: form
       })
 
-      console.log({ data })
       if (!form._id) {
         router.replace(`/admin/products/${ form.slug }`)
       } else {
