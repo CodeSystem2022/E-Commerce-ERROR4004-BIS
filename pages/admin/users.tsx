@@ -59,13 +59,13 @@ const UsersPage = () => {
     {
       field: 'name',
       headerName: 'Full name',
-      width: 300,
+      width: 280,
       description: "User's full name"
     },
     {
       field: 'role',
       headerName: 'Role',
-      width: 200,
+      width: 280,
       description: "User's role",
 
       renderCell: (params) => {
@@ -92,17 +92,24 @@ const UsersPage = () => {
       subTitle='Maintenance of users'
       icon={ <PeopleOutline /> }
     >
-      <Grid container className='fadeIn'>
+      <Grid
+        container
+        className='fadeIn'
+        justifyContent='center'
+        width='100%'
+      >
         <Grid
           item
           xs={ 12 }
-          sx={ { height: '650px', width: '100%' } }
+          md={ 9 }
+          lg={ 7 }
+          sx={ { height: '530px', width: '100%' } }
         >
           <DataGrid
             rows={ rows }
             columns={ columns }
             autoPageSize
-            
+
           />
         </Grid>
       </Grid>

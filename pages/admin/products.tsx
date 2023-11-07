@@ -37,7 +37,7 @@ const columns: GridColDef[] = [
   {
     field: 'title',
     headerName: 'Title',
-    width: 350,
+    width: 480,
     description: 'Title of the product, if you click in teh link you can edit the product',
     renderCell: (params) => {
       return (
@@ -77,6 +77,7 @@ const columns: GridColDef[] = [
     field: 'price',
     headerName: 'Price',
     description: "Product's price",
+    width: 180,
     align: 'center',
     renderCell: (params) => {
       return (
@@ -90,7 +91,7 @@ const columns: GridColDef[] = [
     field: 'sizes',
     headerName: 'Sizes',
     description: "Product's sizes",
-    width: 280
+    width: 310
   },
 ]
 
@@ -140,7 +141,7 @@ const ProductsPage = () => {
           <Grid
             item
             xs={ 12 }
-            sx={ { height: '650px', width: '100%' } }
+            sx={ { height: '530px', width: '100%' } }
           >
             <DataGrid
               rows={ rows }
