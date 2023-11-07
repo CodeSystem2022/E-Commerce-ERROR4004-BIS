@@ -15,10 +15,10 @@ const HomePage: NextPage = () => {
       pageDescription='Find the best shoes at the best price'
     >
       <>
-        <Typography variant='h1' component='h1'>
+        <Typography variant='h1' component='h1' my={ 1 }>
           Shop
         </Typography>
-        <Typography variant='h2' component='h2' sx={ { mb: 1 } }>
+        <Typography variant='h2' component='h2' sx={ { mb: 2 } }>
           All products
         </Typography>
         {

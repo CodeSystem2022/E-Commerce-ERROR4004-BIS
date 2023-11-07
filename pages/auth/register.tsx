@@ -37,7 +37,7 @@ const RegisterPage = () => {
             return
         }
 
-        await signIn('credentials',{ email, password })
+        await signIn('credentials', { email, password })
     }
 
     return (
@@ -60,7 +60,7 @@ const RegisterPage = () => {
                         <Grid item xs={ 12 }>
                             <TextField
                                 label='Full name'
-                                variant='filled'
+                                variant='outlined'
                                 fullWidth
                                 {
                                 ...register('name', {
@@ -75,7 +75,7 @@ const RegisterPage = () => {
                             <TextField
                                 type='email'
                                 label='E-mail'
-                                variant='filled'
+                                variant='outlined'
                                 fullWidth
                                 {
                                 ...register('email', {
@@ -90,7 +90,7 @@ const RegisterPage = () => {
                             <TextField
                                 label='Password'
                                 type='password'
-                                variant='filled'
+                                variant='outlined'
                                 fullWidth
                                 {
                                 ...register('password', {
@@ -109,8 +109,14 @@ const RegisterPage = () => {
                                 size='large'
                                 fullWidth
                                 aria-label='login'
+                                sx={ {
+                                    mb: 1,
+                                    textTransform: 'uppercase',
+                                    py: '12px',
+                                    letterSpacing: '1px'
+                                } }
                             >
-                                Log in
+                                Register
                             </Button>
                         </Grid>
                         <Grid item xs={ 12 } display='flex' justifyContent='end'>
@@ -121,7 +127,6 @@ const RegisterPage = () => {
                                 Already has an account?
                             </NextLink>
                         </Grid>
-
                     </Grid>
                 </Box>
             </form>
@@ -130,13 +135,11 @@ const RegisterPage = () => {
 }
 
 export const getServerSideProps: GetServerSideProps = async ({ req, query }) => {
-    
-    const session = await getSession({ req });
-    // console.log({session});
 
-    const { p = '/' } = query;
+    const session = await getSession({ req })
+    const { p = '/' } = query
 
-    if ( session ) {
+    if (session) {
         return {
             redirect: {
                 destination: p.toString(),
@@ -147,7 +150,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req, query }) => 
 
 
     return {
-        props: { }
+        props: {}
     }
 }
 

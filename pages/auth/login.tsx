@@ -55,7 +55,7 @@ const LoginPage = () => {
                             <TextField
                                 type='email'
                                 label='E-mail'
-                                variant='filled'
+                                variant='outlined'
                                 fullWidth
                                 {
                                 ...register('email', {
@@ -70,7 +70,7 @@ const LoginPage = () => {
                             <TextField
                                 label='Password'
                                 type='password'
-                                variant='filled'
+                                variant='outlined'
                                 fullWidth
                                 {
                                 ...register('password', {
@@ -89,6 +89,11 @@ const LoginPage = () => {
                                 size='large'
                                 fullWidth
                                 aria-label='login'
+                                sx={ {
+                                    textTransform: 'uppercase',
+                                    py: '12px',
+                                    letterSpacing: '1px'
+                                } }
                             >
                                 Log in
                             </Button>
@@ -109,7 +114,7 @@ const LoginPage = () => {
                             flexDirection='column'
                             justifyContent='end'
                         >
-                            <Divider sx={ { width: '100%', mb: 2 } } />
+                            <Divider sx={ { width: '100%', mb: 3 } } />
                             {
                                 Object.values(providers).map((provider: any) => {
 
@@ -123,7 +128,12 @@ const LoginPage = () => {
                                             variant='outlined'
                                             fullWidth
                                             color='secondary'
-                                            sx={ { mb: 1 } }
+                                            sx={ {
+                                                mb: 1,
+                                                textTransform: 'uppercase',
+                                                py: '12px',
+                                                letterSpacing: '1px'
+                                            } }
                                             onClick={ () => signIn(provider.id) }
                                         >
                                             { provider.name }
