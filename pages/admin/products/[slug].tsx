@@ -48,9 +48,7 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
     getValues,
     setValue,
     watch
-  } = useForm<FormData>({
-    defaultValues: product
-  })
+  } = useForm<FormData>({ defaultValues: product })
 
   useEffect(() => {
     const subscription = watch((value, { name, type }) => {
@@ -71,7 +69,7 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
 
   const onChangeSize = (size: string) => {
     const currentSizes = getValues('sizes')
-    // If it's already exist -> deletes
+    // If it's already exist -> delete
     if (currentSizes.includes(size)) {
       return setValue('sizes', currentSizes.filter(s => s !== size), { shouldValidate: true })
     }
@@ -81,7 +79,7 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
   }
 
   const onNewTag = () => {
-    const newTag = newTagValue.trim().toLowerCase()
+    const newTag = newTagValue.trim().toLocaleLowerCase()
     setNewTagValue('')
     const currentTags = getValues('tags')
 
@@ -109,12 +107,20 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
         const formData = new FormData()
         formData.append('file', file)
         const { data } = await ohlalaApi.post<{ message: string }>('/admin/upload', formData)
-        console.log({ data })
+        setValue('images', [...getValues('images'), data.message], { shouldValidate: true })
       }
     } catch (error) {
-
+      console.log({ error })
     }
 
+  }
+
+  const onDeleteImage = (image: string) => {
+    setValue(
+      'images',
+      getValues('images').filter(img => img !== image),
+      { shouldValidate: true }
+    )
   }
 
   const onSubmit = async (form: FormData) => {
@@ -124,14 +130,14 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
     setIsSaving(true)
 
     try {
-      const res = await ohlalaApi({
+      const { data } = await ohlalaApi({
         url: '/admin/products',
         method: form._id ? 'PUT' : 'POST',
         data: form
       })
 
-      if (form._id) {
-        // TODO: see because it`s arriving here, but not re render of the new info
+      console.log({ data })
+      if (!form._id) {
         router.replace(`/admin/products/${ form.slug }`)
       } else {
         setIsSaving(false)
@@ -146,7 +152,7 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
   return (
     <AdminLayout
       title={ 'Product' }
-      subTitle={ `Editing: ${ product.title }` }
+      subTitle={ product.title }
       icon={ <DriveFileRenameOutline /> }
     >
       <form onSubmit={ handleSubmit(onSubmit) }>
@@ -231,7 +237,7 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
               helperText={ errors.price?.message }
             />
 
-            <Divider sx={ { my: 1 } } />
+            <Divider sx={ { my: 2 } } />
 
             <FormControl sx={ { mb: 1 } }>
               <FormLabel>Type</FormLabel>
@@ -351,7 +357,9 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
             <Divider sx={ { my: 2 } } />
 
             <Box display='flex' flexDirection="column">
-              <FormLabel sx={ { mb: 1 } }>Images</FormLabel>
+              <FormLabel sx={ { mb: 1 } }>
+                Images
+              </FormLabel>
               <Button
                 color="secondary"
                 fullWidth
@@ -376,17 +384,18 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
                 label="2 images at least"
                 color='error'
                 variant='outlined'
+                 sx={{ display: getValues('images').length < 2 ? 'flex': 'none' }}
               />
 
               <Grid container spacing={ 2 }>
                 {
-                  product.images.map(img => (
+                  getValues('images').map(img => (
                     <Grid item xs={ 4 } md={ 3 } key={ img }>
                       <Card>
                         <CardMedia
                           component='img'
                           className='fadeIn'
-                          image={ `/products/${ img }` }
+                          image={ img }
                           alt={ img }
                         />
                         <CardActions>
@@ -400,6 +409,7 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
                                 color: '#d32f2f'
                               }
                             } }
+                            onClick={ () => onDeleteImage(img) }
                           >
                             Delete
                           </Button>

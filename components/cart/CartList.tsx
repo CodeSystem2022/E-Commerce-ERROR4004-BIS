@@ -38,7 +38,7 @@ const CartList: FC<CartListPorps> = ({ editable = false, products }) => {
               >
                 <CardActionArea>
                   <CardMedia
-                    image={ `/products/${ product.image }` }
+                    image={ product.image }
                     component='img'
                     sx={ {
                       borderRadius: '12px',
