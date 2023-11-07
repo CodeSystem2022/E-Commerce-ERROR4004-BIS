@@ -16,7 +16,7 @@ const columns: GridColDef[] = [
   {
     field: 'img',
     headerName: 'Photo',
-    description: 'Photo of the product',
+    description: 'Photo of the product, if you click on the pic you can see the detail of the product',
     renderCell: (params) => {
       return (
         <a
@@ -38,7 +38,7 @@ const columns: GridColDef[] = [
     field: 'title',
     headerName: 'Title',
     width: 350,
-    description: 'Title of the product',
+    description: 'Title of the product, if you click in teh link you can edit the product',
     renderCell: (params) => {
       return (
         <NextLink
