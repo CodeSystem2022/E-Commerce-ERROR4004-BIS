@@ -49,8 +49,8 @@ export const initialData: SeedData = {
         {
             description: "With a springy ride for every type of running, the familiar, ideal-for-you feel of the Peg returns to help you reach your goals. This version features the same immediate responsiveness and neutral support you love, but with improved comfort in sensitive areas of the foot, such as the arch and toes.",
             images: [
-                '690124-1200-1200-001.png',
                 '687965-1200-1200-002.png',
+                '690124-1200-1200-001.png',
                 '692133-1200-1200-003.png',
                 '694358-1200-1200-004.png',
             ],

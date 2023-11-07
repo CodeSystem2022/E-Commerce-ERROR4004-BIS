@@ -2,6 +2,8 @@ import React, { FC, ReactElement } from 'react'
 import Head from 'next/head'
 import Navbar from '../ui/Navbar'
 import SideMenu from '../ui/SideMenu'
+import { Box, Typography } from '@mui/material'
+import FooterShopLayout from '../ui/FooterShopLayout'
 
 interface ShopLayoutPops {
   title: string
@@ -44,7 +46,7 @@ const ShopLayout: FC<ShopLayoutPops> = ({
         { children }
       </main>
       <footer>
-        { /* TODO: footer */ }
+        <FooterShopLayout />
       </footer>
     </>
   )

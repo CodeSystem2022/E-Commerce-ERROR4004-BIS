@@ -1,4 +1,5 @@
 export * from './ItemCounter'
+export * from './FooterShopLayout'
 export * from './FullScreenLoading'
 export * from './Navbar'
 export * from './SideMenu'
