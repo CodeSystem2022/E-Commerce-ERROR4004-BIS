@@ -18,18 +18,6 @@ const columns: GridColDef[] = [
     description: 'Order ID'
   },
   {
-    field: 'email',
-    headerName: 'E-mail',
-    width: 300,
-    description: 'Email'
-  },
-  {
-    field: 'name',
-    headerName: 'Full name',
-    width: 300,
-    description: 'Full name'
-  },
-  {
     field: 'total',
     headerName: 'Total',
     width: 180,
@@ -81,8 +69,19 @@ const columns: GridColDef[] = [
     headerName: 'Created at',
     width: 260,
     description: "Order created at"
+  },
+  {
+    field: 'email',
+    headerName: 'E-mail',
+    width: 300,
+    description: 'Email'
+  },
+  {
+    field: 'name',
+    headerName: 'Full name',
+    width: 300,
+    description: 'Full name'
   }
-
 ]
 
 const OrdersPage = () => {
@@ -93,12 +92,12 @@ const OrdersPage = () => {
 
   const rows = data!.map(order => ({
     id: order._id,
-    email: (order.user as IUser).email,
-    name: (order.user as IUser).name,
     total: order.total,
     isPaid: order.isPaid,
     noProducts: order.numberOfItems,
     createdAt: order.createdAt,
+    email: (order.user as IUser)?.email ? (order.user as IUser)?.email : '',
+    name: (order.user as IUser)?.name ? (order.user as IUser)?.name : '',
   }))
 
   return (
