@@ -31,14 +31,14 @@ const CartList: FC<CartListPorps> = ({ editable = false, products }) => {
             key={ product.slug + product.size }
             sx={ { mb: 4 } }
           >
-            <Grid item xs={ 3 }>
+            <Grid item xs={ 6 } sm={ 3 }>
               <NextLink
                 href={ `/product/${ product.slug }` }
                 passHref
               >
                 <CardActionArea>
                   <CardMedia
-                    image={ `/products/${ product.image }` }
+                    image={ product.image }
                     component='img'
                     sx={ {
                       borderRadius: '12px',
@@ -51,7 +51,7 @@ const CartList: FC<CartListPorps> = ({ editable = false, products }) => {
                 </CardActionArea>
               </NextLink>
             </Grid>
-            <Grid item xs={ 7 }>
+            <Grid item xs={ 5 } sm={ 6 }>
               <Box display='flex' flexDirection='column'>
                 <Typography variant='h2' component='h2'>
                   { product.title }
@@ -79,7 +79,8 @@ const CartList: FC<CartListPorps> = ({ editable = false, products }) => {
             </Grid>
             <Grid
               item
-              xs={ 2 }
+              xs={ 12 }
+              sm={ 3 }
               display='flex'
               alignContent='center'
               justifyContent='flex-start'

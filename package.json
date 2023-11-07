@@ -18,6 +18,8 @@
     "@types/bcryptjs": "^2.4.2",
     "axios": "^1.2.2",
     "bcryptjs": "^2.4.3",
+    "cloudinary": "1.28.1",
+    "formidable": "2.0.1",
     "js-cookie": "^3.0.1",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^6.8.2",
@@ -30,6 +32,7 @@
     "swr": "^2.0.0"
   },
   "devDependencies": {
+    "@types/formidable": "^3.4.4",
     "@types/js-cookie": "^3.0.2",
     "@types/jsonwebtoken": "^9.0.0",
     "@types/node": "18.11.18",

@@ -77,3 +77,8 @@
   justify-content: flex-end;
   align-items: flex-end;
 }
+
+footer {
+  background-color: #0f0f0f;
+  color: #ece8e8;
+}

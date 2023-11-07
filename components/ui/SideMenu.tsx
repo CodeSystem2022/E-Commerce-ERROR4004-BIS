@@ -243,7 +243,10 @@ const SideMenu = () => {
                   </Button>
                 </ListItem>
                 <ListItem >
-                  <Button>
+                  <Button
+                     aria-label='go to products'
+                     onClick={ () => navigateTo('/admin/products') }
+                  >
                     <ListItemIcon aria-label='products'>
                       <CategoryOutlined />
                     </ListItemIcon>

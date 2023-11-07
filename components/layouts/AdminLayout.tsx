@@ -41,7 +41,7 @@ const AdminLayout: FC<AdminLayoutPops> = ({
           <Typography variant='h2' component='h2' my={ 1 }>
             { icon }{ ' '} { title }
           </Typography>
-          <Typography variant='h3' component='h3' mb={ 2 }>
+          <Typography variant='h3' component='h3' mb={ 3 }>
             { subTitle }
           </Typography>
         </Box>

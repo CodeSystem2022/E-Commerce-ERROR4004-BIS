@@ -47,6 +47,23 @@ export const initialData: SeedData = {
     ],
     products: [
         {
+            description: "With a springy ride for every type of running, the familiar, ideal-for-you feel of the Peg returns to help you reach your goals. This version features the same immediate responsiveness and neutral support you love, but with improved comfort in sensitive areas of the foot, such as the arch and toes.",
+            images: [
+                '687965-1200-1200-002.png',
+                '690124-1200-1200-001.png',
+                '692133-1200-1200-003.png',
+                '694358-1200-1200-004.png',
+            ],
+            inStock: 78,
+            price: 130,
+            sizes: [ '36', '37', '38', '39', '40', '41', '42', '43', '44'],
+            slug: "pegasusu_40_premium",
+            type: 'running',
+            tags: ['nike', 'shoes', 'men', 'run'],
+            title: "Pegasus 40 Premium - Nike (Men)",
+            gender: 'men'
+        },
+        {
             description: "Sleek, comfortable shoes for little ones. Your little adventurer will be ready to play in these comfy Swift Run 1.0 shoes. Featuring a knit upper and flexible EVA midsole, these shoes keep tiny feet supported and cushioned. Recycled materials and a non-marking outsole ensure each step is gentle on the planet. These lightweight, lace-up shoes inspire dreams of zooming across the playground or racing down the sidewalk — someday.",
             images: [
                 '1740176-00-A_1.jpg',

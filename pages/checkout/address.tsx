@@ -72,7 +72,7 @@ const AddressPage = () => {
           <Grid item xs={ 12 } sm={ 6 }>
             <TextField
               label='First Name'
-              variant='filled'
+              variant='outlined'
               fullWidth
               {
               ...register('firstName', {
@@ -86,7 +86,7 @@ const AddressPage = () => {
           <Grid item xs={ 12 } sm={ 6 }>
             <TextField
               label='Last Name'
-              variant='filled'
+              variant='outlined'
               fullWidth
               {
               ...register('lastName', {
@@ -100,7 +100,7 @@ const AddressPage = () => {
           <Grid item xs={ 12 } sm={ 6 }>
             <TextField
               label='Address'
-              variant='filled'
+              variant='outlined'
               fullWidth
               {
               ...register('address', {
@@ -113,7 +113,7 @@ const AddressPage = () => {
           <Grid item xs={ 12 } sm={ 6 }>
             <TextField
               label='Address 2 (alternative)'
-              variant='filled'
+              variant='outlined'
               fullWidth
               {
               ...register('address2')
@@ -123,7 +123,7 @@ const AddressPage = () => {
           <Grid item xs={ 12 } sm={ 6 }>
             <TextField
               label='ZIP Code'
-              variant='filled'
+              variant='outlined'
               fullWidth
               {
               ...register('zip', {
@@ -137,7 +137,7 @@ const AddressPage = () => {
           <Grid item xs={ 12 } sm={ 6 }>
             <TextField
               label='City'
-              variant='filled'
+              variant='outlined'
               fullWidth
               {
               ...register('city', {
@@ -151,7 +151,7 @@ const AddressPage = () => {
           <Grid item xs={ 12 } sm={ 6 }>
             <TextField
               fullWidth
-              variant='filled'
+              variant='outlined'
               label='Country'
               {
               ...register('country', {
@@ -160,13 +160,13 @@ const AddressPage = () => {
               error={ !!errors.country }
               helperText={ errors.country?.message }
             >
-              
+
             </TextField>
           </Grid>
           <Grid item xs={ 12 } sm={ 6 }>
             <TextField
               label='Telephone'
-              variant='filled'
+              variant='outlined'
               fullWidth
               {
               ...register('phone', {
@@ -185,6 +185,11 @@ const AddressPage = () => {
             className='circular-btn'
             size='large'
             aria-label='Check out order'
+            sx={ {
+              textTransform: 'uppercase',
+              letterSpacing: '1px',
+              py: 1
+            } }
           >
             Check out order
           </Button>
