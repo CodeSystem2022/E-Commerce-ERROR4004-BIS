@@ -8,6 +8,7 @@ import { ConfirmationNumberOutlined } from '@mui/icons-material'
 
 import AdminLayout from '../../components/layouts/AdminLayout'
 import { IOrder, IUser } from '../../interfaces'
+import { formatToUSD } from '../../utils/currency'
 
 const columns: GridColDef[] = [
   {
@@ -32,7 +33,12 @@ const columns: GridColDef[] = [
     field: 'total',
     headerName: 'Total',
     width: 180,
-    description: "Order's total"
+    description: "Order's total",
+    renderCell: (params) => {
+      return (
+        formatToUSD(params.row.total)
+      )
+    }
   },
   {
     field: 'isPaid',
@@ -73,7 +79,7 @@ const columns: GridColDef[] = [
   {
     field: 'createdAt',
     headerName: 'Created at',
-    width: 280,
+    width: 260,
     description: "Order created at"
   }
 

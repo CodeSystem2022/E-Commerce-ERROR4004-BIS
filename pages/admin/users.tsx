@@ -102,6 +102,7 @@ const UsersPage = () => {
             rows={ rows }
             columns={ columns }
             autoPageSize
+            
           />
         </Grid>
       </Grid>

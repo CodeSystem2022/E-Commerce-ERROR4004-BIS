@@ -40,7 +40,8 @@ const ShopLayout: FC<ShopLayoutPops> = ({
         style={ {
           margin: '80px auto',
           maxWidth: '1440px',
-          padding: '0px 30px'
+          padding: '0px 30px',
+          minHeight: '86vh'
         } }
       >
         { children }

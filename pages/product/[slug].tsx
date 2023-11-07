@@ -100,6 +100,7 @@ const ProductPage: NextPage<ProductPageProps> = ({ product }) => {
                     className='circular-btn'
                     onClick={ onAddProduct }
                     aria-label='select a size and the add to cart'
+                    sx={ { py: 1 } }
                   >
                     {
                       tempCartProduct.size
@@ -113,7 +114,7 @@ const ProductPage: NextPage<ProductPageProps> = ({ product }) => {
                 )
             }
             <Box sx={ { mt: 3 } }>
-              <Typography variant='subtitle2'>
+              <Typography variant='subtitle2' my={ 1 }>
                 Description
               </Typography>
               <Typography variant='body2'>

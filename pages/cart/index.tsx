@@ -2,15 +2,7 @@ import { useEffect, useContext } from 'react'
 
 import { useRouter } from 'next/router'
 
-import {
-  Box,
-  Button,
-  Card,
-  CardContent,
-  Divider,
-  Grid,
-  Typography,
-} from '@mui/material'
+import { Box, Button, Card, CardContent, Divider, Grid, Typography } from '@mui/material'
 
 import { CartContext } from '../../context'
 
@@ -50,7 +42,7 @@ const CartPage = () => {
           <Grid item xs={ 12 } sm={ 5 }>
             <Card className='summary-card'>
               <CardContent>
-                <Typography variant='h2' mb={ 4 }>
+                <Typography variant='h2' mb={ 3 }>
                   Order
                 </Typography>
                 <Divider sx={ { my: 1 } } />
@@ -62,6 +54,10 @@ const CartPage = () => {
                     fullWidth
                     aria-label='checkout'
                     href='/checkout/address'
+                    sx={ {
+                      py: 1,
+                      textTransform: 'uppercase'
+                    } }
                   >
                     Checkout
                   </Button>

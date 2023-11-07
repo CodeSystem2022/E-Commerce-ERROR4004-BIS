@@ -101,7 +101,6 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
       return
     }
 
-
     try {
       for (const file of target.files) {
         const formData = new FormData()
@@ -184,7 +183,7 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
 
             <TextField
               label="Title"
-              variant="filled"
+              variant="outlined"
               fullWidth
               sx={ { mb: 1 } }
               { ...register('title', {
@@ -197,7 +196,7 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
 
             <TextField
               label="Description"
-              variant="filled"
+              variant="outlined"
               fullWidth
               multiline
               sx={ { mb: 1 } }
@@ -212,7 +211,7 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
             <TextField
               label="Inventory"
               type='number'
-              variant="filled"
+              variant="outlined"
               fullWidth
               sx={ { mb: 1 } }
               { ...register('inStock', {
@@ -226,7 +225,7 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
             <TextField
               label="Price"
               type='number'
-              variant="filled"
+              variant="outlined"
               fullWidth
               sx={ { mb: 1 } }
               { ...register('price', {
@@ -308,7 +307,7 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
           <Grid item xs={ 12 } sm={ 6 }>
             <TextField
               label="Slug - URL"
-              variant="filled"
+              variant="outlined"
               fullWidth
               sx={ { mb: 1 } }
               { ...register('slug', {
@@ -321,7 +320,7 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
 
             <TextField
               label="Tags"
-              variant="filled"
+              variant="outlined"
               fullWidth
               sx={ { mb: 1 } }
               helperText="Press [spacebar] to add"
@@ -357,7 +356,7 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
             <Divider sx={ { my: 2 } } />
 
             <Box display='flex' flexDirection="column">
-              <FormLabel sx={ { mb: 1 } }>
+              <FormLabel sx={ { mb: 2 } }>
                 Images
               </FormLabel>
               <Button
@@ -367,7 +366,14 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
                   <UploadOutlined
                     sx={ { color: 'black', '&:hover': { color: '#3A64D8' } } }
                   /> }
-                sx={ { mb: 3, py: 1, '&:hover': { border: '1px solid #3A64D8', color: '#3A64D8' } } }
+                sx={ {
+                  mb: 3,
+                  py: 1,
+                  textTransform: 'uppercase',
+                  '&:hover': {
+                    border: '1px solid #3A64D8', color: '#3A64D8'
+                  }
+                } }
                 onClick={ () => fileInputRef.current?.click() }
               >
                 Upload images
@@ -384,14 +390,14 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
                 label="2 images at least"
                 color='error'
                 variant='outlined'
-                 sx={{ display: getValues('images').length < 2 ? 'flex': 'none' }}
+                sx={ { display: getValues('images').length < 2 ? 'flex' : 'none' } }
               />
 
               <Grid container spacing={ 2 }>
                 {
                   getValues('images').map(img => (
-                    <Grid item xs={ 4 } md={ 3 } key={ img }>
-                      <Card>
+                    <Grid item xs={ 5 } sm={ 4} key={ img } mx={ 0.1 }>
+                      <Card elevation={ 6 }>
                         <CardMedia
                           component='img'
                           className='fadeIn'
@@ -426,10 +432,6 @@ const ProductAdminPage: FC<ProductAdminPageProps> = ({ product }) => {
     </AdminLayout>
   )
 }
-
-// You should use getServerSideProps when:
-// - Only if you need to pre-render a page whose data must be fetched at request time
-
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
 

@@ -72,7 +72,7 @@ const DashboardPage = () => {
           icon={ <AttachMoneyOutlined color='success' sx={ { fontSize: 40 } } /> }
         />
         <SummaryTile
-          title={ numberOfOrders - paidOrders  }
+          title={ notPaidOrders  }
           subTitle='Pending orders'
           icon={ <CreditCardOffOutlined color='error' sx={ { fontSize: 40 } } /> }
         />

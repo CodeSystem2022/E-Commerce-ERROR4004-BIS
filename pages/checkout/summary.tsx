@@ -89,7 +89,12 @@ const SummaryPage = () => {
                     fullWidth
                     aria-label='confirm order'
                     disabled={ isPosting}
-                    onClick={onCreateOrder}
+                    onClick={ onCreateOrder }
+                    sx={ {
+                      textTransform: 'uppercase',
+                      letterSpacing: '1px',
+                      py: 1
+                    } }
                   >
                     Confirm order
                   </Button>
