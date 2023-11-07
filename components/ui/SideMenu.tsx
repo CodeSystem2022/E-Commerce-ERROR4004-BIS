@@ -86,12 +86,12 @@ const SideMenu = () => {
           {
             isLoggedIn && (
               <>
-                <ListItem>
+                {/* <ListItem>
                   <ListItemIcon aria-label='go to profile'>
                     <AccountCircleOutlined />
                   </ListItemIcon>
                   <ListItemText primary={ 'Profile' } />
-                </ListItem>
+                </ListItem> */}
                 <Button
                   sx={ {
                     paddingRight: '24px',
