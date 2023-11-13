@@ -39,7 +39,7 @@ const parseFiles = async (req: NextApiRequest): Promise<string> => {
         return reject(err)
       }
 
-      const filePath = await saveFile(files.file as formidable.File)
+      const filePath = await saveFile(files.file as unknown as formidable.File)
       resolve(filePath)
     })
   })
